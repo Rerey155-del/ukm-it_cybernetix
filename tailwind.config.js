@@ -9,7 +9,8 @@ export default {
       customBg: '#ECD6BD',
       merah :  '#A82126' ,
       navbar : '#F7EDE3',
-      abu2 : '#2D2D2D'// Warna background kustom
+      abu2 : '#2D2D2D',
+      putihGajelas : '#AF1740'
     },},
   },
   plugins: [],

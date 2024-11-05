@@ -2,7 +2,7 @@ import Cx from "../assets/cx-logo.svg";
 
 const Navbar = () => {
   return (
-    <nav className="p-4 sticky top-0 left-0 w-full transition-all duration-300 bg-slate-600">
+    <nav className="p-4 sticky top-0 left-0 w-full transition-all duration-300 bg-[#FFF6E3]">
       <div className="container mx-auto flex justify-start pl-14 items-center font-[inter]">
         <ul className="flex space-x-4">
           <li >
