@@ -34,7 +34,7 @@ const LandingPage = () => {
         className="overflow-y-auto text-black"
       >
         <Navbar />
-        <div className="p-20 items-center grid grid-cols-2 space-x-40 mb-6 ">
+        <div className="p-20 items-center grid grid-cols-2 space-x-40 mb-28 mt-10">
           <div data-aos="fade-up" data-aos-duration="2000">
             <div className=" font-bold text-3xl mb-4">
               <h1>Unit Kegiatan Mahasiswa</h1>
@@ -66,10 +66,11 @@ const LandingPage = () => {
           </div>
           <div className="grid grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
             <div
-              className="card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-down"
+              className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+              data-aos="fade-down"
               data-aos-anchor-placement="top-bottom"
             >
-              <div >
+              <div>
                 <img src={Multimedia} alt="" className="size-28" />
               </div>
               <h2 className="card-title">Multimedia</h2>
@@ -77,9 +78,9 @@ const LandingPage = () => {
             </div>
 
             <div
-              className="card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg  " data-aos="fade-down"
+              className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+              data-aos="fade-down"
               data-aos-anchor-placement="top-bottom"
-              
             >
               <div>
                 <img src={Programming} alt="" className="size-28" />
@@ -88,14 +89,64 @@ const LandingPage = () => {
               <p>Frontend Dev & Backend Dev</p>
             </div>
 
-            <div className="card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-down"
-              data-aos-anchor-placement="top-bottom">
+            <div
+              className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+              data-aos="fade-down"
+              data-aos-anchor-placement="top-bottom"
+            >
               <div>
                 <img src={Network} alt="" className="size-28" />
               </div>
               <h2 className="card-title">Networking</h2>
               <p>Networking Fundamental</p>
             </div>
+          </div>
+        </div>
+        <div className="mb-20">
+          <div className="justify-center text-center font-bold text-2xl mb-7 mt-[10rem]">
+            <h2>Portofolio Kami</h2>
+          </div>
+          <div className="grid grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
+            <div
+              className="card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+              data-aos="fade-down"
+              data-aos-anchor-placement="top-bottom"
+            >
+              <div>
+                <img src={Multimedia} alt="" className="size-28" />
+              </div>
+              <h2 className="card-title">Multimedia</h2>
+              <p>UIX Design, Design, Video Editing</p>
+            </div>
+
+            <div
+              className="card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg  "
+              data-aos="fade-down"
+              data-aos-anchor-placement="top-bottom"
+            >
+              <div>
+                <img src={Programming} alt="" className="size-28" />
+              </div>
+              <h2 className="card-title">Programming</h2>
+              <p>Frontend Dev & Backend Dev</p>
+            </div>
+
+            <div
+              className="card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+              data-aos="fade-down"
+              data-aos-anchor-placement="top-bottom"
+            >
+              <div>
+                <img src={Network} alt="" className="size-28" />
+              </div>
+              <h2 className="card-title">Networking</h2>
+              <p>Networking Fundamental</p>
+            </div>
+          </div>
+          <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
+            <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+              Selengkapnya
+            </button>
           </div>
         </div>
       </div>
