@@ -1,20 +1,52 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react"; // Pastikan useState diimpor
 import Cx from "../assets/cx-logo.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Navbar = () => {
+  // State untuk mendeteksi apakah navbar sudah di-scroll
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
+    // Inisialisasi AOS untuk animasi
     AOS.init({
       duration: 2000,
     });
+
+    // Event listener untuk mendeteksi scroll
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); // Jika scroll lebih dari 50px, set isScrolled menjadi true
+    };
+
+    // Tambahkan event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener saat komponen di-unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
   return (
-    <nav data-aos="fade-up" data-aos-duration="2000" className="p-5 fixed top-0 left-0 w-full transition-all duration-300 bg-[#FFF6E3]i">
-      <div className="container mx-auto flex justify-start pl-14 items-center font-[inter]">
+    <nav
+      className={`p-4 fixed top-0 left-0 w-full trans ition-all duration-300 ${
+        isScrolled ? "bg-opacity-50" : ""
+      }`}
+      style={{
+        backdropFilter: isScrolled ? "blur(10px)" : "none", // Jika di-scroll, tambahkan efek blur
+        position: "fixed", // Navbar akan selalu tetap di atas
+        width: "100%", // Lebar penuh
+        top: 0, // Tetap di bagian atas layar
+        zIndex: 1, // Z-index lebih tinggi untuk memastikan navbar berada di depan elemen lain
+      }}
+    >
+      <div
+        data-aos="fade-up"
+        className="container mx-auto flex justify-start pl-14 items-center font-[inter]"
+      >
         <ul className="flex space-x-4">
-          <li >
-            <img className="w-full h-8"src={Cx} />
+          <li>
+            <img className="w-full h-8" src={Cx} alt="Logo" />
           </li>
           <li>
             <a href="#">Home</a>
