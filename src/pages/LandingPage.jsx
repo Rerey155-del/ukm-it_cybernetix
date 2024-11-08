@@ -156,7 +156,7 @@ const LandingPage = () => {
             <div className="grid gap-4 px-20 mt-10">
               <div>
                 <img
-                  className="h-auto max-w-full rounded-lg"
+                  className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:shadow-lg"
                   src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
                   alt="Featured Image"
                 />
@@ -165,35 +165,35 @@ const LandingPage = () => {
               <div className="grid grid-cols-5 gap-4">
                 <div>
                   <img
-                    className="h-auto max-w-full rounded-lg"
+                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                     src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
                     alt="Image 1"
                   />
                 </div>
                 <div>
                   <img
-                    className="h-auto max-w-full rounded-lg"
+                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                     src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
                     alt="Image 2"
                   />
                 </div>
                 <div>
                   <img
-                    className="h-auto max-w-full rounded-lg"
+                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                     src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
                     alt="Image 3"
                   />
                 </div>
                 <div>
                   <img
-                    className="h-auto max-w-full rounded-lg"
+                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                     src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
                     alt="Image 4"
                   />
                 </div>
                 <div>
                   <img
-                    className="h-auto max-w-full rounded-lg"
+                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                     src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
                     alt="Image 5"
                   />
@@ -211,7 +211,7 @@ const LandingPage = () => {
               {users.map((user, index) => (
                 <div
                   key={index}
-                  className="bg-white card-body w-60 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                  className="bg-white card-body w-60 shadow-2xl rounded-3xl "
                 >
                   <img src={user.foto} />
                   <div className="text-center mt-3">
