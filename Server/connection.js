@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 import express from "express";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv"; // Load environment variables
@@ -14,6 +16,7 @@ app.use(express.json()); // Parsing request body sebagai JSON
 
 app.use("/assets", express.static("F:/Backend/Kopken/kopken/src/assets"));
 // Atur untuk menyajikan gambar dari folder D:/images
+
 
 const port = process.env.PORT;
 const url = process.env.MONGODB;
