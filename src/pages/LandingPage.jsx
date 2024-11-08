@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react"; // Fixed imports by removing duplicate `useEffect`
 import Navbar from "../Components/Navbar";
 import foto1 from "../assets/fotobersama.svg";
 import glowEffect from "../assets/glow effect.svg";
@@ -7,13 +7,28 @@ import "aos/dist/aos.css";
 import Network from "../assets/Networking.svg";
 import Multimedia from "../assets/Multimedia.svg";
 import Programming from "../assets/Programming.svg";
+import axios from "axios";
 
 const LandingPage = () => {
+  const [users, setUsers] = useState([]); // Moved `useState` declaration outside `useEffect`
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:2080/user")
+      .then((response) => {
+        setUsers(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 2000,
     });
   }, []);
+
   return (
     <section>
       <div
@@ -65,11 +80,7 @@ const LandingPage = () => {
             <h2>Dengan Divisi Standar Industri</h2>
           </div>
           <div className="grid grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
-            <div
-              className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-              data-aos="fade-down"
-              data-aos-anchor-placement="top-bottom"
-            >
+            <div className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <div>
                 <img src={Multimedia} alt="" className="size-28" />
               </div>
@@ -77,11 +88,7 @@ const LandingPage = () => {
               <p>UIX Design, Design, Video Editing</p>
             </div>
 
-            <div
-              className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-              data-aos="fade-down"
-              data-aos-anchor-placement="top-bottom"
-            >
+            <div className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <div>
                 <img src={Programming} alt="" className="size-28" />
               </div>
@@ -89,11 +96,7 @@ const LandingPage = () => {
               <p>Frontend Dev & Backend Dev</p>
             </div>
 
-            <div
-              className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-              data-aos="fade-down"
-              data-aos-anchor-placement="top-bottom"
-            >
+            <div className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <div>
                 <img src={Network} alt="" className="size-28" />
               </div>
@@ -102,51 +105,127 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="mb-20">
-          <div className="justify-center text-center font-bold text-2xl mb-7 mt-[10rem]">
-            <h2>Portofolio Kami</h2>
-          </div>
-          <div className="grid grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
-            <div
-              className="card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-              data-aos="fade-down"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <div>
-                <img src={Multimedia} alt="" className="size-28" />
-              </div>
-              <h2 className="card-title">Multimedia</h2>
-              <p>UIX Design, Design, Video Editing</p>
+        <div className="mb-20 mt-28">
+          <div>
+            <div className="justify-center text-center font-bold text-2xl mb-5">
+              <h2>Portofolio Kami</h2>
             </div>
+            <div className="grid grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
+              <div
+                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                data-aos="fade-down"
+                data-aos-anchor-placement="top-bottom"
+              ></div>
 
-            <div
-              className="card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg  "
-              data-aos="fade-down"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <div>
-                <img src={Programming} alt="" className="size-28" />
-              </div>
-              <h2 className="card-title">Programming</h2>
-              <p>Frontend Dev & Backend Dev</p>
-            </div>
+              <div
+                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                data-aos="fade-down"
+                data-aos-anchor-placement="top-bottom"
+              ></div>
 
-            <div
-              className="card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-              data-aos="fade-down"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <div>
-                <img src={Network} alt="" className="size-28" />
-              </div>
-              <h2 className="card-title">Networking</h2>
-              <p>Networking Fundamental</p>
+              <div
+                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                data-aos="fade-down"
+                data-aos-anchor-placement="top-bottom"
+              ></div>
+              <div
+                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                data-aos="fade-down"
+                data-aos-anchor-placement="top-bottom"
+              ></div>
+              <div
+                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                data-aos="fade-down"
+                data-aos-anchor-placement="top-bottom"
+              ></div>
+              <div
+                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                data-aos="fade-down"
+                data-aos-anchor-placement="top-bottom"
+              ></div>
             </div>
           </div>
           <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
             <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               Selengkapnya
             </button>
+          </div>
+          <div className="justify-center text-center font-bold text-2xl mb-7 mt-[10rem]">
+            <h2>Dedikasi Berbuah Cerita Yang Mengesankan</h2>
+
+            <div className="grid gap-4 px-20 mt-10">
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
+                  alt="Featured Image"
+                />
+              </div>
+
+              <div className="grid grid-cols-5 gap-4">
+                <div>
+                  <img
+                    className="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                    alt="Image 1"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+                    alt="Image 2"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+                    alt="Image 3"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+                    alt="Image 4"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+                    alt="Image 5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-28">
+            <div>
+              <h2 className="text-center font-bold text-2xl mb-5">
+                Hilangkan Rasa Penasaran Dengan mengenal bagian dari kami
+              </h2>
+            </div>
+            <div className="grid grid-cols-4 p-8 mx-auto justify-items-center font-[Inter]">
+              {users.map((user, index) => (
+                <div
+                  key={index}
+                  className="bg-white card-body w-60 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  <img src={user.foto} />
+                  <div className="text-center mt-3">
+                    <p className="font-bold">{user.nama}</p>
+                    <p>{user.jabatan}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
+              <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                Selengkapnya
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -13,15 +13,20 @@ app.use(cors());
 app.use(express.json()); // Parsing request body sebagai JSON
 
 // Middleware untuk menyajikan gambar dari disk
-app.use("/assets", express.static("F:/Backend/Kopken/kopken/src/assets"));
-// Atur untuk menyajikan gambar dari folder D:/images
+app.use(
+  "/assets",
+  express.static(
+    "C:\\Users\\Administrator\\Documents\\GitHub\\ukm-it_cybernetix\\src\\assets"
+  )
+);
 
+// Atur untuk menyajikan gambar dari folder D:/images
 
 const port = process.env.PORT;
 const url = process.env.MONGODB;
-const namaDatabase = process.env.kopken;
-const namaKoleksiUser = process.env.user; // Koleksi untuk user
-const namaKoleksiProduct = process.env.product; // Koleksi untuk product
+const namaDatabase = process.env.Database;
+const namaKoleksiUser = process.env.User; // Koleksi untuk user
+const namaKoleksiProduct = process.env.Product; // Koleksi untuk product
 
 let client;
 let userCollection;
