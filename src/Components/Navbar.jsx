@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"; // Pastikan useState diimpor
+import { useEffect, useState } from "react";
 import Cx from "../assets/cx-logo.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`p-4 fixed top-0 left-0 w-full trans ition-all duration-300 ${
+      className={`p-4 fixed top-0 left-0 w-full transition-all duration-300 ${
         isScrolled ? "bg-opacity-50" : ""
       }`}
       style={{
