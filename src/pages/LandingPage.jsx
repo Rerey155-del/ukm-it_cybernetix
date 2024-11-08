@@ -211,7 +211,7 @@ const LandingPage = () => {
               {users.map((user, index) => (
                 <div
                   key={index}
-                  className="bg-white card-body w-60 shadow-2xl rounded-3xl "
+                  className="bg-white card-body w-60 shadow-2xl rounded-3xl  "  data-aos="fade-down"
                 >
                   <img src={user.foto} />
                   <div className="text-center mt-3">
