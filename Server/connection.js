@@ -13,7 +13,6 @@ app.use(cors());
 app.use(express.json()); // Parsing request body sebagai JSON
 
 // Middleware untuk menyajikan gambar dari disk
-
 app.use("/assets", express.static("F:/Backend/Kopken/kopken/src/assets"));
 // Atur untuk menyajikan gambar dari folder D:/images
 
