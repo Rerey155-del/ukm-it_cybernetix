@@ -212,6 +212,8 @@ const LandingPage = () => {
                 <div
                   key={index}
                   className="bg-white card-body w-60 shadow-2xl rounded-3xl"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
                 >
                   <img src={user.foto} />
                   <div className="text-center mt-3">
