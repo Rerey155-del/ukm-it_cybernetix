@@ -20,8 +20,6 @@ app.use(
   )
 );
 
-// Atur untuk menyajikan gambar dari folder D:/images
-
 const port = process.env.PORT;
 const url = process.env.MONGODB;
 const namaDatabase = process.env.Database;
