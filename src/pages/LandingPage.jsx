@@ -10,7 +10,7 @@ import Programming from "../assets/Programming.svg";
 import axios from "axios";
 
 const LandingPage = () => {
-  const [users, setUsers] = useState([]); // Moved `useState` declaration outside `useEffect`
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios
@@ -33,7 +33,7 @@ const LandingPage = () => {
     <section>
       <div
         style={{
-          backgroundColor: "#FFF6E3",
+          backgroundColor: "#FFFFFF",
           minHeight: "100vh",
           width: "100%",
           margin: "0",
@@ -211,7 +211,7 @@ const LandingPage = () => {
               {users.map((user, index) => (
                 <div
                   key={index}
-                  className="bg-white card-body w-60 shadow-2xl rounded-3xl  "  data-aos="fade-down"
+                  className="bg-white card-body w-60 shadow-2xl rounded-3xl"
                 >
                   <img src={user.foto} />
                   <div className="text-center mt-3">
