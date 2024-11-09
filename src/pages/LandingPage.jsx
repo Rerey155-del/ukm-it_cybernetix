@@ -207,7 +207,7 @@ const LandingPage = () => {
                 Hilangkan Rasa Penasaran Dengan mengenal bagian dari kami
               </h2>
             </div>
-            <div className="grid grid-cols-4 p-8 mx-auto justify-items-center font-[Inter]">
+            <div className="grid grid-cols-4 gap-8 p-8 mx-auto justify-items-center font-[Inter]">
               {users.map((user, index) => (
                 <div
                   key={index}
