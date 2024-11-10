@@ -165,7 +165,7 @@ const LandingPage = () => {
             <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               Selengkapnya
             </button>
-            {/* komen */}
+            {/* komen sekali*/}
           </div>
           <div className="justify-center text-center font-bold text-2xl mb-7 mt-[10rem]">
             <h2>Dedikasi Berbuah Cerita Yang Mengesankan</h2>
