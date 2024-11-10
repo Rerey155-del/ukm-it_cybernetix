@@ -54,17 +54,21 @@ const StrukturalPage = () => {
             Struktural Inti
           </h2>
           <div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 gap-y-12 p-8  mx-auto justify-items-center font-[Inter] w-full"
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 lg:p-10 mx-auto justify-items-center font-[Inter] w-full"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {users.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body w-60 shadow-2xl rounded-3xl"
+                className="bg-white w-full sm:w-48 md:w-60 shadow-lg rounded-3xl p-4 sm:p-6 md:p-8"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
-                <img src={user.foto} alt={user.nama} className="w-full h-auto rounded-t-3xl" />
+                <img
+                  src={user.foto}
+                  alt={user.nama}
+                  className="w-full h-auto rounded-t-3xl"
+                />
                 <div className="text-center mt-3">
                   <p className="font-bold">{user.nama}</p>
                   <p>{user.jabatan}</p>
