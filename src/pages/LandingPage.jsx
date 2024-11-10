@@ -164,14 +164,14 @@ const LandingPage = () => {
 
             {/* =============  Modal Loading  ================= */}
             {isLoading && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-                <div className="bg-white p-6 rounded-lg flex flex-col items-center">
+              <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
+                <div className=" p-6 rounded-lg flex flex-col items-center">
                   <l-grid
                     size="70"
                     speed="1.75"
                     color="#F16634"
                   ></l-grid>
-                  <p className="mt-4 font-bold text-lg text-[#F16634]">Loading...</p>
+                  <p className="mt-4 font-bold text-lg text-white">Loading...</p>
                 </div>
               </div>
             )}
