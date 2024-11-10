@@ -2,10 +2,20 @@ import { useEffect, useState } from "react";
 import Cx from "../assets/cx-logo.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   // State untuk mendeteksi apakah navbar sudah di-scroll
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const navigate = useNavigate();
+  const Menu = () => {
+    navigate("/");
+  };
+
+  const Struktural = () => {
+    navigate("/struktural");
+  };
 
   useEffect(() => {
     // Inisialisasi AOS untuk animasi
@@ -49,13 +59,13 @@ const Navbar = () => {
             <img className="w-full h-8" src={Cx} alt="Logo" />
           </li>
           <li>
-            <a href="#">Home</a>
+            <a href="#" onClick={Menu}>Home</a>
           </li>
           <li>
             <a href="#">Activity</a>
           </li>
           <li>
-            <a href="#">Struktural</a>
+            <a href="#" onClick={Struktural}>Struktural</a>
           </li>
           <li>
             <a href="#">Profile</a>

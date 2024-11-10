@@ -14,7 +14,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:2080/user")
+      .get("http://localhost:2080/steeringcommittee")
       .then((response) => {
         setUsers(response.data);
       })

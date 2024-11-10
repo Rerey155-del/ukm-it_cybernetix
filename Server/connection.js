@@ -24,10 +24,11 @@ const port = process.env.PORT;
 const url = process.env.MONGODB;
 const namaDatabase = process.env.Database;
 const namaKoleksiUser = process.env.DPO; // Koleksi untuk user
-const namaKoleksiProduct = process.env.Product; // Koleksi untuk product
+const namaKoleksiLitbang = process.env.Litbang; // Koleksi untuk litbang
 
 let client;
 let userCollection;
+let litbangCollection;
 let productCollection;
 
 // Middleware untuk memastikan koneksi ke MongoDB
@@ -38,10 +39,11 @@ const mongoConnectionMiddleware = async (req, res, next) => {
       await client.connect();
       console.log("Koneksi ke MongoDB berhasil");
 
-      // Ambil database dan koleksi untuk user dan product
+      // Ambil database dan koleksi untuk user, litbang, dan product
       const db = client.db(namaDatabase);
-      userCollection = db.collection(namaKoleksiUser); // Koleksi user
-      productCollection = db.collection(namaKoleksiProduct); // Koleksi product
+      userCollection = db.collection(namaKoleksiUser);
+      litbangCollection = db.collection(namaKoleksiLitbang);
+
     }
     next(); // Lanjutkan ke endpoint berikutnya
   } catch (error) {
@@ -53,27 +55,27 @@ const mongoConnectionMiddleware = async (req, res, next) => {
 // Gunakan middleware pada semua route
 app.use(mongoConnectionMiddleware);
 
-app.get("/user", async (req, res) => {
+app.get("/steeringcommittee", async (req, res) => {
   try {
     const data = await userCollection.find().toArray();
-    res.json(data);
-  } catch {
-    res.status(500).json({ message: "terjadi kesalahan" });
-  }
-});
-
-// Endpoint untuk mendapatkan data dari koleksi "product"
-app.get("/product", async (req, res) => {
-  try {
-    const data = await productCollection.find().toArray(); // Gunakan koleksi "product"
     res.json(data);
   } catch (error) {
     res.status(500).json({ message: "terjadi kesalahan" });
   }
 });
 
+app.get("/litbang", async (req, res) => {
+  try {
+    const data = await litbangCollection.find().toArray();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ message: "terjadi kesalahan" });
+  }
+});
+
+
 // Endpoint POST untuk menambahkan data ke koleksi "user"
-app.post("/user", async (req, res) => {
+app.post("/steeringcommittee", async (req, res) => {
   try {
     const result = await userCollection.insertOne(req.body);
     res.json(result);
@@ -82,14 +84,6 @@ app.post("/user", async (req, res) => {
   }
 });
 
-app.get("/product", async (req, res) => {
-  try {
-    const result = await productCollection.insertOne(req.body);
-    res.json(result);
-  } catch (error) {
-    res.status(500).json({ message: "terjadi kesalahan" });
-  }
-});
 
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
