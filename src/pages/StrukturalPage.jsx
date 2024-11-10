@@ -43,7 +43,6 @@ const StrukturalPage = () => {
         className="text-black"
       >
         <Navbar />
-
         <div className="font-[Lora] p-10 justify-center font-bold text-3xl mb-4 max-w-full mt-6">
           <h2 data-aos="fade-up" className="text-center mb-10">
             Struktural 2024/2025
