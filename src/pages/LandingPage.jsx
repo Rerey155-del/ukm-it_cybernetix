@@ -9,12 +9,13 @@ import Multimedia from "../assets/Multimedia.svg";
 import Programming from "../assets/Programming.svg";
 import axios from "axios";
 import { tailChase } from 'ldrs'
+import { useNavigate } from "react-router-dom";
 tailChase.register()
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get("http://localhost:2080/steeringcommittee")
@@ -34,9 +35,15 @@ const LandingPage = () => {
 
   const showLoadingModal = () => {
     setIsLoading(true);
-    // Simulasi proses loading selama 3 detik
-    setTimeout(() => setIsLoading(false), 3000);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate("/struktural"); // Ganti "/nextPage" dengan path halaman tujuan Anda
+    }, 2000);
   };
+
+  // const Struktural = () => {
+  //   navigate("/struktural");
+  // };
 
   return (
     <section>
@@ -156,7 +163,7 @@ const LandingPage = () => {
           </div>
           <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
             <button
-              className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+              className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg" 
              
             >
               Selengkapnya
