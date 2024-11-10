@@ -157,24 +157,12 @@ const LandingPage = () => {
           <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
             <button
               className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-              onClick={showLoadingModal}
+             
             >
               Selengkapnya
             </button>
 
-            {/* =============  Modal Loading  ================= */}
-            {isLoading && (
-              <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
-                <div className=" p-6 rounded-lg flex flex-col items-center">
-                  <l-grid
-                    size="70"
-                    speed="1.75"
-                    color="#F16634"
-                  ></l-grid>
-                  <p className="mt-4 font-bold text-lg text-white">Loading...</p>
-                </div>
-              </div>
-            )}
+           
           </div>
           <div className="justify-center text-center font-bold text-2xl mb-7 mt-[10rem]">
             <h2>Dedikasi Berbuah Cerita Yang Mengesankan</h2>
@@ -250,12 +238,25 @@ const LandingPage = () => {
               ))}
             </div>
             <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
-              <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+              <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"  onClick={showLoadingModal}>
                 Selengkapnya
               </button>
             </div>
           </div>
         </div>
+         {/* =============  Modal Loading  ================= */}
+         {isLoading && (
+              <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
+                <div className=" p-6 rounded-lg flex flex-col items-center">
+                  <l-grid
+                    size="70"
+                    speed="1.75"
+                    color="#F16634"
+                  ></l-grid>
+                  <p className="mt-4 font-bold text-lg text-white">Loading...</p>
+                </div>
+              </div>
+            )}
       </div>
     </section>
   );
