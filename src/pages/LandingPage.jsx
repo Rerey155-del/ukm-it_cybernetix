@@ -46,7 +46,7 @@ const LandingPage = () => {
   // };
 
   // Coba coba
-  
+  // etek etek jua lamang
   return (
     <section>
       <div
