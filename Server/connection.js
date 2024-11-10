@@ -13,10 +13,16 @@ app.use(cors());
 app.use(express.json()); // Parsing request body sebagai JSON
 
 // Middleware untuk menyajikan gambar dari disk
+// app.use(
+//   "/assets",
+//   express.static(
+//     "C:\\Users\\Administrator\\Documents\\GitHub\\ukm-it_cybernetix\\src\\assets"
+//   )
+// );
 app.use(
   "/assets",
   express.static(
-    "C:\\Users\\Administrator\\Documents\\GitHub\\ukm-it_cybernetix\\src\\assets"
+    "D:\\Ngoding\\React_JS\\ukm-it_cybernetix\\ukm-it_cybernetix\\src\\assets"
   )
 );
 
@@ -43,7 +49,6 @@ const mongoConnectionMiddleware = async (req, res, next) => {
       const db = client.db(namaDatabase);
       userCollection = db.collection(namaKoleksiUser);
       litbangCollection = db.collection(namaKoleksiLitbang);
-
     }
     next(); // Lanjutkan ke endpoint berikutnya
   } catch (error) {
@@ -73,7 +78,6 @@ app.get("/litbang", async (req, res) => {
   }
 });
 
-
 // Endpoint POST untuk menambahkan data ke koleksi "user"
 app.post("/steeringcommittee", async (req, res) => {
   try {
@@ -83,7 +87,6 @@ app.post("/steeringcommittee", async (req, res) => {
     res.status(500).json({ message: "terjadi kesalahan" });
   }
 });
-
 
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
