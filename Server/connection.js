@@ -12,13 +12,15 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Parsing request body sebagai JSON
 
-// Middleware untuk menyajikan gambar dari disk
-// app.use(
-//   "/assets",
-//   express.static(
-//     "C:\\Users\\Administrator\\Documents\\GitHub\\ukm-it_cybernetix\\src\\assets"
-//   )
-// );
+// Middleware untuk menyajikan gambar dari disk (Laptop 1)
+app.use(
+  "/assets",
+  express.static(
+    "C:\\Users\\Administrator\\Documents\\GitHub\\ukm-it_cybernetix\\src\\assets"
+  )
+);
+
+// Middleware untuk menyajikan gambar dari disk (Laptop 2)
 app.use(
   "/assets",
   express.static(
