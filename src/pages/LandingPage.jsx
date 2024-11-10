@@ -46,7 +46,7 @@ const LandingPage = () => {
   // };
 
   // Coba coba
-
+  
   return (
     <section>
       <div
