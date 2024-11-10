@@ -246,7 +246,7 @@ const LandingPage = () => {
         </div>
          {/* =============  Modal Loading  ================= */}
          {isLoading && (
-              <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
+              <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center font-[Inter]">
                 <div className=" p-6 rounded-lg flex flex-col items-center">
                   <l-grid
                     size="70"
