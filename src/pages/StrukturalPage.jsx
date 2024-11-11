@@ -7,15 +7,24 @@ import axios from "axios";
 const StrukturalPage = () => {
   const [users, setUsers] = useState([]);
   const [litbangUser, setLitbangUser] = useState([]);
+  const [psdmUser, setPsdmUser] = useState([]);
+  const [infokomUser, setInfokomUser] = useState([]);
+  const [humasUser, setHumasUser] = useState([]);
 
   useEffect(() => {
     Promise.all([
       axios.get("http://localhost:2080/steeringcommittee"),
       axios.get("http://localhost:2080/litbang"),
+      axios.get("http://localhost:2080/psdm"),
+      axios.get("http://localhost:2080/infokom"),
+      axios.get("http://localhost:2080/humas"),
     ])
-      .then(([steeringResponse, litbangResponse]) => {
+      .then(([steeringResponse, litbangResponse,psdmResponse,infokomResponse,humasResponse]) => {
         setUsers(steeringResponse.data);
-        setLitbangUser(litbangResponse.data); // Menyimpan data untuk pengguna litbang
+        setLitbangUser(litbangResponse.data); 
+        setPsdmUser(psdmResponse.data);
+        setInfokomUser(infokomResponse.data);
+        setHumasUser(humasResponse.data)// Menyimpan data untuk pengguna litbang
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -92,6 +101,84 @@ const StrukturalPage = () => {
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {litbangUser.map((user, index) => (
+              <div
+                key={index}
+                className="bg-white w-full sm:w-48 md:w-60 shadow-lg rounded-3xl p-4 sm:p-6 md:p-8"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                <img
+                  src={user.foto}
+                  alt={user.nama}
+                  className="w-full h-auto rounded-t-3xl"
+                />
+                <div className="text-center mt-3">
+                  <p className="font-bold">{user.nama}</p>
+                  <p>{user.jabatan}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <h2 className="font-[Lora] font-semibold text-3xl mb-4 mt-6">
+            Bidang Informasi dan Komunikasi
+          </h2>
+          <div
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 lg:p-10 mx-auto justify-items-center font-[Inter] w-full"
+            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
+          >
+            {infokomUser.map((user, index) => (
+              <div
+                key={index}
+                className="bg-white w-full sm:w-48 md:w-60 shadow-lg rounded-3xl p-4 sm:p-6 md:p-8"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                <img
+                  src={user.foto}
+                  alt={user.nama}
+                  className="w-full h-auto rounded-t-3xl"
+                />
+                <div className="text-center mt-3">
+                  <p className="font-bold">{user.nama}</p>
+                  <p>{user.jabatan}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <h2 className="font-[Lora] font-semibold text-3xl mb-4 mt-6">
+            Bidang Hubungan Masyarakat
+          </h2>
+          <div
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 lg:p-10 mx-auto justify-items-center font-[Inter] w-full"
+            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
+          >
+            {humasUser.map((user, index) => (
+              <div
+                key={index}
+                className="bg-white w-full sm:w-48 md:w-60 shadow-lg rounded-3xl p-4 sm:p-6 md:p-8"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                <img
+                  src={user.foto}
+                  alt={user.nama}
+                  className="w-full h-auto rounded-t-3xl"
+                />
+                <div className="text-center mt-3">
+                  <p className="font-bold">{user.nama}</p>
+                  <p>{user.jabatan}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <h2 className="font-[Lora] font-semibold text-3xl mb-4 mt-6">
+            Bidang Pengembangan Sumber Daya Manusia
+          </h2>
+          <div
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 lg:p-10 mx-auto justify-items-center font-[Inter] w-full"
+            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
+          >
+            {psdmUser.map((user, index) => (
               <div
                 key={index}
                 className="bg-white w-full sm:w-48 md:w-60 shadow-lg rounded-3xl p-4 sm:p-6 md:p-8"

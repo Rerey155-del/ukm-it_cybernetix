@@ -33,11 +33,16 @@ const url = process.env.MONGODB;
 const namaDatabase = process.env.Database;
 const namaKoleksiUser = process.env.DPO; // Koleksi untuk user
 const namaKoleksiLitbang = process.env.Litbang; // Koleksi untuk litbang
+const namaKoleksiPSDM = process.env.PSDM; // Koleksi untuk PSDM
+const namaKoleksiHumas = process.env.Humas; // Koleksi untuk humas
+const namaKoleksiInfokom = process.env.Infokom; // Koleksi untuk infokom
 
 let client;
 let userCollection;
 let litbangCollection;
-let productCollection;
+let pSDMCollection;
+let humasCollection;
+let infokomCollection;
 
 // Middleware untuk memastikan koneksi ke MongoDB
 const mongoConnectionMiddleware = async (req, res, next) => {
@@ -47,10 +52,13 @@ const mongoConnectionMiddleware = async (req, res, next) => {
       await client.connect();
       console.log("Koneksi ke MongoDB berhasil");
 
-      // Ambil database dan koleksi untuk user, litbang, dan product
+      // Ambil database dan koleksi
       const db = client.db(namaDatabase);
       userCollection = db.collection(namaKoleksiUser);
       litbangCollection = db.collection(namaKoleksiLitbang);
+      pSDMCollection = db.collection(namaKoleksiPSDM);
+      humasCollection = db.collection(namaKoleksiHumas);
+      infokomCollection = db.collection(namaKoleksiInfokom);
     }
     next(); // Lanjutkan ke endpoint berikutnya
   } catch (error) {
@@ -62,9 +70,37 @@ const mongoConnectionMiddleware = async (req, res, next) => {
 // Gunakan middleware pada semua route
 app.use(mongoConnectionMiddleware);
 
+// Routes untuk mendapatkan data
 app.get("/steeringcommittee", async (req, res) => {
   try {
     const data = await userCollection.find().toArray();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ message: "terjadi kesalahan" });
+  }
+});
+
+app.get("/psdm", async (req, res) => {
+  try {
+    const data = await pSDMCollection.find().toArray();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ message: "terjadi kesalahan" });
+  }
+});
+
+app.get("/infokom", async (req, res) => {
+  try {
+    const data = await infokomCollection.find().toArray();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ message: "terjadi kesalahan" });
+  }
+});
+
+app.get("/humas", async (req, res) => {
+  try {
+    const data = await humasCollection.find().toArray();
     res.json(data);
   } catch (error) {
     res.status(500).json({ message: "terjadi kesalahan" });
