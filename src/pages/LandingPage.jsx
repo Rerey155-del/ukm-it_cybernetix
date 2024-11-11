@@ -45,11 +45,10 @@ const LandingPage = () => {
   //   navigate("/struktural");
   // };
 
-  // Coba coba
-  // etek etek jua lamang
   return (
     <section>
       <div
+         
         style={{
           backgroundColor: "#FFFFFF",
           minHeight: "100vh",
@@ -242,7 +241,7 @@ const LandingPage = () => {
               ))}
             </div>
             <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
-              <button
+              <button 
                 className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 onClick={showLoadingModal}
               >

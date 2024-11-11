@@ -39,9 +39,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`p-4 fixed top-0 left-0 w-full transition-all duration-300 ${
-        isScrolled ? "bg-opacity-50" : ""
-      }`}
+      className={`p-4 fixed top-0 left-0 w-full transition-all duration-300 ${isScrolled ? "bg-opacity-50" : ""
+        }`}
       style={{
         backdropFilter: isScrolled ? "blur(10px)" : "none", // Jika di-scroll, tambahkan efek blur
         position: "fixed", // Navbar akan selalu tetap di atas
@@ -59,19 +58,19 @@ const Navbar = () => {
             <img className="w-full h-8" src={Cx} alt="Logo" />
           </li>
           <li>
-            <a href="#" onClick={Menu}>Home</a>
+            <a href="" onClick={(e) => { e.preventDefault(); Menu(); }}>Home</a> {/*Mencegah perilaku default <a> yang biasanya melakukan navigasi dan reload halaman. */}
           </li>
           <li>
-            <a href="#">Activity</a>
+            <a href="">Activity</a>
           </li>
           <li>
-            <a href="#" onClick={Struktural}>Struktural</a>
+            <a href="" onClick={(e) => { e.preventDefault(); Struktural(); }}>Struktural</a>
           </li>
           <li>
-            <a href="#">Profile</a>
+            <a href="">Profile</a>
           </li>
           <li>
-            <a href="#">Recruitment</a>
+            <a href="">Recruitment</a>
           </li>
         </ul>
       </div>

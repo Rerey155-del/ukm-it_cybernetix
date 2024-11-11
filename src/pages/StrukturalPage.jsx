@@ -25,7 +25,9 @@ const StrukturalPage = () => {
   return (
     <section style={{ overflow: "hidden" }}>
       <div
+      
         style={{
+          
           backgroundColor: "#FFFFFF",
           minHeight: "100vh",
           width: "100%",
