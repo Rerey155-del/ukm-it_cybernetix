@@ -13,11 +13,11 @@ const StrukturalPage = () => {
 
   useEffect(() => {
     Promise.all([
-      axios.get("http://localhost:2080/steeringcommittee"),
-      axios.get("http://localhost:2080/litbang"),
-      axios.get("http://localhost:2080/psdm"),
-      axios.get("http://localhost:2080/infokom"),
-      axios.get("http://localhost:2080/humas"),
+      axios.get("https://express-mongo-lac.vercel.app/steeringcommittee"),
+      axios.get("https://express-mongo-lac.vercel.app/litbang"),
+      axios.get("https://express-mongo-lac.vercel.app/psdm"),
+      axios.get("https://express-mongo-lac.vercel.app/infokom"),
+      axios.get("https://express-mongo-lac.vercel.app/humas"),
     ])
       .then(([steeringResponse, litbangResponse,psdmResponse,infokomResponse,humasResponse]) => {
         setUsers(steeringResponse.data);

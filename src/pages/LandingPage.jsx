@@ -18,7 +18,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("http://localhost:2080/steeringcommittee")
+      .get("https://express-mongo-lac.vercel.app/steeringcommittee")
       .then((response) => {
         setUsers(response.data);
       })
