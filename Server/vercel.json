@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "connection.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "connection.js"
+      }
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "devCommand": "npm run dev",
+    "buildCommand": "npm run build"
+  }

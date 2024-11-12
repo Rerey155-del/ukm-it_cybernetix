@@ -4,6 +4,8 @@ import express from "express";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv"; // Load environment variables
 import cors from "cors";
+import multer from "multer";
+import cloudinary from "./cloudinaryConfig.js";
 
 // LOAD ENVIRONMENT VARIABLES
 dotenv.config();
@@ -11,6 +13,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json()); // Parsing request body sebagai JSON
+const upload = multer({ storage: multer.memoryStorage() }); // Setup multer dengan memory storage
 
 // Middleware untuk menyajikan gambar dari disk (Laptop 1)
 app.use(
@@ -123,6 +126,26 @@ app.post("/steeringcommittee", async (req, res) => {
     res.json(result);
   } catch (error) {
     res.status(500).json({ message: "terjadi kesalahan" });
+  }
+});
+
+app.post("/upload", upload.single("file"), async (req, res) => {
+  try {
+    // Unggah file ke Cloudinary menggunakan stream
+    const result = await new Promise((resolve, reject) => {
+      const stream = cloudinary.uploader.upload_stream(
+        { folder: "uploads" }, // Folder di Cloudinary tempat menyimpan gambar
+        (error, result) => {
+          if (result) resolve(result);
+          else reject(error);
+        }
+      );
+      stream.end(req.file.buffer); // Kirim file yang diunggah ke Cloudinary
+    });
+
+    res.json({ message: "Upload berhasil", url: result.secure_url });
+  } catch (error) {
+    res.status(500).json({ message: "Terjadi kesalahan saat upload", error });
   }
 });
 
