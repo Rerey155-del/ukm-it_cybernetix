@@ -50,7 +50,7 @@ const LandingPage = () => {
       <div
          
         style={{
-          backgroundColor: "#F5F5DC",
+          backgroundColor: "#FFFFFF",
           minHeight: "100vh",
           width: "100%",
           margin: "0",
