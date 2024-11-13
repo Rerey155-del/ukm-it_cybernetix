@@ -37,7 +37,7 @@ const StrukturalPage = () => {
       
         style={{
           
-          backgroundColor: "#FFFFFF",
+          backgroundColor: "#F5F5DC",
           minHeight: "100vh",
           width: "100%",
           margin: "0",
