@@ -19,9 +19,9 @@ const StrukturalPage = () => {
       axios.get("https://express-mongo-lac.vercel.app/infokom"),
       axios.get("https://express-mongo-lac.vercel.app/humas"),
     ])
-      .then(([steeringResponse, litbangResponse,psdmResponse,infokomResponse,humasResponse]) => {
+      .then(([steeringResponse, litbangResponse, psdmResponse, infokomResponse, humasResponse]) => {
         setUsers(steeringResponse.data);
-        setLitbangUser(litbangResponse.data); 
+        setLitbangUser(litbangResponse.data);
         setPsdmUser(psdmResponse.data);
         setInfokomUser(infokomResponse.data);
         setHumasUser(humasResponse.data)// Menyimpan data untuk pengguna litbang
@@ -34,16 +34,15 @@ const StrukturalPage = () => {
   return (
     <section style={{ overflow: "hidden" }}>
       <div
-      
+
         style={{
-          backgroundColor: "rgba(255, 255, 255, 0.8)",
+          backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
           minHeight: "100vh",
           width: "100%",
           margin: "0",
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
-          overflowY: "hidden", // Menghilangkan scroll vertikal
           backgroundImage: `url(${glowEffect})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",

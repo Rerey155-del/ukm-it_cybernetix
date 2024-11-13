@@ -49,7 +49,7 @@ const LandingPage = () => {
     <section>
       <div
          style={{
-          backgroundColor: "rgba(255, 255, 255, 0.8)",
+          backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
           minHeight: "100vh",
           width: "100%",
           margin: "0",
