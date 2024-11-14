@@ -4,11 +4,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 
+
 const Navbar = () => {
   // State untuk mendeteksi apakah navbar sudah di-scroll
   const [isScrolled, setIsScrolled] = useState(false);
 
+
   const navigate = useNavigate();
+
   const Menu = () => {
     navigate("/");
   };
@@ -25,7 +28,7 @@ const Navbar = () => {
 
     // Event listener untuk mendeteksi scroll
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Jika scroll lebih dari 50px, set isScrolled menjadi true
+      setIsScrolled(window.scrollY > 50);
     };
 
     // Tambahkan event listener
@@ -38,43 +41,64 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`p-4 fixed top-0 left-0 w-full transition-all duration-300 ${isScrolled ? "bg-opacity-50" : ""
-        }`}
-      style={{
-        backdropFilter: isScrolled ? "blur(10px)" : "none", // Jika di-scroll, tambahkan efek blur
-        position: "fixed", // Navbar akan selalu tetap di atas
-        width: "100%", // Lebar penuh
-        top: 0, // Tetap di bagian atas layar
-        zIndex: 1, // Z-index lebih tinggi untuk memastikan navbar berada di depan elemen lain
-      }}
-    >
-      <div
-        data-aos="fade-up"
-        className="container mx-auto flex justify-start pl-14 items-center font-[inter]"
+    <>
+      <nav
+        className={`p-4 fixed top-0 left-0 w-full transition-all duration-300 ${isScrolled ? "bg-opacity-50" : ""} hidden md:block`}
+        style={{
+          backdropFilter: isScrolled ? "blur(10px)" : "none",
+          position: "fixed",
+          width: "100%",
+          top: 0,
+          zIndex: 1,
+        }}
       >
-        <ul className="flex space-x-4">
-          <li>
-            <img className="w-full h-8" src={Cx} alt="Logo" />
-          </li>
-          <li>
-            <a href="" onClick={(e) => { e.preventDefault(); Menu(); }}>Home</a> {/*Mencegah perilaku default <a> yang biasanya melakukan navigasi dan reload halaman. */}
-          </li>
-          <li>
-            <a href="">Activity</a>
-          </li>
-          <li>
-            <a href="" onClick={(e) => { e.preventDefault(); Struktural(); }}>Struktural</a>
-          </li>
-          <li>
-            <a href="">Profile</a>
-          </li>
-          <li>
-            <a href="">Recruitment</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <div
+          data-aos="fade-up"
+          className="container mx-auto flex justify-start pl-14 items-center font-[inter]"
+        >
+          <ul className="flex space-x-4">
+            <div className="text-center">
+            </div>
+           
+            <li>
+              <img className="w-full h-8" src={Cx} alt="Logo" />
+            </li>
+            <li>
+              <a
+                href=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  Menu();
+                }}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="">Activity</a>
+            </li>
+            <li>
+              <a
+                href=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  Struktural();
+                }}
+              >
+                Struktural
+              </a>
+            </li>
+            <li>
+              <a href="">Profile</a>
+            </li>
+            <li>
+              <a href="">Recruitment</a>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+    </>
   );
 };
 

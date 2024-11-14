@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import flowbite from 'flowbite/plugin.cjs';
 import daisyui from 'daisyui';
 
 export default {
@@ -17,5 +18,8 @@ export default {
       },
     },
   },
-  plugins: [daisyui],
+  plugins: [daisyui,
+    flowbite
+  ],
+  
 }

@@ -10,6 +10,7 @@ import Programming from "../assets/Programming.svg";
 import axios from "axios";
 import { tailChase } from "ldrs";
 import { useNavigate } from "react-router-dom";
+import Sidebar from "../Components/Sidebar";
 tailChase.register();
 
 const LandingPage = () => {
@@ -48,7 +49,7 @@ const LandingPage = () => {
   return (
     <section>
       <div
-         style={{
+        style={{
           backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
           minHeight: "100vh",
           width: "100%",
@@ -65,31 +66,35 @@ const LandingPage = () => {
         className="overflow-y-auto text-black"
       >
         <Navbar />
-        <div className="p-20 items-center grid grid-cols-2 space-x-40 mb-28 mt-10">
-          <div data-aos="fade-up" data-aos-duration="2000">
-            <div className=" font-bold text-3xl mb-4">
+        <Sidebar />
+        <div className="p-6 sm:p-10 md:p-16 lg:p-20 items-center grid grid-cols-1 md:grid-cols-2 space-y-8 md:space-x-40 mb-10 sm:mb-20 mt-6 sm:mt-10">
+          <div data-aos="fade-up" data-aos-duration="2000" className="text-center md:text-left">
+            <div className="font-bold text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-4 text-left ">
               <h1>Unit Kegiatan Mahasiswa</h1>
               <h1>IT Cybernetix</h1>
             </div>
+
             <div>
-              <p className="break-words w-[35em] mb-5 font-[Inter]">
+              <p className="break-words w-full md:w-[35em] mx-auto md:mx-0 mb-5 font-[Inter] text-sm sm:text-base text-left md:text-lg lg:text-xl ">
                 Wadah pemberdayaan mahasiswa yang berfokus membangun
                 keterampilan dalam mengenal dunia teknologi
               </p>
-              <div className="space-x-4 text-white font-[Inter]">
-                <button className="rounded-lg bg-[#F16634] p-3 font-semibold cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+              <div className="flex space-x-4 justify-center md:justify-start text-white font-[Inter]">
+                <button className="rounded-lg bg-[#F16634] p-3 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg">
                   Kenali Kami
                 </button>
-                <button className="rounded-lg bg-[#373737] p-3 font-semibold cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                <button className="rounded-lg bg-[#373737] p-3 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg">
                   Gabung Sekarang
                 </button>
               </div>
+
             </div>
           </div>
-          <div className="image-container" data-aos="zoom-in">
-            <img src={foto1} alt="" className="size-[25rem]" />
+          <div className="image-container mx-auto md:mx-0" data-aos="zoom-in">
+            <img src={foto1} alt="" className="w-full md:w-[25rem] max-w-full" />
           </div>
         </div>
+
         <div>
           <div className="justify-center text-center font-bold text-2xl mb-10">
             <h2>Unit Kegiatan Mahasiswa </h2>
@@ -240,7 +245,7 @@ const LandingPage = () => {
               ))}
             </div>
             <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
-              <button 
+              <button
                 className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 onClick={showLoadingModal}
               >
