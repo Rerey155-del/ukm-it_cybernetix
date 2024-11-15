@@ -34,13 +34,15 @@ const LandingPage = () => {
     });
   }, []);
 
-  const showLoadingModal = () => {
+  const showLoadingStruktural = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
       navigate("/struktural"); // Ganti "/nextPage" dengan path halaman tujuan Anda
     }, 2000);
   };
+
+ 
 
   // const Struktural = () => {
   //   navigate("/struktural");
@@ -247,7 +249,7 @@ const LandingPage = () => {
             <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
               <button
                 className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                onClick={showLoadingModal}
+                onClick={showLoadingStruktural}
               >
                 Selengkapnya
               </button>
