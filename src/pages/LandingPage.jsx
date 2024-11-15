@@ -51,8 +51,8 @@ const LandingPage = () => {
       <div
         style={{
           background: `linear-gradient(
-            rgba(255, 255, 255, 0.8), 
-            rgba(255, 255, 255, 0.5)
+            rgba(255, 255, 255, 0.95), 
+            rgba(255, 255, 255, 0.7)
           ), url(${glowEffect})`,
           minHeight: "100vh",
           width: "100%",
