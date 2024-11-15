@@ -50,16 +50,14 @@ const LandingPage = () => {
     <section>
       <div
         style={{
-          background: `linear-gradient(
-            rgba(255, 255, 255, 0.95), 
-            rgba(255, 255, 255, 0.7)
-          ), url(${glowEffect})`,
+          backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
           minHeight: "100vh",
           width: "100%",
           margin: "0",
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
+          backgroundImage: `url(${glowEffect})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
