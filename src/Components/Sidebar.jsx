@@ -1,21 +1,31 @@
 import { useState } from "react";
 import Menu from "../assets/menu.svg";
-import Tentang from "../assets/tentang.svg";
-import Kontak from "../assets/kontak.svg";
-import Keterampilan from "../assets/keterampilan.svg";
-import Address from "../assets/address.svg";
+import Tentang from "../assets/divisi.svg";
+
 import Proyek from "../assets/proyek.svg";
-import Divisi from "../assets/divisi.svg";
+
 import Cx from "../assets/cx-logo.svg";
+import { useNavigate } from "react-router-dom";
+
 
 const Sidebar = () => {
     // Tambahkan state untuk mengelola visibilitas Sidebar
     const [isOpen, setIsOpen] = useState(false);
 
+    const navigate = useNavigate();
+
     // Fungsi untuk membuka dan menutup Sidebar
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
+
+    const Dashboard = () => {
+        navigate("/");
+      };
+
+      const Struktural = () => {
+        navigate("/struktural");
+      };
 
     return (
         <div>
@@ -53,42 +63,21 @@ const Sidebar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="flex items-center p-2 rounded-lg text-gray-900 hover:text-white hover:bg-[#F16634] dark:text-white group"
-                            >
+                                className="flex items-center p-2 rounded-lg text-gray-900 hover:text-white hover:bg-[#F16634] dark:text-white group" onClick={Dashboard}
+                            > 
                                 <img src={Tentang} alt="" />
                                 <span className="ms-3 text-black hover:text-white">Dashboard</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group">
+                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Struktural}>
                             <img src={Proyek} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Tentang saya</span>
-                            </a>
-                        </li><li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group">
-                            <img src={Address} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Proyek</span>
+                                <span className="ms-3 text-black hover:text-white">Struktural</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group">
-                            <img src={Keterampilan} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Address</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group">
-                            <img src={Divisi} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Keterampilan</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group">
-                            <img src={Kontak} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Divisi</span>
-                            </a>
-                        </li>
+                        
+                       
                         
 
                     </ul>
