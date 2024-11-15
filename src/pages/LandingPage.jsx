@@ -222,7 +222,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="mt-28">
+          <div className="px-2 lg:px-10 max-w-full mt-16">
             <div>
               <h2 className="text-2xl text-center font-bold lg:text-2xl mb-5">
                 Hilangkan Rasa Penasaran Dengan mengenal bagian dari kami
