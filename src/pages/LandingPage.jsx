@@ -228,11 +228,11 @@ const LandingPage = () => {
                 Hilangkan Rasa Penasaran Dengan mengenal bagian dari kami
               </h2>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 mx-auto justify-items-center font-[Inter]">
+            <div className="grid grid-cols-2 px-8 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 mx-auto justify-items-center font-[Inter]">
               {users.map((user, index) => (
                 <div
                   key={index}
-                  className="bg-white card-body w-60 shadow-2xl rounded-3xl"
+                  className="bg-white card-body sm: w-[13rem]  md:w-60  lg:w-60 shadow-2xl rounded-3xl"
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
