@@ -78,7 +78,7 @@ const StrukturalPage = () => {
             {users.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 shadow-xl rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -105,7 +105,7 @@ const StrukturalPage = () => {
             {litbangUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 shadow-xl rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -131,7 +131,7 @@ const StrukturalPage = () => {
             {infokomUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 shadow-xl rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -157,7 +157,7 @@ const StrukturalPage = () => {
             {humasUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 shadow-xl rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -183,7 +183,7 @@ const StrukturalPage = () => {
             {psdmUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 shadow-xl rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
