@@ -50,14 +50,16 @@ const LandingPage = () => {
     <section>
       <div
         style={{
-          backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
+          background: `linear-gradient(
+            rgba(255, 255, 255, 0.8), 
+            rgba(255, 255, 255, 0.5)
+          ), url(${glowEffect})`,
           minHeight: "100vh",
           width: "100%",
           margin: "0",
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
-          backgroundImage: `url(${glowEffect})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -67,7 +69,7 @@ const LandingPage = () => {
       >
         <Navbar />
         <Sidebar />
-        <div className="p-6 sm:p-10 md:p-16 lg:p-20 items-center grid grid-cols-1 md:grid-cols-2 space-y-8 md:space-x-40 mb-10 sm:mb-20 mt-6 sm:mt-10">
+        <div className="p-6 sm:p-10 md:p-16 lg:p-20 items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-20 mt-6 sm:mt-10">
           <div data-aos="fade-up" data-aos-duration="2000" className="text-center md:text-left">
             <div className="font-bold text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-4 text-left ">
               <h1>Unit Kegiatan Mahasiswa</h1>

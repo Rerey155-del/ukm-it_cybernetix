@@ -37,14 +37,16 @@ const StrukturalPage = () => {
       <div
 
         style={{
-          backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
+          background: `linear-gradient(
+            rgba(255, 255, 255, 0.8), 
+            rgba(255, 255, 255, 0.5)
+          ), url(${glowEffect})`,
           minHeight: "100vh",
           width: "100%",
           margin: "0",
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
-          backgroundImage: `url(${glowEffect})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -55,7 +57,7 @@ const StrukturalPage = () => {
         <Navbar />
         <Sidebar />
         <div className="font-[Lora] p-4 sm:p-6 md:p-10 justify-center font-bold text-2xl md:text-3xl mb-4 max-w-full mt-6">
-          <h2 data-aos="fade-up" className="text-center mb-6 sm:mb-8 md:mb-10">
+          <h2 data-aos="fade-up" className="text-center mb-6 sm:mb-8 md:mb-5">
             Struktural 2024/2025
           </h2>
           <img
@@ -72,7 +74,7 @@ const StrukturalPage = () => {
             Struktural Inti
           </h2>
           <div
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6 lg:p-8 space-y-3 mx-auto justify-items-center font-[Inter]"
             style={{ overflow: "hidden" }}
           >
             {users.map((user, index) => (
