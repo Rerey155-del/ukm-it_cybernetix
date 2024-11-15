@@ -96,7 +96,7 @@ const LandingPage = () => {
         </div>
 
         <div>
-          <div className="justify-center text-center font-bold text-2xl mb-10">
+          <div className="text-2xl justify-center text-center font-bold lg:text-2xl mb-10">
             <h2>Unit Kegiatan Mahasiswa </h2>
             <h2>Dengan Divisi Standar Industri</h2>
           </div>
@@ -131,7 +131,7 @@ const LandingPage = () => {
             <div className="justify-center text-center font-bold text-2xl mb-5">
               <h2>Portofolio Kami</h2>
             </div>
-            <div className="grid grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
+            <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
                 className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
@@ -171,7 +171,7 @@ const LandingPage = () => {
               Selengkapnya
             </button>
           </div>
-          <div className="justify-center text-center font-bold text-2xl mb-7 mt-[10rem]">
+          <div className="text-2xl justify-center text-center font-bold lg:text-2xl mb-7 mt-[10rem]">
             <h2>Dedikasi Berbuah Cerita Yang Mengesankan</h2>
 
             <div className="grid gap-4 px-20 mt-10">
@@ -224,11 +224,11 @@ const LandingPage = () => {
           </div>
           <div className="mt-28">
             <div>
-              <h2 className="text-center font-bold text-2xl mb-5">
+              <h2 className="text-2xl text-center font-bold lg:text-2xl mb-5">
                 Hilangkan Rasa Penasaran Dengan mengenal bagian dari kami
               </h2>
             </div>
-            <div className="grid grid-cols-4 gap-8 p-8 mx-auto justify-items-center font-[Inter]">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 mx-auto justify-items-center font-[Inter]">
               {users.map((user, index) => (
                 <div
                   key={index}
