@@ -100,7 +100,7 @@ const LandingPage = () => {
             <h2>Unit Kegiatan Mahasiswa </h2>
             <h2>Dengan Divisi Standar Industri</h2>
           </div>
-          <div className="grid grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
+          <div className="grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
             <div className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <div>
                 <img src={Multimedia} alt="" className="size-28" />
