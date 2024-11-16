@@ -12,6 +12,7 @@ import { tailChase } from "ldrs";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 tailChase.register();
+import Footer from "../Components/Footer";
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
@@ -42,8 +43,6 @@ const LandingPage = () => {
     }, 2000);
   };
 
- 
-
   // const Struktural = () => {
   //   navigate("/struktural");
   // };
@@ -70,7 +69,11 @@ const LandingPage = () => {
         <Navbar />
         <Sidebar />
         <div className="p-6 sm:p-10 md:p-16 lg:p-20 items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-20 mt-6 sm:mt-10">
-          <div data-aos="fade-up" data-aos-duration="2000" className="text-center md:text-left">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            className="text-center md:text-left"
+          >
             <div className="font-bold text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-4 text-left ">
               <h1>Unit Kegiatan Mahasiswa</h1>
               <h1>IT Cybernetix</h1>
@@ -89,11 +92,14 @@ const LandingPage = () => {
                   Gabung Sekarang
                 </button>
               </div>
-
             </div>
           </div>
           <div className="image-container mx-auto md:mx-0" data-aos="zoom-in">
-            <img src={foto1} alt="" className="w-full md:w-[25rem] max-w-full" />
+            <img
+              src={foto1}
+              alt=""
+              className="w-full md:w-[25rem] max-w-full"
+            />
           </div>
         </div>
 
@@ -238,7 +244,7 @@ const LandingPage = () => {
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
-                  <img src={user.foto}  />
+                  <img src={user.foto} />
                   <div className="text-center mt-3">
                     <p className="font-bold">{user.nama}</p>
                     <p>{user.jabatan}</p>
@@ -266,6 +272,7 @@ const LandingPage = () => {
           </div>
         )}
       </div>
+      <Footer />
     </section>
   );
 };
