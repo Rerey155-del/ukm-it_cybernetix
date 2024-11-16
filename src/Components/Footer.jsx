@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-blue-900 to-orange-500 text-white opacity-80 py-12">
@@ -38,7 +36,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Sekretariat</h3>
             <address className="not-italic space-y-2">
-              Universitas Putra Indonesia "YPTK"
+              Universitas Putra Indonesia YPTK
               <br />
               Jl. Raya Lubuk Begalung Student Center Lt. 2<br />
               Padang, Sumatera Barat
@@ -89,5 +87,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;
