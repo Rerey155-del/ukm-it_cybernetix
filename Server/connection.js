@@ -16,20 +16,20 @@ app.use(express.json()); // Parsing request body sebagai JSON
 const upload = multer({ storage: multer.memoryStorage() }); // Setup multer dengan memory storage
 
 // Middleware untuk menyajikan gambar dari disk (Laptop 1)
-app.use(
-  "/assets",
-  express.static(
-    "C:\\Users\\Administrator\\Documents\\GitHub\\ukm-it_cybernetix\\src\\assets"
-  )
-);
+// app.use(
+//   "/assets",
+//   express.static(
+//     "C:\\Users\\Administrator\\Documents\\GitHub\\ukm-it_cybernetix\\src\\assets"
+//   )
+// );
 
 // Middleware untuk menyajikan gambar dari disk (Laptop 2)
-app.use(
-  "/assets",
-  express.static(
-    "D:\\Ngoding\\React_JS\\ukm-it_cybernetix\\ukm-it_cybernetix\\src\\assets"
-  )
-);
+// app.use(
+//   "/assets",
+//   express.static(
+//     "D:\\Ngoding\\React_JS\\ukm-it_cybernetix\\ukm-it_cybernetix\\src\\assets"
+//   )
+// );
 
 const port = process.env.PORT;
 const url = process.env.MONGODB;
