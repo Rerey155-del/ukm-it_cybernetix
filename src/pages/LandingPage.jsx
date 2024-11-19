@@ -109,25 +109,25 @@ const LandingPage = () => {
             <h2>Dengan Divisi Standar Industri</h2>
           </div>
           <div className="grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+            <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg" >
               <div>
-                <img src={Multimedia} alt="" className="size-28" />
+                <img src={Multimedia} alt="" className="w-20 h-20 lg:w-28 lg:h-28" />
               </div>
               <h2 className="card-title">Multimedia</h2>
               <p>UIX Design, Design, Video Editing</p>
             </div>
 
-            <div className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+            <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <div>
-                <img src={Programming} alt="" className="size-28" />
+                <img src={Programming} alt="" className="w-20 h-20 lg:w-28 lg:h-28" />
               </div>
               <h2 className="card-title">Programming</h2>
               <p>Frontend Dev & Backend Dev</p>
             </div>
 
-            <div className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+            <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <div>
-                <img src={Network} alt="" className="size-28" />
+                <img src={Network} alt="" className="w-20 h-20 lg:w-28 lg:h-28" />
               </div>
               <h2 className="card-title">Networking</h2>
               <p>Networking Fundamental</p>
@@ -179,56 +179,70 @@ const LandingPage = () => {
               Selengkapnya
             </button>
           </div>
-          <div className="text-xl justify-center text-center font-bold lg:text-2xl mb-7 mt-[10rem]">
+
+          <div className="h-16 sm:h-20 lg:h-36 w-full bg-[#1D3D71] p-8 ">
+            <div className="gap-12 flex items-center justify-center text-white text-xl lg:gap-40  ">
+              <div className="text-base text-center lg:space-y-3 lg:text-xl ">
+                <p>340+</p>
+                <p>anggota aktif</p>
+              </div>
+              <div className="text-base text-center lg:space-y-3 lg:text-xl">
+                <p>340+</p>
+                <p>Total Alumni</p>
+              </div>
+              <div className="text-base text-center lg:space-y-3 lg:text-xl ">
+                <p>340+</p>
+                <p>Project</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-xl justify-center text-center font-bold lg:text-2xl mb-7 mt-[3rem]">
             <h2>Dedikasi Berbuah Cerita Yang Mengesankan</h2>
 
-            <div className="grid gap-4 px-20 mt-10">
-              <div>
+            <div className=" grid grid-cols-1 flex gap-4 px-8 mt-10 lg:flex gap-4 mt-10 lg:px-12 ">
+              {/* Gambar Utama */}
+              <div className="flex-1">
                 <img
-                  className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:shadow-lg"
+                  className="h-full w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:shadow-lg"
                   src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
                   alt="Featured Image"
                 />
               </div>
 
-              <div className="grid grid-cols-5 gap-4">
+              {/* Grid 4 Gambar */}
+              <div className="grid grid-cols-2 gap-4 flex-1">
                 <div>
                   <img
-                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
-                    alt="Image 1"
-                  />
-                </div>
-                <div>
-                  <img
-                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
                     src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
                     alt="Image 2"
                   />
                 </div>
                 <div>
                   <img
-                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
                     src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
                     alt="Image 3"
                   />
                 </div>
                 <div>
                   <img
-                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
                     src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
                     alt="Image 4"
                   />
                 </div>
                 <div>
                   <img
-                    className="h-auto max-w-full rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
                     src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
                     alt="Image 5"
                   />
                 </div>
               </div>
             </div>
+
           </div>
           <div className="px-2 lg:px-10 max-w-full mt-16">
             <div>
