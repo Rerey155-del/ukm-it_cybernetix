@@ -180,17 +180,17 @@ const LandingPage = () => {
             </button>
           </div>
 
-          <div className="h-16 sm:h-20 lg:h-36 w-full bg-[#1D3D71] p-8 ">
+          <div className="p-3 h-16 sm:h-20 lg:h-36 w-full bg-[#1D3D71] lg:p-8 ">
             <div className="gap-12 flex items-center justify-center text-white text-xl lg:gap-40  ">
-              <div className="text-base text-center lg:space-y-3 lg:text-xl ">
+              <div className="text-sm text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
                 <p>anggota aktif</p>
               </div>
-              <div className="text-base text-center lg:space-y-3 lg:text-xl">
+              <div className="text-sm text-center lg:space-y-3 lg:text-xl">
                 <p>340+</p>
                 <p>Total Alumni</p>
               </div>
-              <div className="text-base text-center lg:space-y-3 lg:text-xl ">
+              <div className="text-sm text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
                 <p>Project</p>
               </div>
