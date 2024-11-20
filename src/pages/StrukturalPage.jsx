@@ -80,8 +80,8 @@ const StrukturalPage = () => {
             Struktural Inti
           </h2>
           <div
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6 lg:p-8 space-y-3 mx-auto justify-items-center font-[Inter]"
-            style={{ overflow: "hidden" }}
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6 lg:p-8 mx-auto justify-items-center font-[Inter] "
+            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {users.map((user, index) => (
               <div
