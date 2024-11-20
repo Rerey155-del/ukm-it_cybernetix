@@ -75,7 +75,7 @@ const ActivityPage = () => {
                 <div className="px-4 lg:pt-4 w-full">
                   <p className="text-2xl font-bold mb-4">{user.nama}</p>
                   <p className="text-sm text-gray-600 mb-4 font-[Inter]">{user.isi.length > 100 ? `${user.isi.substring(0, 100)}...` : user.isi}</p>
-                  <button className="font-[Inter] rounded bg-[#F16634] px-4 py-2 text-white hover:bg-[#d14f28] transition">
+                  <button className="font-[Inter] text-sm rounded bg-[#F16634] px-4 py-2 text-white hover:bg-[#d14f28] transition">
                     Lihat detail
                   </button>
                 </div>
