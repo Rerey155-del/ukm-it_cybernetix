@@ -119,7 +119,7 @@ const LandingPage = () => {
 
             <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <div>
-                <img src={Programming} alt="" className="w-20 lg:w-28 lg:h-28" />
+                <img src={Programming} alt="" className="w-16 lg:w-28 lg:h-28" />
               </div>
               <h2 className="card-title">Programming</h2>
               <p>Frontend Dev & Backend Dev</p>
@@ -132,6 +132,7 @@ const LandingPage = () => {
               <h2 className="card-title">Networking</h2>
               <p>Networking Fundamental</p>
             </div>
+            
           </div>
         </div>
         <div className="mb-20 mt-28">
@@ -180,7 +181,7 @@ const LandingPage = () => {
             </button>
           </div>
 
-          <div className="p-3 h-16 sm:h-20 lg:h-36 w-full bg-[#1D3D71] lg:p-8 ">
+          <div className="p-4 h-20 sm:h-20 lg:h-36 w-full bg-[#1D3D71] lg:p-8 ">
             <div className="gap-12 flex items-center justify-center text-white text-xl lg:gap-40  ">
               <div className="text-sm text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
