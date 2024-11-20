@@ -3,7 +3,7 @@ import Cx from "../assets/cx-logo.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   // State untuk mendeteksi apakah navbar sudah di-scroll
@@ -23,6 +23,14 @@ const Navbar = () => {
   const Activity = () => {
     navigate("/activity");
   };
+
+  const Recruitment = () => {
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Saat ini, fitur ini masih dalam pengembangan",
+      });
+  }
 
   useEffect(() => {
     // Inisialisasi AOS untuk animasi
@@ -102,7 +110,11 @@ const Navbar = () => {
               <a href="">Profile</a>
             </li>
             <li>
-              <a href="">Recruitment</a>
+              <a href=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  Recruitment();
+                }}>Recruitment</a>
             </li>
           </ul>
         </div>
