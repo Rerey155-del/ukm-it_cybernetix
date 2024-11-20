@@ -48,7 +48,7 @@ const ActivityPage = () => {
       >
         <Navbar />
         <Sidebar />
-        <div className=" px-4 lg:px-10 max-w-full lg:mt-16 overflow-hidden">
+        <div className="font-[Lora] p-4 sm:p-6 md:p-10 justify-center text-2xl md:text-3xl mb-4 max-w-full mt-6">
           <h2 className=" mt-2 text-center text-2xl font-[Lora] font-semibold lg:text-3xl mb-4" data-aos="fade-up"
             data-aos-duration="2000">
             Activity of Cybernetix
