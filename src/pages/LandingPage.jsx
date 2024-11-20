@@ -43,9 +43,7 @@ const LandingPage = () => {
     }, 2000);
   };
 
-  // const Struktural = () => {
-  //   navigate("/struktural");
-  // };
+
 
   return (
     <section>
@@ -132,7 +130,7 @@ const LandingPage = () => {
               <h2 className="card-title">Networking</h2>
               <p>Networking Fundamental</p>
             </div>
-            
+
           </div>
         </div>
         <div className="mb-20 mt-28">

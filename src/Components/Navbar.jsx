@@ -20,6 +20,10 @@ const Navbar = () => {
     navigate("/struktural");
   };
 
+  const Activity = () => {
+    navigate("/activity");
+  };
+
   useEffect(() => {
     // Inisialisasi AOS untuk animasi
     AOS.init({
@@ -75,7 +79,13 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="">Activity</a>
+            <a
+                href=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  Activity();
+                }}
+              >Activity</a>
             </li>
             <li>
               <a

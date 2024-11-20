@@ -1,0 +1,88 @@
+// eslint-disable-next-line no-undef
+import glowEffect from "../assets/glow effect.svg";
+import Navbar from "../Components/Navbar";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Footer from "../Components/Footer";
+import Sidebar from "../Components/Sidebar";
+
+const ActivityPage = () => {
+  const [artikel, setArtikel] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://express-mongo-lac.vercel.app/articles")
+      .then((response) => {
+        setArtikel(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  return (
+    <section>
+      <div
+        style={{
+          backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
+          minHeight: "100vh",
+          width: "100%",
+          margin: "0",
+          padding: "0",
+          boxSizing: "border-box",
+          overflowX: "hidden",
+          backgroundImage: `url(${glowEffect})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          fontFamily: "Lora",
+        }}
+        className="overflow-y-auto text-black"
+      >
+        <Navbar />
+        <Sidebar />
+        <div className=" px-4 lg:px-10 max-w-full lg:mt-16 overflow-hidden">
+          <h2 className=" mt-2 text-center text-2xl font-[Lora] font-semibold lg:text-3xl mb-4" data-aos="fade-up"
+            data-aos-duration="2000">
+            Activity of Cybernetix
+          </h2>
+          
+            <div className=" px-4 py-4 mb-6">
+            {artikel.map((user, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] border"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                {/* Bagian Gambar */}
+                <div className="w-full">
+                  <img
+                    src={user.gambar}
+                    alt={user.nama}
+                    className="w-full h-auto rounded-3xl object-cover"
+                  />
+                </div>
+
+                {/* Bagian Konten */}
+                <div className="px-4 pt-4 w-full">
+                  <p className="text-2xl font-bold mb-4">{user.nama}</p>
+                  <p className="text-sm text-gray-600 mb-4 font-[Inter]">{user.isi}</p>
+                  <button className="font-[Inter] rounded bg-[#F16634] px-4 py-2 text-white hover:bg-[#d14f28] transition">
+                    Lihat detail
+                  </button>
+                </div>
+              </div>
+            
+            ))}
+          </div>
+          
+
+        </div>
+        <Footer />
+      </div>
+    </section>
+  )
+}
+
+export default ActivityPage
