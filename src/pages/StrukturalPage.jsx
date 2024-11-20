@@ -75,7 +75,8 @@ const StrukturalPage = () => {
         </div>
 
         <div className="px-2 lg:px-10 max-w-full mt-16">
-          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4">
+          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4" data-aos="fade-up"
+                data-aos-duration="2000">
             Struktural Inti
           </h2>
           <div
@@ -102,7 +103,8 @@ const StrukturalPage = () => {
             ))}
           </div>
 
-          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4">
+          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
+                data-aos-duration="2000">
             Bidang Penelitian & Pengembangan
           </h2>
           <div
@@ -128,7 +130,8 @@ const StrukturalPage = () => {
               </div>
             ))}
           </div>
-          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4">
+          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
+                data-aos-duration="2000">
             Bidang Informasi dan Komunikasi
           </h2>
           <div
@@ -154,7 +157,8 @@ const StrukturalPage = () => {
               </div>
             ))}
           </div>
-          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4">
+          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
+                data-aos-duration="2000">
             Bidang Hubungan Masyarakat
           </h2>
           <div
@@ -180,7 +184,8 @@ const StrukturalPage = () => {
               </div>
             ))}
           </div>
-          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4">
+          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
+                data-aos-duration="2000">
             Bidang Pengembangan Sumber Daya Manusia
           </h2>
           <div

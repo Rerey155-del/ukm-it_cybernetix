@@ -111,7 +111,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
             <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg" >
               <div>
-                <img src={Multimedia} alt="" className="w-20 h-20 lg:w-28 lg:h-28" />
+                <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" />
               </div>
               <h2 className="card-title">Multimedia</h2>
               <p>UIX Design, Design, Video Editing</p>
@@ -119,7 +119,7 @@ const LandingPage = () => {
 
             <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <div>
-                <img src={Programming} alt="" className="w-20 h-20 lg:w-28 lg:h-28" />
+                <img src={Programming} alt="" className="w-20 lg:w-28 lg:h-28" />
               </div>
               <h2 className="card-title">Programming</h2>
               <p>Frontend Dev & Backend Dev</p>
@@ -127,7 +127,7 @@ const LandingPage = () => {
 
             <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <div>
-                <img src={Network} alt="" className="w-20 h-20 lg:w-28 lg:h-28" />
+                <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" />
               </div>
               <h2 className="card-title">Networking</h2>
               <p>Networking Fundamental</p>
