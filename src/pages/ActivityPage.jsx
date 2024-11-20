@@ -5,9 +5,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "../Components/Footer";
 import Sidebar from "../Components/Sidebar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ActivityPage = () => {
   const [artikel, setArtikel] = useState([]);
+
+  useEffect(() => {
+    AOS.init(); // Inisialisasi AOS
+    AOS.refresh(); // Memastikan animasi ter-update
+}, []);
 
   useEffect(() => {
     axios
@@ -79,7 +86,7 @@ const ActivityPage = () => {
           
 
         </div>
-        <Footer />
+        <Footer/>
       </div>
     </section>
   )
