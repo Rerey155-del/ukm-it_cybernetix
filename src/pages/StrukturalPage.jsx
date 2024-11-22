@@ -87,7 +87,7 @@ const StrukturalPage = () => {
               {users.map((user, index) => (
                 <div
                   key={index}
-                  className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl"
+                  className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl mb-4"
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
@@ -105,7 +105,7 @@ const StrukturalPage = () => {
             </div>
         
 
-          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
+          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 " data-aos="fade-up"
             data-aos-duration="2000">
             Bidang Penelitian & Pengembangan
           </h2>
@@ -116,7 +116,7 @@ const StrukturalPage = () => {
             {litbangUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl mb-4"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -132,7 +132,7 @@ const StrukturalPage = () => {
               </div>
             ))}
           </div>
-          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
+          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4" data-aos="fade-up"
             data-aos-duration="2000">
             Bidang Informasi dan Komunikasi
           </h2>
@@ -143,7 +143,7 @@ const StrukturalPage = () => {
             {infokomUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl mb-4"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -159,7 +159,7 @@ const StrukturalPage = () => {
               </div>
             ))}
           </div>
-          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
+          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4" data-aos="fade-up"
             data-aos-duration="2000">
             Bidang Hubungan Masyarakat
           </h2>
@@ -170,7 +170,7 @@ const StrukturalPage = () => {
             {humasUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl mb-4"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -186,7 +186,7 @@ const StrukturalPage = () => {
               </div>
             ))}
           </div>
-          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
+          <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4" data-aos="fade-up"
             data-aos-duration="2000">
             Bidang Pengembangan Sumber Daya Manusia
           </h2>
@@ -197,7 +197,7 @@ const StrukturalPage = () => {
             {psdmUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl  mb-4"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
