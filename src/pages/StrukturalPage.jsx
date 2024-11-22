@@ -80,7 +80,7 @@ const StrukturalPage = () => {
             Struktural Inti
           </h2>
           <div
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6 lg:p-8 mx-auto justify-items-center font-[Inter] "
+            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {users.map((user, index) => (
@@ -108,7 +108,7 @@ const StrukturalPage = () => {
             Bidang Penelitian & Pengembangan
           </h2>
           <div
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6 lg:p-8 mx-auto justify-items-center font-[Inter] "
+            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter] "
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {litbangUser.map((user, index) => (
@@ -135,7 +135,7 @@ const StrukturalPage = () => {
             Bidang Informasi dan Komunikasi
           </h2>
           <div
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
+            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {infokomUser.map((user, index) => (
@@ -162,7 +162,7 @@ const StrukturalPage = () => {
             Bidang Hubungan Masyarakat
           </h2>
           <div
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
+            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {humasUser.map((user, index) => (
@@ -189,7 +189,7 @@ const StrukturalPage = () => {
             Bidang Pengembangan Sumber Daya Manusia
           </h2>
           <div
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6 lg:p-8 mx-auto justify-items-center font-[Inter] mb-6"
+            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter] mb-6"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {psdmUser.map((user, index) => (
