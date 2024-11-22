@@ -45,7 +45,7 @@ const StrukturalPage = () => {
     <section style={{ overflow: "hidden" }}>
       <div
         style={{
-          backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
+          backgroundColor: "#FBF8EF", // Warna putih dengan transparansi 80%
           minHeight: "100vh",
           width: "100%",
           margin: "0",
@@ -68,7 +68,7 @@ const StrukturalPage = () => {
           </h2>
           <img
             data-aos="zoom-in"
-            className="rounded-2xl w-full h-auto max-h-[40rem] sm:max-h-[28rem] md:max-h-[32rem] lg:max-h-[36rem] object-cover mx-auto"
+            className="rounded-2xl w-full h-auto max-h-[40rem] sm:max-h-[28rem] md:max-h-[32rem] lg:max-h-[36rem] object-cover mx-auto shadow-xl"
             src={together}
             alt=""
           />
@@ -86,7 +86,7 @@ const StrukturalPage = () => {
             {users.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -114,7 +114,7 @@ const StrukturalPage = () => {
             {litbangUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -141,7 +141,7 @@ const StrukturalPage = () => {
             {infokomUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -168,7 +168,7 @@ const StrukturalPage = () => {
             {humasUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
@@ -195,7 +195,7 @@ const StrukturalPage = () => {
             {psdmUser.map((user, index) => (
               <div
                 key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl"
+                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60  rounded-3xl shadow-xl"
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >

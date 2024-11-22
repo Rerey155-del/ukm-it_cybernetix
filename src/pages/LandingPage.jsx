@@ -18,6 +18,7 @@ const LandingPage = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  
   useEffect(() => {
     axios
       .get("https://express-mongo-lac.vercel.app/steeringcommittee")
@@ -35,6 +36,8 @@ const LandingPage = () => {
     });
   }, []);
 
+
+
   const showLoadingStruktural = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -49,7 +52,7 @@ const LandingPage = () => {
     <section>
       <div
         style={{
-          backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
+          backgroundColor: "#FBF8EF", // Warna putih dengan transparansi 80%
           minHeight: "100vh",
           width: "100%",
           margin: "0",
@@ -249,6 +252,7 @@ const LandingPage = () => {
                 Hilangkan Rasa Penasaran Dengan mengenal bagian dari kami
               </h2>
             </div>
+
             <div className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]">
               {users.map((user, index) => (
                 <div
@@ -265,6 +269,7 @@ const LandingPage = () => {
                 </div>
               ))}
             </div>
+
             <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
               <button
                 className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"

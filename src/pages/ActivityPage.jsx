@@ -31,7 +31,7 @@ const ActivityPage = () => {
     <section>
       <div
         style={{
-          backgroundColor: "rgba(255, 255, 255, 0.8)", // Warna putih dengan transparansi 80%
+          backgroundColor: "#FBF8EF", // Warna putih dengan transparansi 80%
           minHeight: "100vh",
           width: "100%",
           margin: "0",
@@ -67,7 +67,7 @@ const ActivityPage = () => {
                   <img
                     src={user.gambar}
                     alt={user.nama}
-                    className="w-full h-auto rounded-3xl object-cover"
+                    className="w-full h-auto lg:h-[20rem] rounded-3xl object-cover"
                   />
                 </div>
 

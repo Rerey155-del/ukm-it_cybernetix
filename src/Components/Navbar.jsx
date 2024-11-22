@@ -65,7 +65,6 @@ const Navbar = () => {
         }}
       >
         <div
-          data-aos="fade-up"
           className="container mx-auto flex justify-start pl-14 items-center font-[inter]"
         >
           <ul className="flex space-x-4">
