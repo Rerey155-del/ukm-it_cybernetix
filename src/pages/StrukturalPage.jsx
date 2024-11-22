@@ -76,39 +76,41 @@ const StrukturalPage = () => {
 
         <div className="px-2 lg:px-10 max-w-full mt-16">
           <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4" data-aos="fade-up"
-                data-aos-duration="2000">
+            data-aos-duration="2000">
             Struktural Inti
           </h2>
-          <div
-            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]"
-            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
-          >
-            {users.map((user, index) => (
-              <div
-                key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                <img
-                  src={user.foto}
-                  alt={user.nama}
-                  className="w-full h-auto rounded-t-3xl object-cover"
-                />
-                <div className="text-center mt-3">
-                  <p className="font-bold text-base md:text-lg">{user.nama}</p>
-                  <p className="text-sm md:text-base">{user.jabatan}</p>
+          
+            <div
+              className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
+              style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
+            >
+              {users.map((user, index) => (
+                <div
+                  key={index}
+                  className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  <img
+                    src={user.foto}
+                    alt={user.nama}
+                    className="w-full h-auto rounded-t-3xl object-cover"
+                  />
+                  <div className="text-center mt-3">
+                    <p className="font-bold text-base md:text-lg">{user.nama}</p>
+                    <p className="text-sm md:text-base">{user.jabatan}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+        
 
           <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
-                data-aos-duration="2000">
+            data-aos-duration="2000">
             Bidang Penelitian & Pengembangan
           </h2>
           <div
-            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter] "
+            className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter] "
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {litbangUser.map((user, index) => (
@@ -131,11 +133,11 @@ const StrukturalPage = () => {
             ))}
           </div>
           <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
-                data-aos-duration="2000">
+            data-aos-duration="2000">
             Bidang Informasi dan Komunikasi
           </h2>
           <div
-            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]"
+            className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {infokomUser.map((user, index) => (
@@ -158,11 +160,11 @@ const StrukturalPage = () => {
             ))}
           </div>
           <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
-                data-aos-duration="2000">
+            data-aos-duration="2000">
             Bidang Hubungan Masyarakat
           </h2>
           <div
-            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]"
+            className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {humasUser.map((user, index) => (
@@ -185,11 +187,11 @@ const StrukturalPage = () => {
             ))}
           </div>
           <h2 className="pl-4 text-2xl font-[Lora] font-semibold lg:text-3xl mb-4 mt-4" data-aos="fade-up"
-                data-aos-duration="2000">
+            data-aos-duration="2000">
             Bidang Pengembangan Sumber Daya Manusia
           </h2>
           <div
-            className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter] mb-6"
+            className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter] mb-6"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {psdmUser.map((user, index) => (
