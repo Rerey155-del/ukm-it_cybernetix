@@ -1,29 +1,37 @@
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-[#1D3D71] text-white opacity-90 py-12">
+    <footer className="relative bg-gradient-to-r from-blue-100 via-white to-red-100 text-gray-800 py-12 overflow-hidden">
+      {/* Lingkaran Gradien */}
+      <div className="absolute top-0 left-[-150px] w-[400px] h-[400px] bg-gradient-radial from-blue-300/40 to-transparent rounded-full"></div>
+      <div className="absolute bottom-0 right-[-150px] w-[400px] h-[400px] bg-gradient-radial from-red-300/40 to-transparent rounded-full"></div>
+
       <div className="container mx-auto px-6">
         {/* Bagian Utama */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Bagian Kiri */}
           <div className="flex flex-col items-center lg:items-start">
-            <img src="/src/assets/cx-logo.svg" alt="Logo" className="mb-4 w-32" />
+            <img
+              src="/src/assets/cx-logo.svg"
+              alt="Logo"
+              className="mb-4 w-32"
+            />
             <h2 className="text-lg font-semibold text-center lg:text-left">
-              Unit Kegiatan Mahasiswa
-              <br />
-              Information Technology
-              <br />
-              Cybernetix
+              Unit Kegiatan Mahasiswa <br /> Information Technology Cybernetix
             </h2>
-            <p className="mt-4 text-center lg:text-left">
-              &copy; 2007 - 2023 <strong>WebDev</strong> - UKM IT Cybernetix
+            <p className="mt-4 text-center lg:text-left text-sm">
+              &copy; 2007 - {currentYear} <strong>WebDev</strong> - UKM-IT
+              Cybernetix
             </p>
           </div>
 
           {/* Bagian Divisi dan Sekretariat */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
             {/* Divisi */}
             <div>
-              <h3 className="font-semibold mb-4 text-center sm:text-left">Divisi</h3>
+              <h3 className="font-semibold mb-4 text-center sm:text-left">
+                Divisi
+              </h3>
               <ul className="space-y-2 text-center sm:text-left">
                 <li>Software Development</li>
                 <li>UI & UX Design</li>
@@ -36,7 +44,9 @@ const Footer = () => {
 
             {/* Sekretariat */}
             <div>
-              <h3 className="font-semibold mb-4 text-center sm:text-left">Sekretariat</h3>
+              <h3 className="font-semibold mb-4 text-center sm:text-left">
+                Sekretariat
+              </h3>
               <address className="not-italic space-y-2 text-center sm:text-left">
                 Universitas Putra Indonesia YPTK
                 <br />
@@ -57,10 +67,12 @@ const Footer = () => {
         </div>
 
         {/* Bagian Personalia, Explore, Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 text-sm">
           {/* Personalia */}
           <div>
-            <h3 className="font-semibold mb-2 text-center lg:text-left">Personalia</h3>
+            <h3 className="font-semibold mb-2 text-center lg:text-left">
+              Personalia
+            </h3>
             <ul className="space-y-1 text-center lg:text-left">
               <li>DPO</li>
               <li>Struktural</li>
@@ -71,7 +83,9 @@ const Footer = () => {
 
           {/* Explore */}
           <div>
-            <h3 className="font-semibold mb-2 text-center lg:text-left">Explore</h3>
+            <h3 className="font-semibold mb-2 text-center lg:text-left">
+              Explore
+            </h3>
             <ul className="space-y-1 text-center lg:text-left">
               <li>Blog</li>
               <li>Mentor</li>
@@ -82,7 +96,9 @@ const Footer = () => {
 
           {/* Links */}
           <div>
-            <h3 className="font-semibold mb-2 text-center lg:text-left">Links</h3>
+            <h3 className="font-semibold mb-2 text-center lg:text-left">
+              Links
+            </h3>
             <ul className="space-y-1 text-center lg:text-left">
               <li>Privacy & Policy</li>
               <li>Terms & Conditions</li>
