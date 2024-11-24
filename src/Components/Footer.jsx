@@ -10,23 +10,24 @@ const Footer = () => {
         {/* Bagian Utama */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Bagian Kiri */}
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center lg:items-start lg:ml-20">
             <img
               src="/src/assets/cx-logo.svg"
               alt="Logo"
-              className="mb-4 w-32"
+              className="mb-4 w-32 lg:ml-20 lg:mt-20"
             />
-            <h2 className="text-lg font-semibold text-center lg:text-left">
-              Unit Kegiatan Mahasiswa <br /> Information Technology Cybernetix
+            <h2 className="text-lg font-semibold text-center lg:text-center lg:ml-9">
+              Unit Kegiatan Mahasiswa <br /> Information Technology <br />{" "}
+              Cybernetix
             </h2>
-            <p className="mt-4 text-center lg:text-left text-sm">
+            <p className="mt-5 text-center lg:text-left text-sm lg:text-center">
               &copy; 2007 - {currentYear} <strong>WebDev</strong> - UKM-IT
               Cybernetix
             </p>
           </div>
 
           {/* Bagian Divisi dan Sekretariat */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm ">
             {/* Divisi */}
             <div>
               <h3 className="font-semibold mb-4 text-center sm:text-left">
@@ -63,46 +64,45 @@ const Footer = () => {
                 </a>
               </address>
             </div>
-          </div>
-        </div>
 
-        {/* Bagian Personalia, Explore, Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 text-sm">
-          {/* Personalia */}
-          <div>
-            <h3 className="font-semibold mb-2 text-center lg:text-left">
-              Personalia
-            </h3>
-            <ul className="space-y-1 text-center lg:text-left">
-              <li>DPO</li>
-              <li>Struktural</li>
-              <li>Anggota Aktif</li>
-              <li>Alumni Luar Biasa</li>
-            </ul>
-          </div>
+            {/* Personalia */}
+            <div>
+              <h3 className="font-semibold mb-2 text-center lg:text-left">
+                Personalia
+              </h3>
+              <ul className="space-y-1 text-center lg:text-left">
+                <li>DPO</li>
+                <li>Struktural</li>
+                <li>Anggota Aktif</li>
+                <li>Alumni Luar Biasa</li>
+              </ul>
+            </div>
 
-          {/* Explore */}
-          <div>
-            <h3 className="font-semibold mb-2 text-center lg:text-left">
-              Explore
-            </h3>
-            <ul className="space-y-1 text-center lg:text-left">
-              <li>Blog</li>
-              <li>Mentor</li>
-              <li>Kelas Online</li>
-              <li>Validasi Sertifikat</li>
-            </ul>
-          </div>
+            {/* Explore */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 mt-1 text-sm">
+              <div>
+                <h3 className="font-semibold mb-2 text-center lg:text-left">
+                  Explore
+                </h3>
+                <ul className="space-y-1 text-center lg:text-left lg:whitespace-nowrap">
+                  <li>Blog</li>
+                  <li>Mentor</li>
+                  <li>Kelas Online</li>
+                  <li>Validasi Sertifikat</li>
+                </ul>
+              </div>
 
-          {/* Links */}
-          <div>
-            <h3 className="font-semibold mb-2 text-center lg:text-left">
-              Links
-            </h3>
-            <ul className="space-y-1 text-center lg:text-left">
-              <li>Privacy & Policy</li>
-              <li>Terms & Conditions</li>
-            </ul>
+              {/* Links */}
+              <div className="lg:ml-10">
+                <h3 className="font-semibold mb-2 text-center lg:text-left">
+                  Links
+                </h3>
+                <ul className="space-y-1 text-center lg:text-left lg:whitespace-nowrap">
+                  <li>Privacy & Policy</li>
+                  <li>Terms & Conditions</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
