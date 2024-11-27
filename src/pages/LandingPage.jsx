@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"; // Fixed imports by removing duplicate `useEffect`
 import Navbar from "../Components/Navbar";
-import foto1 from "../assets/fotobersama.svg";
+// import foto1 from "../assets/fotobersama.svg";
 import glowEffect from "../assets/glow effect.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,12 +13,13 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 tailChase.register();
 import Footer from "../Components/Footer";
+import Frame from "../assets/Frame.svg"
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     axios
       .get("https://express-mongo-lac.vercel.app/steeringcommittee")
@@ -63,21 +64,26 @@ const LandingPage = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          fontFamily: "Lora",
+          fontFamily: "Montserrat",
         }}
         className="overflow-y-auto text-black"
       >
         <Navbar />
         <Sidebar />
-        <div className="p-6 sm:p-10 md:p-16 lg:p-20 items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-20 mt-6 sm:mt-10">
+
+        <div className="container p-6 sm:p-10 md:p-16 lg: px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-20 mt-6 sm:mt-10">
           <div
             data-aos="fade-up"
             data-aos-duration="2000"
             className="text-center md:text-left"
           >
-            <div className="font-bold text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-4 text-left ">
-              <h1>Unit Kegiatan Mahasiswa</h1>
-              <h1>IT Cybernetix</h1>
+            <div className="font-bold  text-2xl sm:text-3xl md:text-8xl mb-2 sm:mb-4 text-left ">
+              <h1>UKM-IT</h1>
+              <h1>
+                <span className="text-[#F16634]">C</span>
+                YBERNETI
+                <span className="text-[#F16634]">X</span>
+              </h1>
             </div>
 
             <div>
@@ -86,23 +92,24 @@ const LandingPage = () => {
                 keterampilan dalam mengenal dunia teknologi
               </p>
               <div className="flex space-x-4 mb-8 justify-center md:justify-start text-white font-[Inter]">
-                <button className="rounded-lg bg-[#F16634] p-3 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg">
+                <button className="rounded-3xl bg-[#F16634] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg">
                   Kenali Kami
                 </button>
-                <button className="rounded-lg bg-[#373737] p-3 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg">
+                <button className="rounded-3xl bg-[#373737] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg">
                   Gabung Sekarang
                 </button>
               </div>
             </div>
           </div>
-          <div className="image-container mx-auto md:mx-0" data-aos="zoom-in">
+          <div className="image-container  mx-auto md:mx-0 " data-aos="zoom-in">
             <img
-              src={foto1}
+              src={Frame}
               alt=""
-              className="w-full md:w-[25rem] max-w-full"
+              className="w-full max-w-full"
             />
           </div>
         </div>
+
 
         <div>
           <div className="text-xl justify-center text-center font-bold lg:text-2xl mb-10">
@@ -182,8 +189,8 @@ const LandingPage = () => {
             </button>
           </div>
 
-          <div className="p-4 h-20 sm:h-20 lg:h-36 w-full bg-[#1D3D71] lg:p-8 ">
-            <div className="gap-12 flex items-center justify-center text-white text-xl lg:gap-40  ">
+          <div className="p-4 h-20 sm:h-20  lg:h-36 w-full bg-[#383838] lg:p-8 ">
+            <div className="gap-8 flex items-center justify-center text-white text-xl lg:gap-40  ">
               <div className="text-sm text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
                 <p>anggota aktif</p>
@@ -253,15 +260,25 @@ const LandingPage = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2  p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]">
+            <div className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]">
+              {/* Tampilkan Skeleton Loader jika users kosong */}
+              {users.length === 0 &&
+                [...Array(4)].map((_, index) => (
+                  <div
+                    key={index}
+                    className="skeleton w-[8rem] sm:w-[10rem] h-[8rem] sm:h-[10rem] md:h-48 lg:h-60 bg-gray-300 rounded-3xl animate-pulse"
+                  ></div>
+                ))}
+
+              {/* Tampilkan Data dari Database */}
               {users.map((user, index) => (
                 <div
                   key={index}
-                  className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 shadow-2xl rounded-3xl"
+                  className="bg-white card-body sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-2xl rounded-3xl"
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
-                  <img src={user.foto} />
+                  <img src={user.foto} alt={user.nama} className="rounded-xl w-full" />
                   <div className="text-center mt-3">
                     <p className="font-bold">{user.nama}</p>
                     <p>{user.jabatan}</p>
@@ -269,6 +286,8 @@ const LandingPage = () => {
                 </div>
               ))}
             </div>
+
+
 
             <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
               <button
