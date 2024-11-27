@@ -266,7 +266,7 @@ const LandingPage = () => {
                 [...Array(4)].map((_, index) => (
                   <div
                     key={index}
-                    className="skeleton w-[8rem] sm:w-[10rem] h-[8rem] sm:h-[10rem] md:h-48 lg:h-60 bg-gray-300 rounded-3xl animate-pulse"
+                    className="skeleton w-[8rem] sm:w-[10rem] md:w-48 lg:w-60 aspect-square bg-gray-300 rounded-3xl animate-pulse"
                   ></div>
                 ))}
 

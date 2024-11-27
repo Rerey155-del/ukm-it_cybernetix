@@ -1,3 +1,5 @@
+import Cx from "../assets/cx-logo.svg";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
@@ -12,7 +14,7 @@ const Footer = () => {
           {/* Bagian Kiri */}
           <div className="flex flex-col items-center lg:items-start lg:ml-20">
             <img
-              src="/src/assets/cx-logo.svg"
+              src={Cx}
               alt="Logo"
               className="mb-4 w-32 lg:ml-20 lg:mt-20"
             />
