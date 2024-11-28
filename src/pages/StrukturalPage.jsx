@@ -93,24 +93,20 @@ const StrukturalPage = () => {
 
                 ></div>
               ))}
-            {users.map((user, index) => (
-              <div
-                key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl mb-5"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                <img
-                  src={user.foto}
-                  alt={user.nama}
-                  className="w-full h-auto rounded-t-3xl object-cover"
-                />
-                <div className="text-center mt-3">
-                  <p className="font-bold text-base md:text-lg">{user.nama}</p>
-                  <p className="text-sm md:text-base">{user.jabatan}</p>
+           {users.map((user, index) => (
+                <div
+                  key={index}
+                  className="bg-white shadow-lg card-body sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
+                  <div className="text-center mt-3 md:absolute inset-x-0 bottom-4">
+                    <p className="font-bold">{user.nama}</p>
+                    <p>{user.jabatan}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
 
 
@@ -131,23 +127,19 @@ const StrukturalPage = () => {
                 ></div>
               ))}
             {litbangUser.map((user, index) => (
-              <div
-                key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl mb-5"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                <img
-                  src={user.foto}
-                  alt={user.nama}
-                  className="w-full h-auto rounded-t-3xl"
-                />
-                <div className="text-center mt-3">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
+                <div
+                  key={index}
+                  className="bg-white shadow-lg card-body sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
+                  <div className="text-center mt-3 md:absolute inset-x-0 bottom-4">
+                    <p className="font-bold">{user.nama}</p>
+                    <p>{user.jabatan}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
           <h2 className="pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
             Bidang Informasi dan Komunikasi
@@ -165,23 +157,19 @@ const StrukturalPage = () => {
                 ></div>
               ))}
             {infokomUser.map((user, index) => (
-              <div
-                key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl mb-5"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                <img
-                  src={user.foto}
-                  alt={user.nama}
-                  className="w-full h-auto rounded-t-3xl"
-                />
-                <div className="text-center mt-3">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
+                <div
+                  key={index}
+                  className="bg-white shadow-lg card-body sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
+                  <div className="text-center mt-3 md:absolute inset-x-0 bottom-4">
+                    <p className="font-bold">{user.nama}</p>
+                    <p>{user.jabatan}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
           <h2 className="pl-4 text-2xl  font-semibold lg:text-3xl mb-4" 
             >
@@ -200,23 +188,19 @@ const StrukturalPage = () => {
                 ></div>
               ))}
             {humasUser.map((user, index) => (
-              <div
-                key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl mb-5"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                <img
-                  src={user.foto}
-                  alt={user.nama}
-                  className="w-full h-auto rounded-t-3xl"
-                />
-                <div className="text-center mt-3">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
+                <div
+                  key={index}
+                  className="bg-white shadow-lg card-body sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
+                  <div className="text-center mt-3 md:absolute inset-x-0 bottom-4">
+                    <p className="font-bold">{user.nama}</p>
+                    <p>{user.jabatan}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
           <h2 className="pl-4 text-2xl  font-semibold lg:text-3xl mb-4"
             >
@@ -235,23 +219,19 @@ const StrukturalPage = () => {
                 ></div>
               ))}
             {psdmUser.map((user, index) => (
-              <div
-                key={index}
-                className="bg-white card-body sm:w-[10rem] p-6 text-sm  md:w-60  lg:w-60 rounded-3xl shadow-xl mb-5"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                <img
-                  src={user.foto}
-                  alt={user.nama}
-                  className="w-full h-auto rounded-t-3xl"
-                />
-                <div className="text-center mt-3">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
+                <div
+                  key={index}
+                  className="bg-white shadow-lg card-body sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
+                  <div className="text-center mt-3 md:absolute inset-x-0 bottom-4">
+                    <p className="font-bold">{user.nama}</p>
+                    <p>{user.jabatan}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>
