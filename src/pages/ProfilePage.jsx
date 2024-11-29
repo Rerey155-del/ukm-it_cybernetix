@@ -3,7 +3,11 @@ import Sidebar from "../Components/Sidebar";
 import Navbar from "../Components/Navbar";
 import UKM from "../assets/UKMIT.svg";
 import Footer from "../Components/Footer";
+import { useEffect } from "react";
 const ProfilePage = () => {
+    useEffect(()=> {
+        window.scrollTo(0,0),[]
+      }) 
     return (
         <section style={{ overflow: "hidden" }}>
             <div style={{

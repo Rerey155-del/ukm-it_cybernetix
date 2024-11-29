@@ -16,6 +16,10 @@ const ActivityPage = () => {
     AOS.refresh(); // Memastikan animasi ter-update
   }, []);
 
+  useEffect(()=> {
+    window.scrollTo(0,0),[]
+  }) 
+
   useEffect(() => {
     axios
       .get("https://express-mongo-lac.vercel.app/articles")

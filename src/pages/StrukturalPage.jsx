@@ -41,6 +41,10 @@ const StrukturalPage = () => {
       });
   }, []);
 
+  useEffect(()=> {
+    window.scrollTo(0,0),[]
+  })  
+
   return (
     <section style={{ overflow: "hidden" }}>
       <div
