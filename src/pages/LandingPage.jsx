@@ -279,7 +279,7 @@ const LandingPage = () => {
                   data-aos-duration="2000"
                 >
                   <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
-                  <div className="text-center mt-3 md:absolute inset-x-0 bottom-4">
+                  <div className="text-center mt-3 absolute md:absolute inset-x-0 bottom-4">
                     <p className="font-bold">{user.nama}</p>
                     <p>{user.jabatan}</p>
                   </div>

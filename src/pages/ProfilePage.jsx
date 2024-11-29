@@ -24,21 +24,22 @@ const ProfilePage = () => {
             >
                 <Navbar />
                 <Sidebar />
-                <div className="container grid grid-cols-1 mx-auto md:grid-cols-2 p-20 gap-8 mt-20 justify-center items-center">
-                    <div className="rounded-3xl bg-white w-[20rem] h-[20rem] p-8" data-aos="zoom-in">
-                        <img src={UKM} alt="" className="pt-14" />
+                <div className="container grid grid-cols-1 mx-auto md:grid-cols-2 p-5 md:p-20 gap-8 mt-10 md:mt-20 justify-center items-center">
+                    <div className="rounded-3xl bg-white w-[15rem] mx-auto md:w-[20rem] h-[15rem] md:h-[20rem] p-5 md:p-8" data-aos="zoom-in">
+                        <img src={UKM} alt="" className="pt-12 md:pt-14 mx-auto" />
                     </div>
-                    <div className="text-center md:text-left" data-aos="fade-up"
-                        data-aos-duration="2000">
-                        <div className="text-4xl font-bold ">
-                            <h2 >Unit Kegiatan Mahasiswa</h2>
+                    <div className="text-center md:text-left" data-aos="fade-up" data-aos-duration="2000">
+                        <div className="text-2xl md:text-4xl font-bold">
+                            <h2>Unit Kegiatan Mahasiswa</h2>
                             <h2 className="text-[#F16634]">IT Cybernetix</h2>
                         </div>
-                        <p className="mt-5 font-semibold">Wadah pemberdayaan mahasiswa yang berfokus membangun keterampilan
-                            dalam mengenal dunia teknologi.</p>
+                        <p className="mt-3 md:mt-5 font-medium md:font-semibold text-sm md:text-base">
+                            Wadah pemberdayaan mahasiswa yang berfokus membangun keterampilan
+                            dalam mengenal dunia teknologi.
+                        </p>
                     </div>
-
                 </div>
+
                 <div className="p-16 mt-12 font-semibold ">
                     <p>
                         UKM-IT Cybernetix UPI YPTK Padang dibentuk oleh mahasiswa yang memiliki visi dan semangat yang sama untuk mengembangkan teknologi informasi di lingkungan kampus. Berawal dari keinginan Muhammad Riza Nurtam, Medio Nofriyanto, Hadad Samir, dan Rafles Susandi untuk mengaktifkan kembali kelompok belajar Linux yang telah ada sejak 2001, pada 18 Desember 2006 mereka mengadakan pertemuan pertama. Dalam pertemuan tersebut, hadir beberapa mahasiswa lain yang berbagi pandangan yang sama untuk membentuk UKM IT yang dapat diakui secara resmi oleh kampus.</p>
