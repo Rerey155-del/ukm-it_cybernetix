@@ -46,8 +46,9 @@ const Footer = () => {
             </div>
 
             {/* Sekretariat */}
-            <div>
-              <h3 className="font-semibold mb-4 text-center sm:text-left">
+            <div className="mt-6 md:mt-0">
+
+              <h3 className="font-semibold mb-4 text-center sm:text-left ">
                 Sekretariat
               </h3>
               <address className="not-italic space-y-2 text-center sm:text-left">
@@ -68,7 +69,7 @@ const Footer = () => {
             </div>
 
             {/* Personalia */}
-            <div>
+            <div className="hidden lg:block">
               <h3 className="font-semibold mb-2 text-center lg:text-left">
                 Personalia
               </h3>
@@ -81,8 +82,8 @@ const Footer = () => {
             </div>
 
             {/* Explore */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 mt-1 text-sm">
-              <div>
+            <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 mt-1 text-sm">
+              <div className="hidden lg:block">
                 <h3 className="font-semibold mb-2 text-center lg:text-left">
                   Explore
                 </h3>
@@ -95,7 +96,7 @@ const Footer = () => {
               </div>
 
               {/* Links */}
-              <div className="lg:ml-10">
+              <div className="lg:ml-10 hidden lg:block">
                 <h3 className="font-semibold mb-2 text-center lg:text-left">
                   Links
                 </h3>
