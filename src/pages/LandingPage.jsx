@@ -77,7 +77,7 @@ const LandingPage = () => {
             data-aos-duration="2000"
             className="text-center md:text-left"
           >
-            <div className="font-bold  text-2xl sm:text-3xl md:text-8xl mb-2 sm:mb-4 text-left ">
+            <div className="font-bold  text-4xl sm:text-4xl md:text-8xl mb-2 sm:mb-4 text-left ">
               <h1>UKM-IT</h1>
               <h1>
                 <span className="text-[#F16634]">C</span>

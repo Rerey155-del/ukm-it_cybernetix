@@ -28,6 +28,9 @@ const Sidebar = () => {
       const Activity = () => {
         navigate("/activity");
       };
+      const Profile = () => {
+        navigate("/Profile");
+      };
 
       const Recruitment = () => {
         Swal.fire({
@@ -91,6 +94,12 @@ const Sidebar = () => {
                             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Activity}>
                             <img src={Proyek} alt="" />
                                 <span className="ms-3 text-black hover:text-white">Activity</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Profile}>
+                            <img src={Proyek} alt="" />
+                                <span className="ms-3 text-black hover:text-white">Profile</span>
                             </a>
                         </li>
                         <li>
