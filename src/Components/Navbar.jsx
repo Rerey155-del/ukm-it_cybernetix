@@ -24,6 +24,12 @@ const Navbar = () => {
     navigate("/activity");
   };
 
+  const Profile = () => {
+    navigate("/Profile");
+  };
+
+
+
   const Recruitment = () => {
     Swal.fire({
         icon: "error",
@@ -106,7 +112,11 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="">Profile</a>
+              <a  href=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  Profile();
+                }}>Profile</a>
             </li>
             <li>
               <a href=""
