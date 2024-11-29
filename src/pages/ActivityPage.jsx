@@ -14,7 +14,7 @@ const ActivityPage = () => {
   useEffect(() => {
     AOS.init(); // Inisialisasi AOS
     AOS.refresh(); // Memastikan animasi ter-update
-}, []);
+  }, []);
 
   useEffect(() => {
     axios
@@ -49,12 +49,20 @@ const ActivityPage = () => {
         <Navbar />
         <Sidebar />
         <div className=" p-4 sm:p-6 md:p-10 justify-center text-2xl md:text-3xl mb-4 max-w-full mt-6">
-          <h2 className=" mt-2 text-center text-2xl font-semibold lg:text-3xl mb-4" data-aos="fade-up"
-            data-aos-duration="2000">
+          <h2 className=" mt-2 text-center text-2xl font-semibold lg:text-3xl mb-4">
             Activity of Cybernetix
           </h2>
-          
-            <div className=" px-4 py-4 mb-6">
+
+          <div className=" px-4 py-4 mb-6">
+            {/* menamplkan skeleton */}
+            {artikel.length === 0 &&
+              [...Array(4)].map((_, index) => (
+                <div
+                  key={index}
+                  className="skeleton rounded-3xl shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] h-[23rem] border animate-pulse"
+                ></div>
+              ))}
+            {/* mapping data */}
             {artikel.map((user, index) => (
               <div
                 key={index}
@@ -80,13 +88,13 @@ const ActivityPage = () => {
                   </button>
                 </div>
               </div>
-            
+
             ))}
           </div>
-          
+
 
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </section>
   )
