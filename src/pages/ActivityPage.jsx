@@ -42,14 +42,14 @@ const ActivityPage = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          fontFamily: "Lora",
+          fontFamily: "Montserrat",
         }}
         className="overflow-y-auto text-black"
       >
         <Navbar />
         <Sidebar />
-        <div className="font-[Lora] p-4 sm:p-6 md:p-10 justify-center text-2xl md:text-3xl mb-4 max-w-full mt-6">
-          <h2 className=" mt-2 text-center text-2xl font-[Lora] font-semibold lg:text-3xl mb-4" data-aos="fade-up"
+        <div className=" p-4 sm:p-6 md:p-10 justify-center text-2xl md:text-3xl mb-4 max-w-full mt-6">
+          <h2 className=" mt-2 text-center text-2xl font-semibold lg:text-3xl mb-4" data-aos="fade-up"
             data-aos-duration="2000">
             Activity of Cybernetix
           </h2>
@@ -74,7 +74,7 @@ const ActivityPage = () => {
                 {/* Bagian Konten */}
                 <div className="px-4 lg:pt-4 w-full">
                   <p className="text-2xl font-bold mb-4">{user.nama}</p>
-                  <p className="text-sm text-gray-600 mb-4 font-[Inter]">{user.isi.length > 100 ? `${user.isi.substring(0, 100)}...` : user.isi}</p>
+                  <p className="text-sm text-gray-600 mb-4">{user.isi.length > 100 ? `${user.isi.substring(0, 100)}...` : user.isi}</p>
                   <button className="font-[Inter] text-sm rounded bg-[#F16634] px-4 py-2 text-white hover:bg-[#d14f28] transition">
                     Lihat detail
                   </button>
