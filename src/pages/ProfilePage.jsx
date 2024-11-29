@@ -29,7 +29,7 @@ const ProfilePage = () => {
                 <Navbar />
                 <Sidebar />
                 <div className="container grid grid-cols-1 mx-auto md:grid-cols-2 p-5 md:p-20 gap-8 mt-10 md:mt-20 justify-center items-center">
-                    <div className="rounded-3xl bg-white w-[15rem] mx-auto md:w-[20rem] h-[15rem] md:h-[20rem] p-5 md:p-8" data-aos="zoom-in">
+                    <div className="rounded-3xl shadow-xl bg-white w-[15rem] mx-auto md:w-[20rem] h-[15rem] md:h-[20rem] p-5 md:p-8" data-aos="zoom-in">
                         <img src={UKM} alt="" className="pt-12 md:pt-14 mx-auto" />
                     </div>
                     <div className="text-center md:text-left" data-aos="fade-up" data-aos-duration="2000">
@@ -44,7 +44,7 @@ const ProfilePage = () => {
                     </div>
                 </div>
 
-                <div className="p-8 md:p-16 mt-12 font-semibold ">
+                <div className="p-8 text-md md:p-16 mt-12 font-semibold ">
                     <p>
                         UKM-IT Cybernetix UPI YPTK Padang dibentuk oleh mahasiswa yang memiliki visi dan semangat yang sama untuk mengembangkan teknologi informasi di lingkungan kampus. Berawal dari keinginan Muhammad Riza Nurtam, Medio Nofriyanto, Hadad Samir, dan Rafles Susandi untuk mengaktifkan kembali kelompok belajar Linux yang telah ada sejak 2001, pada 18 Desember 2006 mereka mengadakan pertemuan pertama. Dalam pertemuan tersebut, hadir beberapa mahasiswa lain yang berbagi pandangan yang sama untuk membentuk UKM IT yang dapat diakui secara resmi oleh kampus.</p>
                     <br />
