@@ -37,11 +37,8 @@ const LandingPage = () => {
     });
   }, []);
 
-  useEffect(()=> {
-    window.scrollTo(0,0),[]
-  }) 
-
-
+  
+  
   const showLoadingStruktural = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -49,7 +46,10 @@ const LandingPage = () => {
       navigate("/struktural"); // Ganti "/nextPage" dengan path halaman tujuan Anda
     }, 2000);
   };
-
+  
+  useEffect(()=> {
+    window.scrollTo(0,0),[]
+  }) 
 
 
   return (
