@@ -14,11 +14,15 @@ import Sidebar from "../Components/Sidebar";
 tailChase.register();
 import Footer from "../Components/Footer";
 import Frame from "../assets/Frame.svg"
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+// import { styled } from '@mui/material/styles';
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     axios
@@ -37,8 +41,68 @@ const LandingPage = () => {
     });
   }, []);
 
-  
-  
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode); // Toggle dark mode
+  };
+
+  // fungsi switch darkmode
+  // const MaterialUISwitch = styled(Switch)(({ theme }) => ({
+  //   width: 62,
+  //   height: 34,
+  //   padding: 7,
+  //   '& .MuiSwitch-switchBase': {
+  //     margin: 1,
+  //     padding: 0,
+  //     transform: 'translateX(6px)',
+  //     '&.Mui-checked': {
+  //       color: '#fff',
+  //       transform: 'translateX(22px)',
+  //       '& .MuiSwitch-thumb:before': {
+  //         backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
+  //           '#fff',
+  //         )}" d="M4.2 2.5l-.7 1.8-1.8.7 1.8.7.7 1.8.6-1.8L6.7 5l-1.9-.7-.6-1.8zm15 8.3a6.7 6.7 0 11-6.6-6.6 5.8 5.8 0 006.6 6.6z"/></svg>')`,
+  //       },
+  //       '& + .MuiSwitch-track': {
+  //         opacity: 1,
+  //         backgroundColor: '#aab4be',
+  //         ...theme.applyStyles('dark', {
+  //           backgroundColor: '#8796A5',
+  //         }),
+  //       },
+  //     },
+  //   },
+  //   '& .MuiSwitch-thumb': {
+  //     backgroundColor: '#001e3c',
+  //     width: 32,
+  //     height: 32,
+  //     '&::before': {
+  //       content: "''",
+  //       position: 'absolute',
+  //       width: '100%',
+  //       height: '100%',
+  //       left: 0,
+  //       top: 0,
+  //       backgroundRepeat: 'no-repeat',
+  //       backgroundPosition: 'center',
+  //       backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
+  //         '#fff',
+  //       )}" d="M9.305 1.667V3.75h1.389V1.667h-1.39zm-4.707 1.95l-.982.982L5.09 6.072l.982-.982-1.473-1.473zm10.802 0L13.927 5.09l.982.982 1.473-1.473-.982-.982zM10 5.139a4.872 4.872 0 00-4.862 4.86A4.872 4.872 0 0010 14.862 4.872 4.872 0 0014.86 10 4.872 4.872 0 0010 5.139zm0 1.389A3.462 3.462 0 0113.471 10a3.462 3.462 0 01-3.473 3.472A3.462 3.462 0 016.527 10 3.462 3.462 0 0110 6.528zM1.665 9.305v1.39h2.083v-1.39H1.666zm14.583 0v1.39h2.084v-1.39h-2.084zM5.09 13.928L3.616 15.4l.982.982 1.473-1.473-.982-.982zm9.82 0l-.982.982 1.473 1.473.982-.982-1.473-1.473zM9.305 16.25v2.083h1.389V16.25h-1.39z"/></svg>')`,
+  //     },
+  //     ...theme.applyStyles('dark', {
+  //       backgroundColor: '#003892',
+  //     }),
+  //   },
+  //   '& .MuiSwitch-track': {
+  //     opacity: 1,
+  //     backgroundColor: '#aab4be',
+  //     borderRadius: 20 / 2,
+  //     ...theme.applyStyles('dark', {
+  //       backgroundColor: '#8796A5',
+  //     }),
+  //   },
+  // }));  
+
+
   const showLoadingStruktural = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -46,17 +110,16 @@ const LandingPage = () => {
       navigate("/struktural"); // Ganti "/nextPage" dengan path halaman tujuan Anda
     }, 2000);
   };
-  
-  useEffect(()=> {
-    window.scrollTo(0,0),[]
-  }) 
+
+
 
 
   return (
     <section>
       <div
         style={{
-          backgroundColor: "#FBF8EF", // Warna putih dengan transparansi 80%
+          backgroundColor: darkMode ? "#1E2237" : "#FBF8EF", // Ubah warna berdasarkan darkMode
+          color: darkMode ? "#FFFFFF" : "#000000", // Warna teks
           minHeight: "100vh",
           width: "100%",
           margin: "0",
@@ -119,8 +182,17 @@ const LandingPage = () => {
             <h2>Unit Kegiatan Mahasiswa </h2>
             <h2>Dengan Divisi Standar Industri</h2>
           </div>
+          <div className="flex justify-end ml-auto">
+            <FormControlLabel
+              control={<Switch checked={darkMode} onChange={toggleDarkMode} />}
+
+            />
+          </div>
           <div className="grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
-            <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg" >
+            <div
+              className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:scale-105 hover:shadow-lg`}
+            >
               <div>
                 <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" />
               </div>
@@ -128,7 +200,10 @@ const LandingPage = () => {
               <p>UIX Design, Design, Video Editing</p>
             </div>
 
-            <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+            <div
+              className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:scale-105 hover:shadow-lg`}
+            >
               <div>
                 <img src={Programming} alt="" className="w-16 lg:w-28 lg:h-28" />
               </div>
@@ -136,7 +211,10 @@ const LandingPage = () => {
               <p>Frontend Dev & Backend Dev</p>
             </div>
 
-            <div className="sm:h-[200px] bg-white card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+            <div
+              className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:scale-105 hover:shadow-lg`}
+            >
               <div>
                 <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" />
               </div>
@@ -192,7 +270,8 @@ const LandingPage = () => {
             </button>
           </div>
 
-          <div className="p-4 h-20 sm:h-20  lg:h-36 w-full bg-[#383838] lg:p-8 ">
+          <div className={`p-4 h-20 ${darkMode ? 'bg-[#F16634]' : 'bg-[#383838]'
+                } sm:h-20  lg:h-36 w-full  lg:p-8  `}>
             <div className="gap-8 flex items-center justify-center text-white text-xl lg:gap-40  ">
               <div className="text-sm text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
