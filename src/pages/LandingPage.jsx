@@ -16,7 +16,7 @@ import Footer from "../Components/Footer";
 import Frame from "../assets/Frame.svg"
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-// import { styled } from '@mui/material/styles';
+
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
@@ -214,7 +214,7 @@ const LandingPage = () => {
           </div>
 
           <div className={`p-4 h-20 ${darkMode ? 'bg-[#F16634]' : 'bg-[#383838]'
-                } sm:h-20  lg:h-36 w-full  lg:p-8  `}>
+            } sm:h-20  lg:h-36 w-full  lg:p-8  `}>
             <div className="gap-8 flex items-center justify-center text-white text-xl lg:gap-40  ">
               <div className="text-sm text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
