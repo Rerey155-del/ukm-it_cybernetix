@@ -16,6 +16,7 @@ import Footer from "../Components/Footer";
 import Frame from "../assets/Frame.svg"
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
+import feed1 from "../assets/desain1.png";
 
 
 const LandingPage = () => {
@@ -174,10 +175,10 @@ const LandingPage = () => {
             </div>
             <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
-                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-full shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
-              ></div>
+              ><img src={feed1} alt="" className="rounded-3xl" /></div>
 
               <div
                 className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
