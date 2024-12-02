@@ -134,7 +134,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer duration-200 hover:scale-105 hover:shadow-lg`}
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer hover:scale-105 hover:shadow-lg`}
             >
               <div>
                 <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" />
@@ -145,7 +145,7 @@ const LandingPage = () => {
 
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer duration-200 hover:scale-105 hover:shadow-lg`}
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer hover:scale-105 hover:shadow-lg`}
             >
               <div>
                 <img src={Programming} alt="" className="w-16 lg:w-28 lg:h-28" />
@@ -156,7 +156,7 @@ const LandingPage = () => {
 
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer duration-200 hover:scale-105 hover:shadow-lg`}
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer hover:scale-105 hover:shadow-lg`}
             >
               <div>
                 <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" />
