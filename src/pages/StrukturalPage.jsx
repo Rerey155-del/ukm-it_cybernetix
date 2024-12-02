@@ -111,8 +111,8 @@ const StrukturalPage = () => {
            {users.map((user, index) => (
                 <div
                   key={index}
-                  className={`bg-white card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                    } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl`}
+                  className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                    } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
@@ -147,8 +147,8 @@ const StrukturalPage = () => {
             {litbangUser.map((user, index) => (
                 <div
                   key={index}
-                  className={`bg-white card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                    } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl`}
+                  className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                    } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
@@ -180,8 +180,8 @@ const StrukturalPage = () => {
             {infokomUser.map((user, index) => (
                 <div
                   key={index}
-                  className={`bg-white card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl`}
+                  className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
@@ -214,8 +214,8 @@ const StrukturalPage = () => {
             {humasUser.map((user, index) => (
                 <div
                   key={index}
-                  className={`bg-white card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl`}
+                  className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
@@ -248,8 +248,8 @@ const StrukturalPage = () => {
             {psdmUser.map((user, index) => (
                 <div
                   key={index}
-                  className={`bg-white card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-xl rounded-3xl`}
+                  className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
