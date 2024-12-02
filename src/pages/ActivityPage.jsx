@@ -16,9 +16,9 @@ const ActivityPage = () => {
     AOS.refresh(); // Memastikan animasi ter-update
   }, []);
 
-  useEffect(()=> {
-    window.scrollTo(0,0),[]
-  }) 
+  useEffect(() => {
+    window.scrollTo(0, 0), []
+  })
 
   useEffect(() => {
     axios
@@ -92,13 +92,10 @@ const ActivityPage = () => {
                   </button>
                 </div>
               </div>
-
             ))}
           </div>
-
-
         </div>
-        <Footer />
+        <Footer/>
       </div>
     </section>
   )

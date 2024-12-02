@@ -134,7 +134,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:scale-105 hover:shadow-lg`}
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer duration-200 hover:scale-105 hover:shadow-lg`}
             >
               <div>
                 <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" />
@@ -145,7 +145,7 @@ const LandingPage = () => {
 
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:scale-105 hover:shadow-lg`}
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer duration-200 hover:scale-105 hover:shadow-lg`}
             >
               <div>
                 <img src={Programming} alt="" className="w-16 lg:w-28 lg:h-28" />
@@ -156,7 +156,7 @@ const LandingPage = () => {
 
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:scale-105 hover:shadow-lg`}
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer duration-200 hover:scale-105 hover:shadow-lg`}
             >
               <div>
                 <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" />
@@ -299,12 +299,15 @@ const LandingPage = () => {
               {users.map((user, index) => (
                 <div
                   key={index}
-                  className="bg-white card-body sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-2xl rounded-3xl"
+                  className={`bg-white card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                    } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-2xl rounded-3xl`}
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
                   <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
-                  <div className="text-center md:absolute inset-x-0 bottom-4">
+                  <div className={`absolute ${darkMode ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
+                    } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}></div>
+                  <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
                     <p className="font-bold">{user.nama}</p>
                     <p>{user.jabatan}</p>
                   </div>
@@ -334,7 +337,7 @@ const LandingPage = () => {
           </div>
         )}
       </div>
-      <Footer />
+      <Footer darkMode={darkMode} />
     </section>
   );
 };
