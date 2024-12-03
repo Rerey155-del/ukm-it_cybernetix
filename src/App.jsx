@@ -6,8 +6,6 @@ import Struktural from "./pages/StrukturalPage";
 import Activity from "./pages/ActivityPage";
 import Profile from "./pages/ProfilePage";
 
-
-
 const App = () => {
   return (
     <Router>
