@@ -15,7 +15,7 @@ import Sidebar from "../Components/Sidebar";
 tailChase.register();
 import Footer from "../Components/Footer";
 import Frame from "../assets/Frame.svg"
-
+import porto1 from "../assets/porto1.jpg"
 
 
 const LandingPage = () => {
@@ -113,11 +113,11 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="image-container  mx-auto md:mx-0 " data-aos="zoom-in">
+          <div className="image-container mx-auto md:mx-0" data-aos="zoom-in">
             <img
               src={Frame}
               alt=""
-              className="w-full max-w-full"
+              className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
             />
           </div>
         </div>
@@ -172,10 +172,10 @@ const LandingPage = () => {
             </div>
             <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
-                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
-              ><img src="" alt="" className="rounded-3xl" /></div>
+              ><img src={porto1} alt="" className="rounded-3xl" /></div>
 
               <div
                 className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
@@ -188,21 +188,9 @@ const LandingPage = () => {
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
               ></div>
-              <div
-                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                data-aos="fade-down"
-                data-aos-anchor-placement="top-bottom"
-              ></div>
-              <div
-                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                data-aos="fade-down"
-                data-aos-anchor-placement="top-bottom"
-              ></div>
-              <div
-                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                data-aos="fade-down"
-                data-aos-anchor-placement="top-bottom"
-              ></div>
+              
+             
+             
             </div>
           </div>
           <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">

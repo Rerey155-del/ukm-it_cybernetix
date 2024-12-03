@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 
 const ActivityPage = () => {
   const [artikel, setArtikel] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
   const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
 
   useEffect(() => {
@@ -24,6 +25,10 @@ const ActivityPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0), []
   })
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode); // Toggle dark mode
+  };
 
   useEffect(() => {
     axios
@@ -40,7 +45,8 @@ const ActivityPage = () => {
     <section>
       <div
         style={{
-          backgroundColor: "#FBF8EF", // Warna putih dengan transparansi 80%
+          backgroundColor: darkMode ? "#1E2237" : "#FBF8EF", // Ubah warna berdasarkan darkMode
+          color: darkMode ? "#FFFFFF" : "#000000", // Warna teks
           minHeight: "100vh",
           width: "100%",
           margin: "0",
@@ -55,7 +61,7 @@ const ActivityPage = () => {
         }}
         className="overflow-y-auto text-black"
       >
-        <Navbar />
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
         <div className=" p-4 sm:p-6 md:p-10 justify-center text-2xl md:text-3xl mb-4 max-w-full mt-6">
           <h2 className=" mt-2 text-center text-2xl font-semibold lg:text-3xl mb-4">
@@ -75,8 +81,9 @@ const ActivityPage = () => {
             {artikel.map((user, index) => (
               <div
                 key={index}
-                className="bg-white rounded-3xl shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] border"
-                data-aos="fade-up"
+                className={`rounded-3xl ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+              } shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] border"
+                data-aos="fade-up`} 
                 data-aos-duration="1000"
               >
                 {/* Bagian Gambar */}
@@ -91,7 +98,7 @@ const ActivityPage = () => {
                 {/* Bagian Konten */}
                 <div className="px-4 lg:pt-4 w-full">
                   <p className="text-2xl font-bold mb-4">{user.nama}</p>
-                  <p className="text-sm text-gray-600 mb-4">{user.isi.length > 100 ? `${user.isi.substring(0, 100)}...` : user.isi}</p>
+                  <p className="text-sm mb-4">{user.isi.length > 100 ? `${user.isi.substring(0, 100)}...` : user.isi}</p>
                   <button className="font-[Inter] text-sm rounded bg-[#F16634] px-4 py-2 text-white hover:bg-[#d14f28] transition">
                     Lihat detail
                   </button>
@@ -100,7 +107,7 @@ const ActivityPage = () => {
             ))}
           </div>
         </div>
-        <Footer />
+        <Footer darkMode={darkMode} />
       </div>
     </section>
   )

@@ -36,7 +36,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Saat ini, fitur ini masih dalam pengembangan",
+      text: "Saat ini, recruitment belum dibuka yaa",
     });
   }
 
