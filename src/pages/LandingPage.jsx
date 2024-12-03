@@ -167,24 +167,24 @@ const LandingPage = () => {
         </div>
         <div className="mb-20 mt-[8rem]">
           <div>
-            <div className="justify-center text-xl text-center font-bold lg:text-2xl mb-5">
+            <div className="justify-center text-xl text-center font-bold lg:text-2xl lg:mb-5">
               <h2>Portofolio Kami</h2>
             </div>
-            <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
-                className="bg-white card w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
               ><img src={porto1} alt="" className="rounded-3xl" /></div>
 
               <div
-                className="bg-white card w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
               ><img src={porto2} alt="" className="rounded-3xl" /></div>
 
               <div
-                className="bg-white card w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
               ></div>
@@ -199,8 +199,8 @@ const LandingPage = () => {
             </button>
           </div>
 
-          <div className={`p-4 h-20 border-white ${darkMode ? 'bg-[#F16634]' : 'bg-[#383838]'
-            } sm:h-20  lg:h-36 w-full  lg:p-8  `}>
+          <div className={`p-4 h-16 ${darkMode ? 'bg-[#F16634]' : 'bg-[#383838]'
+            }   lg:h-36 w-full  lg:p-8  `}>
             <div className="gap-6 flex items-center justify-center text-white text-xl lg:gap-40  ">
               <div className="text-xs text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
@@ -209,14 +209,14 @@ const LandingPage = () => {
               <div className="space-x-3">
                 <span>|</span>
               </div>
-              <div className="text-sm text-center lg:space-y-3 lg:text-xl">
+              <div className="text-xs text-center lg:space-y-3 lg:text-xl">
                 <p>340+</p>
                 <p>Total Alumni</p>
               </div>
               <div className="space-x-3">
                 <span>|</span>
               </div>
-              <div className="text-sm text-center lg:space-y-3 lg:text-xl ">
+              <div className="text-xs text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
                 <p>Project</p>
               </div>
