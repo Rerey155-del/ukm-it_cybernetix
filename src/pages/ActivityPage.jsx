@@ -13,7 +13,6 @@ const ActivityPage = () => {
   const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
 
   useEffect(() => {
-    // Logika autoscroll setiap kali rute berubah
     window.scrollTo(0, 0); // Scroll ke atas
   }, [location]); // Akan dijalankan saat lokasi (URL) berubah
 
