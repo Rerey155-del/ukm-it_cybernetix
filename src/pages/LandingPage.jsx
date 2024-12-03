@@ -131,7 +131,7 @@ const LandingPage = () => {
             <h2>Unit Kegiatan Mahasiswa </h2>
             <h2>Dengan Divisi Standar Industri</h2>
           </div>
-         
+
           <div className="grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
