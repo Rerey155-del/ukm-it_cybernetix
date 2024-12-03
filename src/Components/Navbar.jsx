@@ -8,11 +8,11 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 
 
-
+ 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ darkMode, toggleDarkMode }) => {
-
-
+  
+  
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
 
@@ -129,12 +129,12 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </li>
 
           </ul>
-          <div className="flex justify-end ml-auto">
+           <div className="flex justify-end ml-auto">
             <FormControlLabel
               control={<Switch checked={darkMode} onChange={toggleDarkMode} />}
             />
           </div>
-
+          
         </div>
 
       </nav>

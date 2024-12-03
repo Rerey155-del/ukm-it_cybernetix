@@ -80,12 +80,12 @@ const StrukturalPage = () => {
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
         <div className=" p-4 sm:p-6 md:p-10 justify-center font-bold text-2xl md:text-3xl mb-4 max-w-full mt-6">
-          <h2 data-aos="fade-up" className="text-center mb-6 sm:mb-8 md:mb-5">
+          <h2 data-aos="fade-up"  className="text-center mb-6 sm:mb-8 md:mb-5">
             Struktural 2024/2025
           </h2>
 
           <img
-            data-aos="zoom-in"
+            data-aos="zoom-in" 
             className="rounded-2xl w-full h-zauto max-h-[40rem] sm:max-h-[28rem] md:max-h-[32rem] lg:max-h-[36rem] object-cover mx-auto shadow-xl"
             src={together}
             alt=""
