@@ -16,6 +16,7 @@ tailChase.register();
 import Footer from "../Components/Footer";
 import Frame from "../assets/Frame.svg"
 import porto1 from "../assets/porto1.jpg"
+import porto2 from "../assets/porto2.jpg"
 
 
 const LandingPage = () => {
@@ -26,7 +27,6 @@ const LandingPage = () => {
   const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
 
   useEffect(() => {
-    // Logika autoscroll setiap kali rute berubah
     window.scrollTo(0, 0); // Scroll ke atas
   }, [location]); // Akan dijalankan saat lokasi (URL) berubah
 
@@ -83,7 +83,7 @@ const LandingPage = () => {
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
 
-        <div className="container p-6 sm:p-10 md:p-16 lg: px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-20 mt-6 sm:mt-10">
+        <div className="container p-6 sm:p-10 md:p-16 lg: px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-24 mt-6 sm:mt-10">
           <div
             data-aos="fade-up"
             data-aos-duration="2000"
@@ -124,7 +124,7 @@ const LandingPage = () => {
 
 
         <div>
-          <div className="text-xl justify-center text-center font-bold lg:text-2xl mb-10">
+          <div className="text-xl justify-center text-center font-bold lg:text-2xl mb-16">
             <h2>Unit Kegiatan Mahasiswa </h2>
             <h2>Dengan Divisi Standar Industri</h2>
           </div>
@@ -165,7 +165,7 @@ const LandingPage = () => {
 
           </div>
         </div>
-        <div className="mb-20 mt-28">
+        <div className="mb-20 mt-[8rem]">
           <div>
             <div className="justify-center text-xl text-center font-bold lg:text-2xl mb-5">
               <h2>Portofolio Kami</h2>
@@ -178,22 +178,22 @@ const LandingPage = () => {
               ><img src={porto1} alt="" className="rounded-3xl" /></div>
 
               <div
-                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                data-aos="fade-down"
+                data-aos-anchor-placement="top-bottom"
+              ><img src={porto2} alt="" className="rounded-3xl" /></div>
+
+              <div
+                className="bg-white card w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
               ></div>
 
-              <div
-                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                data-aos="fade-down"
-                data-aos-anchor-placement="top-bottom"
-              ></div>
-              
-             
-             
+
+
             </div>
           </div>
-          <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
+          <div className="flex justify-center font-semibold text-lg mb-24 mt-7 font-[Inter]">
             <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
               Selengkapnya
             </button>
