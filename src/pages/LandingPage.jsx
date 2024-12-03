@@ -15,9 +15,7 @@ import Sidebar from "../Components/Sidebar";
 tailChase.register();
 import Footer from "../Components/Footer";
 import Frame from "../assets/Frame.svg"
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
-import feed1 from "../assets/desain1.png";
+// import feed1 from "../assets/desain1.png";
 
 
 const LandingPage = () => {
@@ -133,12 +131,7 @@ const LandingPage = () => {
             <h2>Unit Kegiatan Mahasiswa </h2>
             <h2>Dengan Divisi Standar Industri</h2>
           </div>
-          <div className="flex justify-end ml-auto">
-            <FormControlLabel
-              control={<Switch checked={darkMode} onChange={toggleDarkMode} />}
-
-            />
-          </div>
+         
           <div className="grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
@@ -182,10 +175,10 @@ const LandingPage = () => {
             </div>
             <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
-                className="bg-white card w-full shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
-              ><img src={feed1} alt="" className="rounded-3xl" /></div>
+              ><img src="" alt="" className="rounded-3xl" /></div>
 
               <div
                 className="bg-white card-body w-80 shadow-2xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
@@ -221,16 +214,22 @@ const LandingPage = () => {
             </button>
           </div>
 
-          <div className={`p-4 h-20 ${darkMode ? 'bg-[#F16634]' : 'bg-[#383838]'
+          <div className={`p-4 h-20 border-white ${darkMode ? 'bg-[#F16634]' : 'bg-[#383838]'
             } sm:h-20  lg:h-36 w-full  lg:p-8  `}>
-            <div className="gap-8 flex items-center justify-center text-white text-xl lg:gap-40  ">
-              <div className="text-sm text-center lg:space-y-3 lg:text-xl ">
+            <div className="gap-6 flex items-center justify-center text-white text-xl lg:gap-40  ">
+              <div className="text-xs text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
                 <p>anggota aktif</p>
+              </div>
+              <div className="space-x-3">
+                <span>|</span>
               </div>
               <div className="text-sm text-center lg:space-y-3 lg:text-xl">
                 <p>340+</p>
                 <p>Total Alumni</p>
+              </div>
+              <div className="space-x-3">
+                <span>|</span>
               </div>
               <div className="text-sm text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>

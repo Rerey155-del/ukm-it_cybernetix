@@ -11,18 +11,13 @@ import Switch from '@mui/material/Switch';
  
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ darkMode, toggleDarkMode }) => {
-  // State untuk mendeteksi apakah navbar sudah di-scroll
-  const [isScrolled, setIsScrolled] = useState(false);
   
-
-
+  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
 
   const Menu = () => {
     navigate("/");
   };
-
-  
 
   const Struktural = () => {
     navigate("/struktural");
@@ -133,10 +128,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </li>
 
           </ul>
-          <div className="flex justify-end ml-auto">
+           <div className="flex justify-end ml-auto">
             <FormControlLabel
               control={<Switch checked={darkMode} onChange={toggleDarkMode} />}
-
             />
           </div>
           
