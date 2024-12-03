@@ -15,7 +15,7 @@ import Sidebar from "../Components/Sidebar";
 tailChase.register();
 import Footer from "../Components/Footer";
 import Frame from "../assets/Frame.svg"
-// import feed1 from "../assets/desain1.png";
+
 
 
 const LandingPage = () => {
