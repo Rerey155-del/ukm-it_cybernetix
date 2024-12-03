@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 import glowEffect from "../assets/glow effect.svg";
 import Navbar from "../Components/Navbar";
 import { useEffect, useState } from "react";
