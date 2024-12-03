@@ -7,9 +7,16 @@ import Footer from "../Components/Footer";
 import Sidebar from "../Components/Sidebar";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useLocation } from "react-router-dom";
 
 const ActivityPage = () => {
   const [artikel, setArtikel] = useState([]);
+  const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
+
+  useEffect(() => {
+    // Logika autoscroll setiap kali rute berubah
+    window.scrollTo(0, 0); // Scroll ke atas
+  }, [location]); // Akan dijalankan saat lokasi (URL) berubah
 
   useEffect(() => {
     AOS.init(); // Inisialisasi AOS
@@ -95,7 +102,7 @@ const ActivityPage = () => {
             ))}
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </section>
   )

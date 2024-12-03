@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"; // Fixed imports by removing duplicate `useEffect`
+
 import Navbar from "../Components/Navbar";
 // import foto1 from "../assets/fotobersama.svg";
 import glowEffect from "../assets/glow effect.svg";
@@ -9,7 +10,7 @@ import Multimedia from "../assets/Multimedia.svg";
 import Programming from "../assets/Programming.svg";
 import axios from "axios";
 import { tailChase } from "ldrs";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 tailChase.register();
 import Footer from "../Components/Footer";
@@ -24,6 +25,12 @@ const LandingPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
+
+  useEffect(() => {
+    // Logika autoscroll setiap kali rute berubah
+    window.scrollTo(0, 0); // Scroll ke atas
+  }, [location]); // Akan dijalankan saat lokasi (URL) berubah
 
   useEffect(() => {
     axios
@@ -78,7 +85,7 @@ const LandingPage = () => {
         }}
         className="overflow-y-auto text-black"
       >
-        <Navbar />
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
 
         <div className="container p-6 sm:p-10 md:p-16 lg: px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-20 mt-6 sm:mt-10">

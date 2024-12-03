@@ -7,6 +7,7 @@ import Sidebar from "../Components/Sidebar";
 import Footer from "../Components/Footer";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
+import { useLocation } from "react-router-dom";
 
 const StrukturalPage = () => {
   const [users, setUsers] = useState([]);
@@ -15,6 +16,14 @@ const StrukturalPage = () => {
   const [infokomUser, setInfokomUser] = useState([]);
   const [humasUser, setHumasUser] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
+
+
+  useEffect(() => {
+    // Logika autoscroll setiap kali rute berubah
+    window.scrollTo(0, 0); // Scroll ke atas
+  }, [location]); // Akan dijalankan saat lokasi (URL) berubah
+
 
   useEffect(() => {
     Promise.all([
@@ -69,7 +78,7 @@ const StrukturalPage = () => {
         }}
         className="text-black"
       >
-        <Navbar />
+         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
         <div className=" p-4 sm:p-6 md:p-10 justify-center font-bold text-2xl md:text-3xl mb-4 max-w-full mt-6">
           <h2 data-aos="fade-up" className="text-center mb-6 sm:mb-8 md:mb-5">

@@ -4,12 +4,16 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 
 
  
-const Navbar = () => {
+// eslint-disable-next-line react/prop-types
+const Navbar = ({ darkMode, toggleDarkMode }) => {
   // State untuk mendeteksi apakah navbar sudah di-scroll
   const [isScrolled, setIsScrolled] = useState(false);
+  
 
 
   const navigate = useNavigate();
@@ -17,6 +21,8 @@ const Navbar = () => {
   const Menu = () => {
     navigate("/");
   };
+
+  
 
   const Struktural = () => {
     navigate("/struktural");
@@ -127,6 +133,12 @@ const Navbar = () => {
             </li>
 
           </ul>
+          <div className="flex justify-end ml-auto">
+            <FormControlLabel
+              control={<Switch checked={darkMode} onChange={toggleDarkMode} />}
+
+            />
+          </div>
           
         </div>
 

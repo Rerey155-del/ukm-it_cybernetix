@@ -4,10 +4,19 @@ import Navbar from "../Components/Navbar";
 import UKM from "../assets/UKMIT.svg";
 import Footer from "../Components/Footer";
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+
 const ProfilePage = () => {
-    useEffect(()=> {
-        window.scrollTo(0,0),[]
-      }) 
+
+    const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
+
+    useEffect(() => {
+        // Logika autoscroll setiap kali rute berubah
+        window.scrollTo(0, 0); // Scroll ke atas
+      }, [location]); // Akan dijalankan saat lokasi (URL) berubah
+
+
     return (
         <section style={{ overflow: "hidden" }}>
             <div style={{
