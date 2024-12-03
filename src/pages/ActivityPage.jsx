@@ -77,7 +77,7 @@ const ActivityPage = () => {
                 key={index}
                 className="bg-white rounded-3xl shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] border"
                 data-aos="fade-up"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 {/* Bagian Gambar */}
                 <div className="w-full">

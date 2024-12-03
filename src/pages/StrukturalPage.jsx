@@ -117,7 +117,7 @@ const StrukturalPage = () => {
                 className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                   } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                 data-aos="fade-up"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
                 <div className={`absolute ${darkMode ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
@@ -153,7 +153,7 @@ const StrukturalPage = () => {
                 className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                   } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                 data-aos="fade-up"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
                 <div className={`absolute ${darkMode ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
@@ -186,7 +186,7 @@ const StrukturalPage = () => {
                 className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                   } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                 data-aos="fade-up"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
                 <div className={`absolute ${darkMode ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
@@ -220,7 +220,7 @@ const StrukturalPage = () => {
                 className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                   } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                 data-aos="fade-up"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
                 <div className={`absolute ${darkMode ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
@@ -254,7 +254,7 @@ const StrukturalPage = () => {
                 className={`card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                   } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                 data-aos="fade-up"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
                 <div className={`absolute ${darkMode ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'

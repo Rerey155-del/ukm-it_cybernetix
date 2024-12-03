@@ -60,9 +60,6 @@ const LandingPage = () => {
     }, 2000);
   };
 
-
-
-
   return (
     <section>
       <div
