@@ -86,7 +86,7 @@ const LandingPage = () => {
         <div className="container p-6 sm:p-10 md:p-16 lg: px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-24 mt-6 sm:mt-10">
           <div
             data-aos="fade-up"
-            data-aos-duration="2000"
+            data-aos-duration="1500"
             className="text-center md:text-left"
           >
             <div className="font-bold  text-4xl sm:text-4xl md:text-8xl mb-2 sm:mb-4 text-left ">
@@ -113,7 +113,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="image-container mx-auto md:mx-0" data-aos="zoom-in">
+          <div className="image-container mx-auto md:mx-0" data-aos="zoom-in" data-aos-duration="1500">
             <img
               src={Frame}
               alt=""
@@ -173,7 +173,7 @@ const LandingPage = () => {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
                 className="bg-white card w-80 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                data-aos="fade-down"
+                data-aos="fade-down" 
                 data-aos-anchor-placement="top-bottom"
               ><img src={porto1} alt="" className="rounded-3xl" /></div>
 
@@ -217,7 +217,7 @@ const LandingPage = () => {
                 <span>|</span>
               </div>
               <div className="text-xs text-center lg:space-y-3 lg:text-xl ">
-                <p>340+</p>
+                <p>n/A</p>
                 <p>Project</p>
               </div>
             </div>
@@ -294,7 +294,7 @@ const LandingPage = () => {
                   className={`bg-white card-body ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                     } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-2xl rounded-3xl`}
                   data-aos="fade-up"
-                  data-aos-duration="2000"
+                  data-aos-duration="1000"
                 >
                   <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
                   <div className={`absolute ${darkMode ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'

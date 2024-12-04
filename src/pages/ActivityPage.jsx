@@ -22,10 +22,6 @@ const ActivityPage = () => {
     AOS.refresh(); // Memastikan animasi ter-update
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0), []
-  })
-
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode); // Toggle dark mode
   };
@@ -82,9 +78,9 @@ const ActivityPage = () => {
               <div
                 key={index}
                 className={`rounded-3xl ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-              } shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] border"
-                data-aos="fade-up`} 
-                data-aos-duration="1000"
+              } shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] border"`} 
+              data-aos="fade-up"
+              data-aos-duration="1000"
               >
                 {/* Bagian Gambar */}
                 <div className="w-full">
