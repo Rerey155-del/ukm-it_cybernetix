@@ -18,6 +18,8 @@ import Frame from "../assets/Frame.svg"
 import porto1 from "../assets/porto1.jpg"
 import porto2 from "../assets/porto2.jpg"
 
+import { Link } from "react-router-dom"; // Import Link dari React Router
+
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
@@ -134,33 +136,42 @@ const LandingPage = () => {
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                 } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
-              <div>
-                <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" />
+              <div className="cursor-pointer">
+              <Link to="/multimedia" className="block">
+                <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" /></Link>
               </div>
+              <Link to="/programming" className="block">
               <h2 className="card-title">Multimedia</h2>
               <p>UIX Design, Design, Video Editing</p>
+              </Link>
             </div>
 
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                 } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
-              <div>
-                <img src={Programming} alt="" className="w-16 lg:w-28 lg:h-28" />
+              <div className="cursor-pointer">
+              <Link to="/programming" className="block">
+                <img src={Programming} alt="" className="w-16 lg:w-28 lg:h-28" /></Link>
               </div>
+              <Link to="/programming" className="block">
               <h2 className="card-title">Programming</h2>
               <p>Frontend Dev & Backend Dev</p>
+              </Link>
             </div>
 
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                 } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
-              <div>
-                <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" />
+              <div className="cursor-pointer">
+              <Link to="/networking" className="block">
+                <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" /></Link>
               </div>
+              <Link to="/networking" className="block">
               <h2 className="card-title">Networking</h2>
               <p>Networking Fundamental</p>
+              </Link>
             </div>
 
           </div>
