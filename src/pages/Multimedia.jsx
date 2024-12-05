@@ -1,12 +1,8 @@
 import glowEffect from "../assets/glow effect.svg";
 import Sidebar from "../Components/Sidebar";
 import Navbar from "../Components/Navbar";
-import UKM from "../assets/UKMIT.svg";
 import Footer from "../Components/Footer";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import porto1 from "../assets/porto1.jpg";
-import porto2 from "../assets/porto2.jpg";
+import multimedia from "../assets/multimedia.jpg";
 
 const Programming = ({ darkMode, toggleDarkMode }) => {
   return (
@@ -27,96 +23,53 @@ const Programming = ({ darkMode, toggleDarkMode }) => {
           backgroundSize: "cover",
           fontFamily: "Montserrat",
         }}
-        className="text-black"
+        className="flex flex-col"
       >
+        {/* Navbar */}
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
-        {/* Header Section */}
-        <div className="container mx-auto px-4 py-10 mt-6">
-          <h2 className="text-4xl font-bold text-center mb-6">Multimedia</h2>
-          <p className="text-lg text-black mb-10">
-            Divisi Multimedia UKM-IT Cybernetix adalah ruang bagi anggota untuk
-            mengasah keterampilan coding dan algoritma, serta mengembangkan
-            logika pemrograman. Divisi ini dirancang untuk memberikan
-            pembelajaran mendalam dalam berbagai bahasa pemrograman, mulai dari
-            dasar hingga lanjutan, dan mencakup praktik terbaik untuk membangun
-            aplikasi yang efisien, aman, dan skalabel.
-          </p>
-          {/* <section className="mb-10">
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                <strong>Penguasaan Dasar Pemrograman:</strong> Mengajarkan
-                dasar-dasar pemrograman melalui bahasa populer seperti Python,
-                Java, atau C++.
-              </li>
-              <li>
-                <strong>Pengembangan Aplikasi:</strong> Memberikan kesempatan
-                kepada anggota untuk merancang dan membangun aplikasi.
-              </li>
-              <li>
-                <strong>Persiapan Kompetitif:</strong> Mempersiapkan anggota
-                untuk mengikuti kompetisi seperti hackathon atau lomba coding.
-              </li>
-            </ul>
-          </section> */}
-          {/* <p className="text-lg text-black mb-10">
-            Divisi Programming UKM-IT Cybernetix menyediakan lingkungan belajar
-            yang mendukung,penuh tantangan, dan berorientasi praktik bagi
-            anggota yang ingin berkembang sebagai programmer. Divisi ini
-            membantu anggota untuk terus belajar, berinovasi, dan mempersiapkan
-            merekan menghadapi dunia teknologi yang dinamis
-          </p> */}
-        </div>
 
-        {/* Portfolio Programming Section */}
-        <div className="container mx-auto px-4 py-10">
-          <h2 className="text-3xl font-semibold text-center mb-8 text-black">
-            Portofolio Multimedia
-          </h2>
+        {/* Konten Utama */}
+        <div className="flex-grow container mx-auto px-4 py-12 mt-12">
           <div className="flex flex-col gap-12">
             {[
               {
-                title: "re-Design UI Kopi Kenangan",
+                title: "Multimedia",
                 description:
-                  "Event ini diadakan untuk memperkenalkan dunia Teknologi Informasi (TI) kepada masyarakat dan mahasiswa. Acara ini mencakup beberapa kegiatan, seperti Coding, Cerdas Cermat, Seminar, UI/UX, Video Pendek, Poster, dan Bazar.",
-                image: porto1,
-              },
-              {
-                title: "UI Design Train Tic",
-                description:
-                  "Kegiatan ini diadakan untuk meningkatkan sumber daya manusia yang ada pada UKM IT Cybernetix. Bootcamp ini dilakukan secara daring melalui platform Discord dan menggunakan materi yang relevan dengan dunia industri.",
-                image: porto2,
+                  "Divisi Multi Media UKM-IT Cybernetix adalah wadah untuk mengembangkan kreativitas dan keterampilan anggota dalam bidang visual, desain, dan multimedia. Divisi ini terbuka bagi mahasiswa yang ingin belajar dan bereksplorasi dalam desain UI/UX, desain grafis, dan Video editing, dengan tujuan utama memperkaya pengetahuan dan kemampuan setiap anggota di bidang multimedia.",
+                image: multimedia,
               },
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col lg:flex-row items-center gap-6"
+                className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-6"
               >
+                {/* Bagian Konten */}
+                <div className="w-full lg:w-1/2 lg:ml-12">
+                  <h3 className="text-xl lg:text-2xl font-bold mb-4 lg:mt-12">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm lg:text-base leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+
                 {/* Bagian Gambar */}
                 <div className="w-full lg:w-1/2 max-w-[500px]">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="rounded-lg shadow-md w-full"
+                    className="rounded-lg shadow-md w-full h-auto"
                   />
-                </div>
-
-                {/* Bagian Konten */}
-                <div className="w-full lg:w-1/2">
-                  <h3 className="text-2xl font-bold text-black mb-4">
-                    {item.title}
-                  </h3>
-                  <p className="text-black mb-6">{item.description}</p>
-                  <button className="px-6 py-2 bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600 transition duration-200">
-                    Lihat detail
-                  </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
+        {/* Footer */}
+        <Footer darkMode={darkMode} />
       </div>
-      <Footer darkMode={darkMode} />
     </section>
   );
 };
