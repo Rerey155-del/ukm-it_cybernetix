@@ -3,6 +3,10 @@ import LandingPage from "./pages/LandingPage";
 import Struktural from "./pages/StrukturalPage";
 import Activity from "./pages/ActivityPage";
 import Profile from "./pages/ProfilePage";
+import Programming from "./pages/Programming";
+import Multimedia from "./pages/Multimedia";
+import Networking from "./pages/Networking";
+import Portofolio from "./pages/Portofolio";
 
 const App = () => {
   return (
