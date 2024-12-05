@@ -6,6 +6,7 @@ import Navbar from "../Components/Navbar";
 import { useLocation } from "react-router-dom";
 import porto1 from "../assets/porto1.jpg"
 import porto2 from "../assets/porto2.jpg"
+import porto3 from "../assets/porto3.png"
 import Sidebar from "../Components/Sidebar";
 
 const Portofolio = () => {
@@ -16,14 +17,14 @@ const Portofolio = () => {
       id: 1,
       title: "Nexus APP Official",
       description: " Aplikasi Bengkel Motor dirancang untuk memudahkan pengguna dalam merawat dan memperbaiki kendaraan bermotor mereka. Aplikasi ini menyediakan fungsionalitas berbasis web dan seluler yang terintegrasi dengan bengkel-bengkel mitra. Pengguna dapat melakukan pemantauan jarak tempuh motor, menerima rekomendasi perawatan, dan menemukan bengkel terdekat untuk servis. Aplikasi juga mendukung mitra bengkel dengan fitur administrasi suku cadang. responsive e-commerce platform built with Next.js and Stripe integration.",
-      foto: porto1,
+      foto: porto2,
       tags: ["Figma", "React JS", "Tailwind CSS", "PHP", "MySQL","Lumen"],
     },
     {
       id: 2,
       title: "Donor.pdg",
       description: "A drag-and-drop task management application with real-time updates.",
-      foto: porto2,
+      foto: porto1,
       tags: ["React", "Firebase", "Material-UI"],
 
     },
@@ -31,7 +32,7 @@ const Portofolio = () => {
       id: 3,
       title: "Website Voting Ketum Waketum Cybernetix",
       description: "A drag-and-drop task management application with real-time updates.",
-      foto: porto2,
+      foto: porto3,
       tags: ["React", "Firebase", "Material-UI"],
     },
     {

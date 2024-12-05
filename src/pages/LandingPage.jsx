@@ -17,6 +17,7 @@ import Footer from "../Components/Footer";
 import Frame from "../assets/Frame.svg"
 import porto1 from "../assets/porto1.jpg"
 import porto2 from "../assets/porto2.jpg"
+import porto3 from "../assets/porto3.png"
 import { Link } from "react-router-dom"; // Import Link dari React Router
 
 
@@ -204,7 +205,7 @@ const LandingPage = () => {
                 className="bg-white card w-80 mb-2 shadow-xl rounded-3xl  "
                 data-aos="fade-down" data-aos-duration="1500"
                 data-aos-anchor-placement="top-bottom"
-              ><img src={porto2} alt="" className="rounded-3xl" /></div>
+              ><img src={porto3} alt="" className="rounded-3xl" /></div>
 
 
 
