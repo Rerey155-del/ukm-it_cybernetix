@@ -23,15 +23,15 @@ const Portofolio = () => {
     {
       id: 2,
       title: "Donor.pdg",
-      description: "A drag-and-drop task management application with real-time updates.",
+      description: "Donor.Pdg adalah situs yang menyediakan Informasi tentang Donor darah bertujuna untuk membantu pasien yang membutuhkan darah, meningkatkan kesadaran akan pentingnya donor darah, atau mendukung persediaan darah di pusat-pusat kesehatan.",
       foto: porto1,
       tags: ["React", "Firebase", "Material-UI"],
 
     },
     {
       id: 3,
-      title: "Website Voting Ketum Waketum Cybernetix",
-      description: "A drag-and-drop task management application with real-time updates.",
+      title: "E-Voting Cybernetix",
+      description: "E-Voting adalah sebuah platform digital yang dirancang untuk mendukung proses pengambilan suara secara online dalam pemilihan Ketua Umum (Ketum) dan Wakil Ketua Umum (Waketum) pada organisasi UKM IT Cybernetix. Platform ini bertujuan untuk menyediakan sistem voting yang cepat, aman, transparan, dan mudah diakses oleh seluruh anggota organisasi. Dengan menggunakan E-VOTING, pemilih dapat memberikan suaranya dari mana saja secara real-time, sekaligus meminimalkan risiko kesalahan perhitungan manual serta memastikan integritas hasil pemilihan.",
       foto: porto3,
       tags: ["React", "Firebase", "Material-UI"],
     },

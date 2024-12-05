@@ -191,20 +191,20 @@ const LandingPage = () => {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
                 className="bg-white card w-80 shadow-xl rounded-3xl "
-                data-aos="fade-down" data-aos-duration="1500"
-                data-aos-anchor-placement="top-bottom"
+
+
               ><img src={porto1} alt="" className="rounded-3xl" /></div>
 
               <div
                 className="bg-white card w-80 shadow-xl rounded-3xl  "
-                data-aos="fade-down" data-aos-duration="1500"
-                data-aos-anchor-placement="top-bottom"
+
+
               ><img src={porto2} alt="" className="rounded-3xl" /></div>
 
               <div
                 className="bg-white card w-80 shadow-xl rounded-3xl  "
-                data-aos="fade-down" data-aos-duration="1500"
-                data-aos-anchor-placement="top-bottom"
+
+
               ><img src={porto3} alt="" className="rounded-3xl" /></div>
 
 
