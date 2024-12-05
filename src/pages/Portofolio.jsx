@@ -15,9 +15,9 @@ const Portofolio = () => {
     {
       id: 1,
       title: "Nexus APP Official",
-      description: "A fully responsive e-commerce platform built with Next.js and Stripe integration.",
+      description: " Aplikasi Bengkel Motor dirancang untuk memudahkan pengguna dalam merawat dan memperbaiki kendaraan bermotor mereka. Aplikasi ini menyediakan fungsionalitas berbasis web dan seluler yang terintegrasi dengan bengkel-bengkel mitra. Pengguna dapat melakukan pemantauan jarak tempuh motor, menerima rekomendasi perawatan, dan menemukan bengkel terdekat untuk servis. Aplikasi juga mendukung mitra bengkel dengan fitur administrasi suku cadang. responsive e-commerce platform built with Next.js and Stripe integration.",
       foto: porto1,
-      tags: ["Next.js", "React", "Stripe", "Tailwind CSS"],
+      tags: ["Figma", "React JS", "Tailwind CSS", "PHP", "MySQL","Lumen"],
     },
     {
       id: 2,
@@ -76,9 +76,9 @@ const Portofolio = () => {
         className="overflow-y-auto text-black">
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
-        <div className="p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem] cursor-pointer overflow-hidden flex-wrap">
+        <div className="p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem]  overflow-hidden flex-wrap">
           {portofolioData.map((user, index) => (
-            <div key={index} className={`card  mb-8 ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+            <div key={index} className={`card cursor-pointer mb-8 ${darkMode ? 'bg-[#32364F]' : 'bg-white'
           } w-80 shadow-xl`} data-aos="fade-up"
             data-aos-duration="1000" > 
               <figure>
@@ -88,9 +88,9 @@ const Portofolio = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">
-                  {user.description}
+                  {user.title}
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p>{user.description.length > 100 ? `${user.description.substring(0, 100)}...` : user.description}</p>
                 <div className="card-actions justify-end">
                   <div className="badge badge-outline">Fashion</div>
                   <div className="badge badge-outline">Products</div>
