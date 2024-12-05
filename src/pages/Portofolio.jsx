@@ -1,0 +1,108 @@
+// eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect } from "react";
+import glowEffect from "../assets/glow effect.svg";
+import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
+import { useLocation } from "react-router-dom";
+import porto1 from "../assets/porto1.jpg"
+import porto2 from "../assets/porto2.jpg"
+import Sidebar from "../Components/Sidebar";
+
+const Portofolio = () => {
+
+  // pembikinan JSON dummy untuk portofolio
+  const portofolioData = [
+    {
+      id: 1,
+      title: "Nexus APP Official",
+      description: " Aplikasi Bengkel Motor dirancang untuk memudahkan pengguna dalam merawat dan memperbaiki kendaraan bermotor mereka. Aplikasi ini menyediakan fungsionalitas berbasis web dan seluler yang terintegrasi dengan bengkel-bengkel mitra. Pengguna dapat melakukan pemantauan jarak tempuh motor, menerima rekomendasi perawatan, dan menemukan bengkel terdekat untuk servis. Aplikasi juga mendukung mitra bengkel dengan fitur administrasi suku cadang. responsive e-commerce platform built with Next.js and Stripe integration.",
+      foto: porto1,
+      tags: ["Figma", "React JS", "Tailwind CSS", "PHP", "MySQL","Lumen"],
+    },
+    {
+      id: 2,
+      title: "Donor.pdg",
+      description: "A drag-and-drop task management application with real-time updates.",
+      foto: porto2,
+      tags: ["React", "Firebase", "Material-UI"],
+
+    },
+    {
+      id: 3,
+      title: "Website Voting Ketum Waketum Cybernetix",
+      description: "A drag-and-drop task management application with real-time updates.",
+      foto: porto2,
+      tags: ["React", "Firebase", "Material-UI"],
+    },
+    {
+      id: 3,
+      title: "Website Voting Ketum Waketum Cybernetix",
+      description: "A drag-and-drop task management application with real-time updates.",
+      foto: porto2,
+      tags: ["React", "Firebase", "Material-UI"],
+    },
+
+  ];
+
+
+  const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode); // Toggle dark mode
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+
+  return (
+    <section>
+      <div style={{
+        backgroundColor: darkMode ? "#1E2237" : "#FBF8EF", // Ubah warna berdasarkan darkMode
+        color: darkMode ? "#FFFFFF" : "#000000", // Warna teks
+        minHeight: "100vh",
+        width: "100%",
+        margin: "0",
+        padding: "0",
+        boxSizing: "border-box",
+        overflowX: "hidden",
+        backgroundImage: `url(${glowEffect})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        fontFamily: "Montserrat",
+      }}
+        className="overflow-y-auto text-black">
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Sidebar />
+        <div className="p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem]  overflow-hidden flex-wrap">
+          {portofolioData.map((user, index) => (
+            <div key={index} className={`card cursor-pointer mb-8 ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+          } w-80 shadow-xl`} data-aos="fade-up"
+            data-aos-duration="1000" > 
+              <figure>
+                <img
+                  src={user.foto}
+                  alt={user.title} />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">
+                  {user.title}
+                </h2>
+                <p>{user.description.length > 100 ? `${user.description.substring(0, 100)}...` : user.description}</p>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer darkMode={darkMode} />
+    </section>
+  );
+};
+
+export default Portofolio;

@@ -61,6 +61,13 @@ const LandingPage = () => {
       navigate("/struktural"); // Ganti "/nextPage" dengan path halaman tujuan Anda
     }, 2000);
   };
+  const showLoadingPortofolio = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate("/portofolio"); // Ganti "/nextPage" dengan path halaman tujuan Anda
+    }, 2000);
+  };
 
   return (
     <section>
@@ -183,29 +190,29 @@ const LandingPage = () => {
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
-                className="bg-white card w-80 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 mb-2 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down" 
                 data-aos-anchor-placement="top-bottom"
               ><img src={porto1} alt="" className="rounded-3xl" /></div>
 
               <div
-                className="bg-white card w-80 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 mb-2 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
               ><img src={porto2} alt="" className="rounded-3xl" /></div>
 
               <div
-                className="bg-white card w-80 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 mb-2 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
-              ></div>
+              ><img src={porto2} alt="" className="rounded-3xl" /></div>
 
 
 
             </div>
           </div>
           <div className="flex justify-center font-semibold text-lg mb-24 mt-7 font-[Inter]">
-            <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg">
+            <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg "onClick={showLoadingPortofolio}>
               Selengkapnya
             </button>
           </div>
