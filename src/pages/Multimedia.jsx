@@ -36,7 +36,7 @@ const Programming = () => {
           backgroundSize: "cover",
           fontFamily: "Montserrat",
         }}
-        className="flex flex-col"
+        className=" flex flex-col"
       >
         {/* Navbar */}
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />

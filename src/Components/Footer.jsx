@@ -4,7 +4,7 @@ import Cx from "../assets/cx-logo.svg";
 const Footer = ({darkMode}) => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className={`relative py-12 overflow-hidden ${
+    <footer className={` relative py-12 overflow-hidden ${
       darkMode
         ? "bg-[#32364F]" // Background gelap
         : "bg-gradient-to-r from-blue-100 via-white to-red-100 text-gray-800" // Background terang

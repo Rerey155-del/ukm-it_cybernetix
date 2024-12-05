@@ -55,7 +55,7 @@ const ActivityPage = () => {
           backgroundSize: "cover",
           fontFamily: "Montserrat",
         }}
-        className="overflow-y-auto text-black"
+        className=" overflow-y-auto text-black"
       >
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />

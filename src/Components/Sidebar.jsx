@@ -44,7 +44,7 @@ const Sidebar = () => {
     return (
         <div>
             {/* Tombol untuk membuka Sidebar, hanya tampil di tablet dan mobile */}
-            <div className="p-3 md:hidden justify-between flex m-4 ">
+            <div className=" p-3 md:hidden justify-between flex m-4 ">
                 <img src={Cx} alt="" />
                 <img src={Menu} onClick={toggleSidebar} alt="Menu icon" className="bg-white p-4 rounded-full" />
             </div>

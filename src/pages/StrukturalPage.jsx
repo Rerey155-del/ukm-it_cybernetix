@@ -75,7 +75,7 @@ const StrukturalPage = () => {
           backgroundSize: "cover",
           fontFamily: "Montserrat",
         }}
-        className="text-black"
+        className=" text-black"
       >
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
