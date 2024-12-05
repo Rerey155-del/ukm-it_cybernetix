@@ -17,7 +17,6 @@ import Footer from "../Components/Footer";
 import Frame from "../assets/Frame.svg"
 import porto1 from "../assets/porto1.jpg"
 import porto2 from "../assets/porto2.jpg"
-
 import { Link } from "react-router-dom"; // Import Link dari React Router
 
 
@@ -144,12 +143,12 @@ const LandingPage = () => {
                 } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
               <div className="cursor-pointer">
-              <Link to="/multimedia" className="block">
-                <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" /></Link>
+                <Link to="/multimedia" className="block">
+                  <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" /></Link>
               </div>
               <Link to="/programming" className="block">
-              <h2 className="card-title">Multimedia</h2>
-              <p>UIX Design, Design, Video Editing</p>
+                <h2 className="card-title">Multimedia</h2>
+                <p>UIX Design, Design, Video Editing</p>
               </Link>
             </div>
 
@@ -158,12 +157,12 @@ const LandingPage = () => {
                 } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
               <div className="cursor-pointer">
-              <Link to="/programming" className="block">
-                <img src={Programming} alt="" className="w-16 lg:w-28 lg:h-28" /></Link>
+                <Link to="/programming" className="block">
+                  <img src={Programming} alt="" className="w-16 lg:w-28 lg:h-28" /></Link>
               </div>
               <Link to="/programming" className="block">
-              <h2 className="card-title">Programming</h2>
-              <p>Frontend Dev & Backend Dev</p>
+                <h2 className="card-title">Programming</h2>
+                <p>Frontend Dev & Backend Dev</p>
               </Link>
             </div>
 
@@ -172,12 +171,12 @@ const LandingPage = () => {
                 } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
               <div className="cursor-pointer">
-              <Link to="/networking" className="block">
-                <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" /></Link>
+                <Link to="/networking" className="block">
+                  <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" /></Link>
               </div>
               <Link to="/networking" className="block">
-              <h2 className="card-title">Networking</h2>
-              <p>Networking Fundamental</p>
+                <h2 className="card-title">Networking</h2>
+                <p>Networking Fundamental</p>
               </Link>
             </div>
 
@@ -190,19 +189,19 @@ const LandingPage = () => {
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
-                className="bg-white card w-80 mb-2 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                data-aos="fade-down" 
+                className="bg-white card w-80 mb-2 shadow-xl rounded-3xl "
+                data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
               ><img src={porto1} alt="" className="rounded-3xl" /></div>
 
               <div
-                className="bg-white card w-80 mb-2 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 mb-2 shadow-xl rounded-3xl  "
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
               ><img src={porto2} alt="" className="rounded-3xl" /></div>
 
               <div
-                className="bg-white card w-80 mb-2 shadow-xl rounded-3xl cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white card w-80 mb-2 shadow-xl rounded-3xl  "
                 data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom"
               ><img src={porto2} alt="" className="rounded-3xl" /></div>
@@ -212,7 +211,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="flex justify-center font-semibold text-lg mb-24 mt-7 font-[Inter]">
-            <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg "onClick={showLoadingPortofolio}>
+            <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg " onClick={showLoadingPortofolio}>
               Selengkapnya
             </button>
           </div>

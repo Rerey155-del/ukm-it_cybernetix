@@ -3,8 +3,21 @@ import Sidebar from "../Components/Sidebar";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import networking from "../assets/networking.jpg";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
-const Programming = ({ darkMode, toggleDarkMode }) => {
+const Programming = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll ke atas
+  }, [location]);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode); // Toggle dark mode
+  };
+
   return (
     <section style={{ overflow: "hidden" }}>
       <div
@@ -30,7 +43,9 @@ const Programming = ({ darkMode, toggleDarkMode }) => {
         <Sidebar />
 
         {/* Konten Utama */}
-        <div className="flex-grow container mx-auto px-4 py-12 mt-12">
+        <div className="p-8 flex-grow container mx-auto md:px-4 py-16 md:mt-[8rem] md:mb-[6rem]"
+          data-aos="fade-up"
+          data-aos-duration="1000">
           <div className="flex flex-col gap-12">
             {[
               {
@@ -59,7 +74,7 @@ const Programming = ({ darkMode, toggleDarkMode }) => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="rounded-lg shadow-md w-full h-auto"
+                    className="rounded-xl shadow-md w-full h-auto"
                   />
                 </div>
               </div>
