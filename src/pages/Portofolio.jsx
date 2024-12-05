@@ -6,6 +6,7 @@ import Navbar from "../Components/Navbar";
 import { useLocation } from "react-router-dom";
 import porto1 from "../assets/porto1.jpg"
 import porto2 from "../assets/porto2.jpg"
+import Sidebar from "../Components/Sidebar";
 
 const Portofolio = () => {
 
@@ -25,6 +26,13 @@ const Portofolio = () => {
       foto: porto2,
       tags: ["React", "Firebase", "Material-UI"],
 
+    },
+    {
+      id: 3,
+      title: "Website Voting Ketum Waketum Cybernetix",
+      description: "A drag-and-drop task management application with real-time updates.",
+      foto: porto2,
+      tags: ["React", "Firebase", "Material-UI"],
     },
     {
       id: 3,
@@ -67,9 +75,11 @@ const Portofolio = () => {
       }}
         className="overflow-y-auto text-black">
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <div className="flex p-[6rem] gap-8 cursor-pointer overflow-y-none">
+        <Sidebar />
+        <div className="p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem] cursor-pointer overflow-hidden flex-wrap">
           {portofolioData.map((user, index) => (
-            <div key={index} className={`card  w-80 shadow-xl`} data-aos="fade-up"
+            <div key={index} className={`card  mb-8 ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+          } w-80 shadow-xl`} data-aos="fade-up"
             data-aos-duration="1000" > 
               <figure>
                 <img
