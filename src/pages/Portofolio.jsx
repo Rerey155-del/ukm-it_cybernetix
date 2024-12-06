@@ -15,6 +15,11 @@ import donorpdg1 from "../assets/donorpdg1.png";
 import donorpdg2 from "../assets/donorpdg2.png";
 import donorpdg3 from "../assets/donorpdg3.png";
 import donorpdg4 from "../assets/donorpdg4.png";
+import voting1 from "../assets/voting1.png"
+import voting2 from "../assets/voting2.png"
+import voting3 from "../assets/voting3.png"
+import voting4 from "../assets/voting4.png"
+
 
 const Portofolio = () => {
   const portofolioData = [
@@ -42,7 +47,7 @@ const Portofolio = () => {
       description:
         "E-Voting adalah platform digital yang dirancang untuk mendukung proses pengambilan suara secara online. Sistem ini menawarkan keamanan data, transparansi hasil, dan kemudahan akses bagi semua peserta yang terlibat dalam proses voting.",
       foto: porto3,
-      screenshot: ["{}"],
+      screenshot: [voting1,voting2,voting3,voting4],
       tags: ["Laravel Blade", "Tailwind CSS", "MySQL"],
     },
   ];
@@ -115,7 +120,7 @@ const Portofolio = () => {
       {/* Modal */}
       {selectedPortofolio && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="container bg-white rounded-lg w-11/12 sm:w-10/12 md:w-8/12 lg:w-8/12 max-w-5xl p-4">
+          <div className="container bg-white rounded-xl w-11/12 sm:w-10/12 md:w-8/12 lg:w-8/12 max-w-5xl p-4">
             {/* Carousel */}
             <div className="container carousel w-full">
               {selectedPortofolio.screenshot.map((image, index) => (
@@ -127,7 +132,7 @@ const Portofolio = () => {
                   <img
                     src={image}
                     alt={`Screenshot ${index + 1}`}
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
               ))}
@@ -169,7 +174,7 @@ const Portofolio = () => {
             {/* Close Button */}
             <div className="text-center sm:text-right mt-4">
               <button
-                className="btn btn-primary"
+                className="btn bg-[#F16634] border-none text-white"
                 onClick={() => setSelectedPortofolio(null)}
               >
                 Close
