@@ -48,7 +48,7 @@ const Portofolio = () => {
         "E-Voting adalah platform digital yang dirancang untuk mendukung proses pengambilan suara secara online. Sistem ini menawarkan keamanan data, transparansi hasil, dan kemudahan akses bagi semua peserta yang terlibat dalam proses voting.",
       foto: porto3,
       screenshot: [voting1,voting2,voting3,voting4],
-      tags: ["Laravel Blade", "Tailwind CSS", "MySQL"],
+      tags: ["figma","Laravel Blade", "Tailwind CSS", "MySQL"],
     },
   ];
 
