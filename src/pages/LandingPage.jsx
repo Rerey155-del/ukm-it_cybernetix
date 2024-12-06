@@ -19,7 +19,7 @@ import porto1 from "../assets/porto1.jpg"
 import porto2 from "../assets/porto2.jpg"
 import porto3 from "../assets/porto3.png"
 import { Link } from "react-router-dom"; // Import Link dari React Router
-
+import fotolagi from "../assets/fotolagi.png"
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
@@ -124,11 +124,22 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="image-container mx-auto md:mx-0" data-aos="zoom-in" data-aos-duration="1500">
-            <img
-              src={Frame}
-              alt=""
-              className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
-            />
+
+            <label className="swap swap-flip text-9xl">
+              {/* this hidden checkbox controls the state */}
+              <input type="checkbox" />
+
+              <div className="swap-on"><img
+                src={fotolagi}
+                alt=""
+                className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
+              /></div>
+              <div className="swap-off"><img
+                src={Frame}
+                alt=""
+                className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
+              /></div>
+            </label>
           </div>
         </div>
 

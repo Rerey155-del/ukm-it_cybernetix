@@ -1,93 +1,103 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from "react";
-
+import { useState, useEffect } from "react";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import { useLocation } from "react-router-dom";
-import porto1 from "../assets/porto1.jpg"
-import porto2 from "../assets/porto2.jpg"
-import porto3 from "../assets/porto3.png"
+import porto1 from "../assets/porto1.jpg";
+import porto2 from "../assets/porto2.jpg";
+import porto3 from "../assets/porto3.png";
 import Sidebar from "../Components/Sidebar";
 
 const Portofolio = () => {
-
-  // pembikinan JSON dummy untuk portofolio
   const portofolioData = [
     {
       id: 1,
       title: "Nexus APP Official",
-      description: " Aplikasi Bengkel Motor dirancang untuk memudahkan pengguna dalam merawat dan memperbaiki kendaraan bermotor mereka. Aplikasi ini menyediakan fungsionalitas berbasis web dan seluler yang terintegrasi dengan bengkel-bengkel mitra. Pengguna dapat melakukan pemantauan jarak tempuh motor, menerima rekomendasi perawatan, dan menemukan bengkel terdekat untuk servis. Aplikasi juga mendukung mitra bengkel dengan fitur administrasi suku cadang. responsive e-commerce platform built with Next.js and Stripe integration.",
+      description:
+        "Aplikasi Bengkel Motor dirancang untuk memudahkan pengguna dalam merawat dan memperbaiki kendaraan bermotor mereka. Fitur meliputi jadwal servis otomatis, rekomendasi spare part, serta pelaporan langsung kerusakan. Nexus APP bertujuan memberikan pengalaman pengguna yang cepat dan efisien dalam perawatan kendaraan sehari-hari.",
       foto: porto2,
-      tags: ["Figma", "React JS", "Tailwind CSS", "PHP", "MySQL","Lumen"],
+      tags: ["Figma", "React JS", "Tailwind CSS", "PHP", "MySQL", "Lumen"],
     },
     {
       id: 2,
       title: "Donor.pdg",
-      description: "Donor.Pdg adalah situs yang menyediakan Informasi tentang Donor darah bertujuna untuk membantu pasien yang membutuhkan darah, meningkatkan kesadaran akan pentingnya donor darah, atau mendukung persediaan darah di pusat-pusat kesehatan.",
+      description:
+        "Donor.Pdg adalah situs yang menyediakan informasi tentang donor darah untuk membantu pasien yang membutuhkan darah dengan cepat. Platform ini memfasilitasi pengguna untuk menemukan pendonor potensial serta menyimpan riwayat pendonoran untuk keperluan medis masa depan.",
       foto: porto1,
       tags: ["React", "Firebase", "Material-UI"],
-
     },
     {
       id: 3,
       title: "E-Voting Cybernetix",
-      description: "E-Voting adalah sebuah platform digital yang dirancang untuk mendukung proses pengambilan suara secara online dalam pemilihan Ketua Umum (Ketum) dan Wakil Ketua Umum (Waketum) pada organisasi UKM IT Cybernetix. Platform ini bertujuan untuk menyediakan sistem voting yang cepat, aman, transparan, dan mudah diakses oleh seluruh anggota organisasi. Dengan menggunakan E-VOTING, pemilih dapat memberikan suaranya dari mana saja secara real-time, sekaligus meminimalkan risiko kesalahan perhitungan manual serta memastikan integritas hasil pemilihan.",
+      description:
+        "E-Voting adalah platform digital yang dirancang untuk mendukung proses pengambilan suara secara online. Sistem ini menawarkan keamanan data, transparansi hasil, dan kemudahan akses bagi semua peserta yang terlibat dalam proses voting.",
       foto: porto3,
       tags: ["React", "Firebase", "Material-UI"],
-    }
-
+    },
   ];
 
+  const truncateText = (text, wordLimit) => {
+    const words = text.split(" ");
+    return words.length > wordLimit
+      ? words.slice(0, wordLimit).join(" ") + "..."
+      : text;
+  };
 
   const [darkMode, setDarkMode] = useState(false);
+  const [selectedPortofolio, setSelectedPortofolio] = useState(null); // State untuk menyimpan data card yang dipilih
   const location = useLocation();
+
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode); // Toggle dark mode
+    setDarkMode((prevMode) => !prevMode);
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-
   return (
     <section>
-      <div style={{
-        backgroundColor: darkMode ? "#1E2237" : "#FBF8EF", // Ubah warna berdasarkan darkMode
-        color: darkMode ? "#FFFFFF" : "#000000", // Warna teks
-        minHeight: "100vh",
-        width: "100%",
-        margin: "0",
-        padding: "0",
-        boxSizing: "border-box",
-        overflowX: "hidden",
-        backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733469856/glow-effect_htt6qz.webp')`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        fontFamily: "Montserrat",
-      }}
-        className=" overflow-y-auto text-black">
+      <div
+        style={{
+          backgroundColor: darkMode ? "#1E2237" : "#FBF8EF",
+          color: darkMode ? "#FFFFFF" : "#000000",
+          minHeight: "100vh",
+          width: "100%",
+          margin: "0",
+          padding: "0",
+          boxSizing: "border-box",
+          overflowX: "hidden",
+          backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733469856/glow-effect_htt6qz.webp')`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          fontFamily: "Montserrat",
+        }}
+        className="overflow-y-auto text-black"
+      >
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
-        <div className="container p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem]  overflow-hidden flex-wrap">
-          {portofolioData.map((user, index) => (
-            <div key={index} className={`card cursor-pointer mb-8 ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-          } w-80 shadow-xl`} data-aos="fade-up"
-            data-aos-duration="1000" > 
+        <div className="container p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem] overflow-hidden flex-wrap">
+          {portofolioData.map((item) => (
+            <div
+              key={item.id}
+              className={`tekan card cursor-pointer mb-8 ${darkMode ? "bg-[#32364F]" : "bg-white"
+                } w-80 shadow-xl`}
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              onClick={() => setSelectedPortofolio(item)} // Buka modal dengan data card yang dipilih
+            >
               <figure>
-                <img
-                  src={user.foto}
-                  alt={user.title} />
+                <img src={item.foto} alt={item.title} />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">
-                  {user.title}
-                </h2>
-                <p>{user.description.length > 100 ? `${user.description.substring(0, 100)}...` : user.description}</p>
+                <h2 className="card-title">{item.title}</h2>
+                <p>{truncateText(item.description, 50)}</p>
                 <div className="card-actions justify-end">
-                  <div className="badge badge-outline">Fashion</div>
-                  <div className="badge badge-outline">Products</div>
+                  {item.tags.map((tag, idx) => (
+                    <div key={idx} className="badge badge-outline">
+                      {tag}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -95,6 +105,31 @@ const Portofolio = () => {
         </div>
       </div>
       <Footer darkMode={darkMode} />
+
+      {/* Modal */}
+      {selectedPortofolio && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg w-11/12 max-w-5xl p-4">
+            <h3 className="font-bold text-lg text-black">{selectedPortofolio.title}</h3>
+            <p className="py-2 text-black">{selectedPortofolio.description}</p>
+            <div className="card-actions flex flex-wrap gap-2">
+              {selectedPortofolio.tags.map((tag, idx) => (
+                <div key={idx} className="badge badge-outline text-black">
+                  {tag}
+                </div>
+              ))}
+            </div>
+            <div className="text-right mt-4">
+              <button
+                className="btn btn-primary"
+                onClick={() => setSelectedPortofolio(null)} // Tutup modal
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
