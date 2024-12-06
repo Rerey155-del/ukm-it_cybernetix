@@ -6,6 +6,15 @@ import porto1 from "../assets/porto1.jpg";
 import porto2 from "../assets/porto2.jpg";
 import porto3 from "../assets/porto3.png";
 import Sidebar from "../Components/Sidebar";
+import nexus1 from "../assets/nexus1.png";
+import nexus2 from "../assets/nexus2.png";
+import nexus3 from "../assets/nexus3.png";
+import nexus4 from "../assets/nexus4.png";
+import nexus5 from "../assets/nexus5.png";
+import donorpdg1 from "../assets/donorpdg1.png";
+import donorpdg2 from "../assets/donorpdg2.png";
+import donorpdg3 from "../assets/donorpdg3.png";
+import donorpdg4 from "../assets/donorpdg4.png";
 
 const Portofolio = () => {
   const portofolioData = [
@@ -15,6 +24,7 @@ const Portofolio = () => {
       description:
         "Aplikasi Bengkel Motor dirancang untuk memudahkan pengguna dalam merawat dan memperbaiki kendaraan bermotor mereka. Fitur meliputi jadwal servis otomatis, rekomendasi spare part, serta pelaporan langsung kerusakan. Nexus APP bertujuan memberikan pengalaman pengguna yang cepat dan efisien dalam perawatan kendaraan sehari-hari.",
       foto: porto2,
+      screenshot: [nexus1, nexus2, nexus3, nexus4, nexus5],
       tags: ["Figma", "React JS", "Tailwind CSS", "PHP", "MySQL", "Lumen"],
     },
     {
@@ -23,7 +33,8 @@ const Portofolio = () => {
       description:
         "Donor.Pdg adalah situs yang menyediakan informasi tentang donor darah untuk membantu pasien yang membutuhkan darah dengan cepat. Platform ini memfasilitasi pengguna untuk menemukan pendonor potensial serta menyimpan riwayat pendonoran untuk keperluan medis masa depan.",
       foto: porto1,
-      tags: ["React", "Firebase", "Material-UI"],
+      screenshot: [donorpdg1, donorpdg2, donorpdg3, donorpdg4],
+      tags: ["Figma", "ReactJS", "Tailwind CSS"],
     },
     {
       id: 3,
@@ -31,16 +42,11 @@ const Portofolio = () => {
       description:
         "E-Voting adalah platform digital yang dirancang untuk mendukung proses pengambilan suara secara online. Sistem ini menawarkan keamanan data, transparansi hasil, dan kemudahan akses bagi semua peserta yang terlibat dalam proses voting.",
       foto: porto3,
-      tags: ["React", "Firebase", "Material-UI"],
+      screenshot: ["{}"],
+      tags: ["Laravel Blade", "Tailwind CSS", "MySQL"],
     },
   ];
 
-  const truncateText = (text, wordLimit) => {
-    const words = text.split(" ");
-    return words.length > wordLimit
-      ? words.slice(0, wordLimit).join(" ") + "..."
-      : text;
-  };
 
   const [darkMode, setDarkMode] = useState(false);
   const [selectedPortofolio, setSelectedPortofolio] = useState(null); // State untuk menyimpan data card yang dipilih
@@ -91,8 +97,8 @@ const Portofolio = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{item.title}</h2>
-                <p>{truncateText(item.description, 50)}</p>
-                <div className="card-actions justify-end">
+                <p className="truncate">{item.description}</p>
+                <div className="card-actions justify-end pt-5">
                   {item.tags.map((tag, idx) => (
                     <div key={idx} className="badge badge-outline">
                       {tag}
@@ -109,16 +115,32 @@ const Portofolio = () => {
       {/* Modal */}
       {selectedPortofolio && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg w-11/12 max-w-5xl p-4">
+          <div className=" bg-white rounded-lg w-11/12 max-w-5xl p-4">
+            <div className="carousel w-full">
+              {selectedPortofolio.screenshot.map((image, index) => (
+                <div key={index} id={`item${index + 1}`} className="carousel-item w-full h-[20rem]">
+                  <img src={image} alt={`Screenshot ${index + 1}`} className="w-full rounded-lg" />
+                </div>
+              ))}
+            </div>
+            <div className="flex w-full justify-center gap-2 py-2 ">
+              <a href="#item1" className="btn btn-xs rounded-full">1</a>
+              <a href="#item2" className="btn btn-xs rounded-full">2</a>
+              <a href="#item3" className="btn btn-xs rounded-full">3</a>
+              <a href="#item4" className="btn btn-xs rounded-full">4</a>
+            </div>
+
             <h3 className="font-bold text-lg text-black">{selectedPortofolio.title}</h3>
             <p className="py-2 text-black">{selectedPortofolio.description}</p>
-            <div className="card-actions flex flex-wrap gap-2">
+            <p className="text-black">teknologi : </p>
+            <div className="card-actions flex flex-wrap gap-2 mt-2">
               {selectedPortofolio.tags.map((tag, idx) => (
                 <div key={idx} className="badge badge-outline text-black">
                   {tag}
                 </div>
               ))}
             </div>
+
             <div className="text-right mt-4">
               <button
                 className="btn btn-primary"
