@@ -1,4 +1,4 @@
-import glowEffect from "../assets/glow effect.svg";
+
 import Navbar from "../Components/Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -49,7 +49,7 @@ const ActivityPage = () => {
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
-          backgroundImage: `url(${glowEffect})`,
+          backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733466817/glow_effect_iulzny.svg')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -78,9 +78,9 @@ const ActivityPage = () => {
               <div
                 key={index}
                 className={`rounded-3xl ${darkMode ? 'bg-[#32364F]' : 'bg-white'
-              } shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] border"`} 
-              data-aos="fade-up"
-              data-aos-duration="1000"
+                  } shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] border"`}
+                data-aos="fade-up"
+                data-aos-duration="1000"
               >
                 {/* Bagian Gambar */}
                 <div className="w-full">
@@ -103,11 +103,11 @@ const ActivityPage = () => {
             ))}
           </div>
         </div>
-        
+
       </div>
       <Footer darkMode={darkMode} />
     </section>
-    
+
   )
 }
 
