@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import glowEffect from "../assets/glow effect.svg";
+
 import Navbar from "../Components/Navbar";
 import together from "../assets/Together.jpg";
 import axios from "axios";
@@ -69,7 +69,7 @@ const StrukturalPage = () => {
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
-          backgroundImage: `url(${glowEffect})`,
+          backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733466817/glow_effect_iulzny.svg')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",

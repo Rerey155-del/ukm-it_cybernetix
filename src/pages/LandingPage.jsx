@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"; // Fixed imports by removing duplic
 
 import Navbar from "../Components/Navbar";
 // import foto1 from "../assets/fotobersama.svg";
-import glowEffect from "../assets/glow effect.svg";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Network from "../assets/Networking.svg";
@@ -81,12 +81,12 @@ const LandingPage = () => {
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
-          backgroundImage: `url(${glowEffect}`,
+          backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733466817/glow_effect_iulzny.svg')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
           fontFamily: "Montserrat",
-          
+
         }}
         className=" overflow-y-auto text-black"
       >

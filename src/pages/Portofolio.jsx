@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
-import glowEffect from "../assets/glow effect.svg";
+
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import { useLocation } from "react-router-dom";
@@ -61,7 +61,7 @@ const Portofolio = () => {
         padding: "0",
         boxSizing: "border-box",
         overflowX: "hidden",
-        backgroundImage: `url(${glowEffect})`,
+        backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733466817/glow_effect_iulzny.svg')`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
