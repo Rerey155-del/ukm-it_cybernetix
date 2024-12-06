@@ -115,25 +115,50 @@ const Portofolio = () => {
       {/* Modal */}
       {selectedPortofolio && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className=" bg-white rounded-lg w-11/12 max-w-5xl p-4">
+          <div className="container bg-white rounded-lg w-11/12 sm:w-10/12 md:w-8/12 lg:w-8/12 max-w-5xl p-4">
+            {/* Carousel */}
             <div className="carousel w-full">
               {selectedPortofolio.screenshot.map((image, index) => (
-                <div key={index} id={`item${index + 1}`} className="carousel-item w-full h-[20rem]">
-                  <img src={image} alt={`Screenshot ${index + 1}`} className="w-full rounded-lg" />
+                <div
+                  key={index}
+                  id={`item${index + 1}`}
+                  className="carousel-item w-full h-[10rem] md:h-[15rem]"
+                >
+                  <img
+                    src={image}
+                    alt={`Screenshot ${index + 1}`}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
               ))}
             </div>
-            <div className="flex w-full justify-center gap-2 py-2 ">
-              <a href="#item1" className="btn btn-xs rounded-full">1</a>
-              <a href="#item2" className="btn btn-xs rounded-full">2</a>
-              <a href="#item3" className="btn btn-xs rounded-full">3</a>
-              <a href="#item4" className="btn btn-xs rounded-full">4</a>
+
+            {/* Carousel Navigation */}
+            <div className="flex w-full justify-center gap-2 py-2">
+              {selectedPortofolio.screenshot.map((_, index) => (
+                <a
+                  key={index}
+                  href={`#item${index + 1}`}
+                  className="btn btn-xs sm:btn-sm rounded-full"
+                >
+                  {index + 1}
+                </a>
+              ))}
             </div>
 
-            <h3 className="font-bold text-lg text-black">{selectedPortofolio.title}</h3>
-            <p className="py-2 text-black">{selectedPortofolio.description}</p>
-            <p className="text-black">teknologi : </p>
-            <div className="card-actions flex flex-wrap gap-2 mt-2">
+            {/* Title and Description */}
+            <h3 className="font-bold text-lg text-black text-center sm:text-left">
+              {selectedPortofolio.title}
+            </h3>
+            <p className="py-2 text-black text-sm sm:text-base text-center sm:text-left">
+              {selectedPortofolio.description}
+            </p>
+
+            {/* Tags */}
+            <p className="text-black text-sm sm:text-base text-center sm:text-left">
+              Teknologi:
+            </p>
+            <div className="card-actions flex flex-wrap gap-2 justify-center sm:justify-start mt-2">
               {selectedPortofolio.tags.map((tag, idx) => (
                 <div key={idx} className="badge badge-outline text-black">
                   {tag}
@@ -141,15 +166,17 @@ const Portofolio = () => {
               ))}
             </div>
 
-            <div className="text-right mt-4">
+            {/* Close Button */}
+            <div className="text-center sm:text-right mt-4">
               <button
                 className="btn btn-primary"
-                onClick={() => setSelectedPortofolio(null)} // Tutup modal
+                onClick={() => setSelectedPortofolio(null)}
               >
                 Close
               </button>
             </div>
           </div>
+
         </div>
       )}
     </section>
