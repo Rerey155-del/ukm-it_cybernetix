@@ -34,7 +34,7 @@ const Portofolio = () => {
         "Donor.Pdg adalah situs yang menyediakan informasi tentang donor darah untuk membantu pasien yang membutuhkan darah dengan cepat. Platform ini memfasilitasi pengguna untuk menemukan pendonor potensial serta menyimpan riwayat pendonoran untuk keperluan medis masa depan.",
       foto: porto1,
       screenshot: [donorpdg1, donorpdg2, donorpdg3, donorpdg4],
-      tags: ["Figma", "ReactJS", "Tailwind CSS"],
+      tags: ["Figma", "ReactJS", "Tailwind CSS","MySQL"],
     },
     {
       id: 3,
