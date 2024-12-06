@@ -117,7 +117,7 @@ const Portofolio = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="container bg-white rounded-lg w-11/12 sm:w-10/12 md:w-8/12 lg:w-8/12 max-w-5xl p-4">
             {/* Carousel */}
-            <div className="carousel w-full">
+            <div className="container carousel w-full">
               {selectedPortofolio.screenshot.map((image, index) => (
                 <div
                   key={index}
