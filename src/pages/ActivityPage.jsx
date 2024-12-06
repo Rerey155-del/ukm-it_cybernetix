@@ -49,7 +49,7 @@ const ActivityPage = () => {
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
-          backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733466817/glow_effect_iulzny.svg')`,
+          backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733469856/glow-effect_htt6qz.webp')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
