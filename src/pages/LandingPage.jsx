@@ -139,7 +139,7 @@ const LandingPage = () => {
             <h2>Dengan Divisi Standar Industri</h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
+          <div className="container grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
             <div
               className={`sm:h-[200px] ${darkMode ? 'bg-[#32364F]' : 'bg-white'
                 } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
@@ -184,12 +184,12 @@ const LandingPage = () => {
 
           </div>
         </div>
-        <div className="mb-20 mt-[8rem]">
+        <div className=" mb-20 mt-[8rem]">
           <div>
             <div className="justify-center text-xl text-center font-bold lg:text-2xl lg:mb-5">
               <h2>Portofolio Kami</h2>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
+            <div className="container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
               <div
                 className="bg-white card w-80 shadow-xl rounded-3xl "
 
@@ -245,7 +245,7 @@ const LandingPage = () => {
           <div className="text-xl justify-center text-center font-bold lg:text-2xl mb-7 mt-[3rem]">
             <h2>Dedikasi Berbuah Cerita Yang Mengesankan</h2>
 
-            <div className=" grid grid-cols-1 flex gap-4 px-8 mt-10 lg:flex gap-4 mt-10 lg:px-12 ">
+            <div className="mx-auto justify-items-center container grid grid-cols-1 flex gap-4 px-8 mt-10 lg:flex gap-4 mt-10 lg:px-12 ">
               {/* Gambar Utama */}
               <div className="flex-1">
                 <img
@@ -296,7 +296,7 @@ const LandingPage = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]">
+            <div className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:p-8 mx-auto justify-items-center font-[Inter]">
               {/* Tampilkan Skeleton Loader jika users kosong */}
               {users.length === 0 &&
                 [...Array(4)].map((_, index) => (

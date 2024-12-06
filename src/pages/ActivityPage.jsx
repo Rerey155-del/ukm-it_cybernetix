@@ -64,7 +64,7 @@ const ActivityPage = () => {
             Activity of Cybernetix
           </h2>
 
-          <div className=" px-4 py-4 mb-6">
+          <div className="container mx-auto px-4 py-4 mb-6">
             {/* menamplkan skeleton */}
             {artikel.length === 0 &&
               [...Array(4)].map((_, index) => (
@@ -92,7 +92,7 @@ const ActivityPage = () => {
                 </div>
 
                 {/* Bagian Konten */}
-                <div className="px-4 lg:pt-4 w-full">
+                <div className=" px-4 lg:pt-4 w-full">
                   <p className="text-2xl font-bold mb-4">{user.nama}</p>
                   <p className="text-sm mb-4">{user.isi.length > 100 ? `${user.isi.substring(0, 100)}...` : user.isi}</p>
                   <button className="font-[Inter] text-sm rounded bg-[#F16634] px-4 py-2 text-white hover:bg-[#d14f28] transition">
@@ -103,9 +103,11 @@ const ActivityPage = () => {
             ))}
           </div>
         </div>
-        <Footer darkMode={darkMode} />
+        
       </div>
+      <Footer darkMode={darkMode} />
     </section>
+    
   )
 }
 

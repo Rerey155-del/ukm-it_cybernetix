@@ -70,7 +70,7 @@ const Portofolio = () => {
         className=" overflow-y-auto text-black">
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
-        <div className="p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem]  overflow-hidden flex-wrap">
+        <div className="container p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem]  overflow-hidden flex-wrap">
           {portofolioData.map((user, index) => (
             <div key={index} className={`card cursor-pointer mb-8 ${darkMode ? 'bg-[#32364F]' : 'bg-white'
           } w-80 shadow-xl`} data-aos="fade-up"

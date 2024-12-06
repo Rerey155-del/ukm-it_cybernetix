@@ -86,20 +86,21 @@ const StrukturalPage = () => {
 
           <img
             data-aos="zoom-in" 
-            className="rounded-2xl w-full h-zauto max-h-[40rem] sm:max-h-[28rem] md:max-h-[32rem] lg:max-h-[36rem] object-cover mx-auto shadow-xl"
+            className="container rounded-2xl w-full h-zauto max-h-[40rem] sm:max-h-[28rem] md:max-h-[32rem] lg:max-h-[36rem] object-cover mx-auto shadow-xl"
             src={together}
             alt=""
           />
         </div>
 
-        <div className="px-2 lg:px-10 max-w-full mt-16">
-          <h2 className="pl-4 text-2xl  font-semibold lg:text-3xl mb-4"
+        <div className=" px-2 lg:px-10 max-w-full mt-16">
+        <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
+          <h2
           >
             Struktural Inti
           </h2>
-
+</div>
           <div
-            className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
+            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {/* Tampilkan Skeleton Loader jika users kosong */}
@@ -130,13 +131,14 @@ const StrukturalPage = () => {
             ))}
           </div>
 
-
-          <h2 className="pl-4 text-2xl  font-semibold lg:text-3xl mb-4 "
+          <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
+          <h2 
           >
             Bidang Penelitian & Pengembangan
           </h2>
+          </div>
           <div
-            className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter] "
+            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter] "
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {/* Tampilkan Skeleton Loader jika users kosong */}
@@ -165,11 +167,13 @@ const StrukturalPage = () => {
               </div>
             ))}
           </div>
-          <h2 className="pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
+          <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
+          <h2>
             Bidang Informasi dan Komunikasi
           </h2>
+          </div>
           <div
-            className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
+            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {/* Tampilkan Skeleton Loader jika users kosong */}
@@ -198,12 +202,14 @@ const StrukturalPage = () => {
               </div>
             ))}
           </div>
-          <h2 className="pl-4 text-2xl  font-semibold lg:text-3xl mb-4"
+          <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
+          <h2
           >
             Bidang Hubungan Masyarakat
           </h2>
+          </div>
           <div
-            className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
+            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {/* Tampilkan Skeleton Loader jika users kosong */}
@@ -232,12 +238,14 @@ const StrukturalPage = () => {
               </div>
             ))}
           </div>
-          <h2 className="pl-4 text-2xl  font-semibold lg:text-3xl mb-4"
+          <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
+          <h2
           >
             Bidang Pengembangan Sumber Daya Manusia
           </h2>
+          </div>
           <div
-            className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter] mb-6"
+            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter] mb-6"
             style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
           >
             {/* Tampilkan Skeleton Loader jika users kosong */}
