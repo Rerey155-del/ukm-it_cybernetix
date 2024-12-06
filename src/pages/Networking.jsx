@@ -43,7 +43,7 @@ const Programming = () => {
         <Sidebar />
 
         {/* Konten Utama */}
-        <div className="p-8 flex-grow container mx-auto md:px-4 py-16 md:mt-[8rem] md:mb-[6rem]"
+        <div className="container p-8 flex-grow container mx-auto md:px-4 py-16 md:mt-[8rem] md:mb-[6rem]"
           data-aos="fade-up"
           data-aos-duration="1000">
           <div className="flex flex-col gap-12">
