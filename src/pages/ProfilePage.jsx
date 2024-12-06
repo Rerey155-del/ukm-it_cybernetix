@@ -10,8 +10,10 @@ import { useLocation } from "react-router-dom";
 const ProfilePage = () => {
     const [darkMode, setDarkMode] = useState(false);
     const location = useLocation();
+    const darkModes = JSON.parse(localStorage.getItem("darkMode"));
     const toggleDarkMode = () => {
         setDarkMode((prevMode) => !prevMode); // Toggle dark mode
+        localStorage.setItem("darkMode", JSON.stringify(!darkMode));
       };
 
     useEffect(() => {
@@ -23,8 +25,8 @@ const ProfilePage = () => {
     return (
         <section style={{ overflow: "hidden" }}>
             <div style={{
-              backgroundColor: darkMode ? "#1E2237" : "#FBF8EF", // Ubah warna berdasarkan darkMode
-              color: darkMode ? "#FFFFFF" : "#000000", // Warna teks
+              backgroundColor: darkModes ? "#1E2237" : "#FBF8EF", // Ubah warna berdasarkan darkMode
+              color: darkModes ? "#FFFFFF" : "#000000", // Warna teks
               minHeight: "100vh",
               width: "100%",
               margin: "0",
@@ -39,7 +41,7 @@ const ProfilePage = () => {
             }}
                 className=" text-black"
             >
-                <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+                <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
                 <Sidebar />
                 <div className="container grid grid-cols-1 mx-auto md:grid-cols-2 p-5 md:p-20 gap-8 mt-10 md:mt-20 justify-center items-center">
                     <div className="rounded-3xl shadow-xl bg-white w-[15rem] mx-auto md:w-[20rem] h-[15rem] md:h-[20rem] p-5 md:p-8" data-aos="zoom-in">
@@ -72,7 +74,7 @@ const ProfilePage = () => {
                         Sejak berdirinya, UKM IT-Cybernetix aktif berkontribusi dalam bidang pembelajaran, pengembangan, dan penelitian teknologi informasi. Beragam kegiatan telah dilakukan, mulai dari belajar bersama, berbagi ilmu, hingga mengadakan acara besar yang melibatkan seluruh mahasiswa UPI YPTK Padang serta mahasiswa dari universitas lain di Kota Padang. Kegiatan tersebut meliputi seminar, kompetisi IT, dan program kolaborasi antar universitas, dengan tujuan utama untuk mengembangkan minat dan keahlian mahasiswa di bidang teknologi informasi serta memperkuat jaringan antar mahasiswa di kota Padang.</p>
                 </div>
             </div>
-            <Footer darkMode={darkMode} />
+            <Footer darkMode={darkModes} />
         </section>
     )
 }
