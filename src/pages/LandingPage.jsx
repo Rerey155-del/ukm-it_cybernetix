@@ -81,7 +81,7 @@ const LandingPage = () => {
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
-          backgroundImage: `url(${glowEffect})`,
+          backgroundImage: `url(${glowEffect}`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
