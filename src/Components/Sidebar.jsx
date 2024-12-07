@@ -116,7 +116,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                         </li>
                     </ul>
                 </div>
-                <div className="flex justify-center pt-6 ml-auto">
+                <div className="flex justify-center pt-72 ml-auto">
                    
                     <label className="flex cursor-pointer gap-2">
                         <svg
