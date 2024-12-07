@@ -42,7 +42,7 @@ const ProfilePage = () => {
                 className=" text-black"
             >
                 <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-                <Sidebar />
+                <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
                 <div className="container grid grid-cols-1 mx-auto md:grid-cols-2 p-5 md:p-20 gap-8 mt-10 md:mt-20 justify-center items-center">
                     <div className="rounded-3xl shadow-xl bg-white w-[15rem] mx-auto md:w-[20rem] h-[15rem] md:h-[20rem] p-5 md:p-8" data-aos="zoom-in">
                         <img src={UKM} alt="" className="pt-12 md:pt-14 mx-auto" />

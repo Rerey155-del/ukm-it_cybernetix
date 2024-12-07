@@ -60,7 +60,8 @@ const ActivityPage = () => {
         className=" overflow-y-auto text-black"
       >
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-        <Sidebar />
+        <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
+
         <div className=" p-4 sm:p-6 md:p-10 justify-center text-2xl md:text-3xl mb-4 max-w-full mt-6">
           <h2 className=" mt-2 text-center text-2xl font-semibold lg:text-3xl mb-4">
             Activity of Cybernetix

@@ -47,7 +47,7 @@ const Programming = () => {
       >
         {/* Navbar */}
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-        <Sidebar />
+        <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
 
         {/* Konten Utama */}
         <div className="container p-8 flex-grow container mx-auto md:px-4 py-16 md:mt-[8rem] md:mb-[6rem]"

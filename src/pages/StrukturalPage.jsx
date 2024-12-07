@@ -80,7 +80,7 @@ const StrukturalPage = () => {
         className=" text-black"
       >
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-        <Sidebar />
+        <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <div className=" p-4 sm:p-6 md:p-10 justify-center font-bold text-2xl md:text-3xl mb-4 max-w-full mt-6">
           <h2 data-aos="fade-up"  className="text-center mb-6 sm:mb-8 md:mb-5">
             Struktural 2024/2025

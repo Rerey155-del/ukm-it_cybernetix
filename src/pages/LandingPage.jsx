@@ -93,7 +93,7 @@ const LandingPage = () => {
         className=" overflow-y-auto text-black"
       >
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-        <Sidebar />
+        <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
 
         <div className="container p-6 sm:p-10 md:p-16 lg: px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-24 mt-6 sm:mt-10">
           <div
