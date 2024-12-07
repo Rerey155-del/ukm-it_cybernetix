@@ -39,7 +39,7 @@ const Portofolio = () => {
         "Donor.Pdg adalah situs yang menyediakan informasi tentang donor darah untuk membantu pasien yang membutuhkan darah dengan cepat. Platform ini memfasilitasi pengguna untuk menemukan pendonor potensial serta menyimpan riwayat pendonoran untuk keperluan medis masa depan.",
       foto: porto1,
       screenshot: [donorpdg1, donorpdg2, donorpdg3, donorpdg4],
-      tags: ["Figma", "ReactJS", "Tailwind CSS","MySQL"],
+      tags: ["Figma", "ReactJS", "Tailwind CSS", "MySQL"],
     },
     {
       id: 3,
@@ -47,8 +47,8 @@ const Portofolio = () => {
       description:
         "E-Voting adalah platform digital yang dirancang untuk mendukung proses pengambilan suara secara online. Sistem ini menawarkan keamanan data, transparansi hasil, dan kemudahan akses bagi semua peserta yang terlibat dalam proses voting.",
       foto: porto3,
-      screenshot: [voting1,voting2,voting3,voting4],
-      tags: ["Figma","Laravel Blade", "Tailwind CSS", "MySQL"],
+      screenshot: [voting1, voting2, voting3, voting4],
+      tags: ["Figma", "Laravel Blade", "Tailwind CSS", "MySQL"],
     },
   ];
 
@@ -91,7 +91,7 @@ const Portofolio = () => {
           {portofolioData.map((item) => (
             <div
               key={item.id}
-              className={`tekan card cursor-pointer mb-8 ${darkMode ? "bg-[#32364F]" : "bg-white"
+              className={` card cursor-pointer mb-8 ${darkMode ? "bg-[#32364F]" : "bg-white"
                 } w-80 shadow-xl`}
               data-aos="fade-up"
               data-aos-duration="1000"
@@ -137,6 +137,7 @@ const Portofolio = () => {
                 </div>
               ))}
             </div>
+
 
             {/* Carousel Navigation */}
             <div className="flex w-full justify-center gap-2 py-2">
