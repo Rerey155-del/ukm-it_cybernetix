@@ -5,11 +5,15 @@ import Proyek from "../assets/proyek.svg";
 import Cx from "../assets/cx-logo.svg";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 
 
 const Sidebar = () => {
     // Tambahkan state untuk mengelola visibilitas Sidebar
     const [isOpen, setIsOpen] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
+    const darkModes = JSON.parse(localStorage.getItem("darkMode"));
 
     const navigate = useNavigate();
 
@@ -18,27 +22,32 @@ const Sidebar = () => {
         setIsOpen(!isOpen);
     };
 
+    const toggleDarkMode = () => {
+        setDarkMode((prevMode) => !prevMode); // Toggle dark mode
+        localStorage.setItem("darkMode", JSON.stringify(!darkMode));
+      };
+
     const Dashboard = () => {
         navigate("/");
-      };
+    };
 
-      const Struktural = () => {
+    const Struktural = () => {
         navigate("/struktural");
-      };
-      const Activity = () => {
+    };
+    const Activity = () => {
         navigate("/activity");
-      };
-      const Profile = () => {
+    };
+    const Profile = () => {
         navigate("/Profile");
-      };
+    };
 
-      const Recruitment = () => {
+    const Recruitment = () => {
         Swal.fire({
             icon: "error",
             title: "Oops...",
             text: "Saat ini, fitur ini masih dalam pengembangan",
-          });
-      }
+        });
+    }
 
 
     return (
@@ -52,7 +61,8 @@ const Sidebar = () => {
             {/* Sidebar */}
             <div
                 id="drawer-navigation"
-                className={`fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform font-[Inter] ${isOpen ? "translate-x-0" : "-translate-x-full"} bg-white `}
+                className={`fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform font-[Inter] ${isOpen ? "translate-x-0" : "-translate-x-full"} ${darkModes ? 'bg-[#32364F]' : 'bg-white'
+            }`}
                 tabIndex="-1"
                 aria-labelledby="drawer-navigation-label"
             >
@@ -78,41 +88,42 @@ const Sidebar = () => {
                             <a
                                 href="#"
                                 className="flex items-center p-2 rounded-lg text-gray-900 hover:text-white hover:bg-[#F16634] dark:text-white group" onClick={Dashboard}
-                            > 
+                            >
                                 <img src={Tentang} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Dashboard</span>
+                                <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Dashboard</span>
                             </a>
                         </li>
 
                         <li>
                             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Struktural}>
-                            <img src={Proyek} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Struktural</span>
+                                <img src={Proyek} alt="" />
+                                <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Struktural</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Activity}>
-                            <img src={Proyek} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Activity</span>
+                                <img src={Proyek} alt="" />
+                                <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Activity</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Profile}>
-                            <img src={Proyek} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Profile</span>
+                                <img src={Proyek} alt="" />
+                                <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Profile</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Recruitment}>
-                            <img src={Proyek} alt="" />
-                                <span className="ms-3 text-black hover:text-white">Recruitment</span>
+                                <img src={Proyek} alt="" />
+                                <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Recruitment</span>
                             </a>
                         </li>
-                        
-                       
-                        
-
                     </ul>
+                </div>
+                <div className="flex ml-auto">
+                    <FormControlLabel
+                        control={<Switch checked={darkMode} onChange={toggleDarkMode} />}
+                    />
                 </div>
             </div>
         </div>

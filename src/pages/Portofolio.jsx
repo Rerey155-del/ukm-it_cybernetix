@@ -89,7 +89,7 @@ const Portofolio = () => {
       >
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
-        <div className="container p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem] overflow-hidden flex-wrap">
+        <div className="container justify-items-center p-6 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:p-[6rem] overflow-hidden flex-wrap">
           {portofolioData.map((item) => (
             <div
               key={item.id}
