@@ -72,7 +72,7 @@ const ActivityPage = () => {
               [...Array(4)].map((_, index) => (
                 <div
                   key={index}
-                  className="skeleton rounded-3xl shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] h-[23rem] border animate-pulse"
+                  className="skeleton rounded-3xl shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] h-[23rem] animate-pulse"
                 ></div>
               ))}
             {/* mapping data */}
