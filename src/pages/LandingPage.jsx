@@ -321,22 +321,22 @@ const LandingPage = () => {
 
               {/* Tampilkan Data dari Database */}
               {users.map((user, index) => (
-                <div
-                  key={index}
-                  className={`bg-white card-body ${darkModes ? 'bg-[#32364F]' : 'bg-white'
-                    } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-2xl rounded-3xl`}
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
-                  <div className={`absolute ${darkModes ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
-                    } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}></div>
-                  <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
-                    <p className="font-bold">{user.nama}</p>
-                    <p>{user.jabatan}</p>
-                  </div>
+              <div
+                key={index}
+                className={`card-body ${darkModes ? 'bg-[#32364F]' : 'bg-white'
+                  } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
+                <div className={`absolute ${darkModes ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
+                  } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}></div>
+                <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
+                  <p className="font-bold">{user.nama}</p>
+                  <p>{user.jabatan}</p>
                 </div>
-              ))}
+              </div>
+            ))}
             </div>
 
 
