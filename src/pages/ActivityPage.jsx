@@ -12,6 +12,7 @@ const ActivityPage = () => {
   const [artikel, setArtikel] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
+  const darkModes = JSON.parse(localStorage.getItem("darkMode"));
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll ke atas
@@ -24,6 +25,7 @@ const ActivityPage = () => {
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode); // Toggle dark mode
+    localStorage.setItem("darkMode", JSON.stringify(!darkMode));
   };
 
   useEffect(() => {
@@ -41,8 +43,8 @@ const ActivityPage = () => {
     <section>
       <div
         style={{
-          backgroundColor: darkMode ? "#1E2237" : "#FBF8EF", // Ubah warna berdasarkan darkMode
-          color: darkMode ? "#FFFFFF" : "#000000", // Warna teks
+          backgroundColor: darkModes ? "#1E2237" : "#FBF8EF", // Ubah warna berdasarkan darkMode
+          color: darkModes ? "#FFFFFF" : "#000000", // Warna teks
           minHeight: "100vh",
           width: "100%",
           margin: "0",
@@ -57,7 +59,7 @@ const ActivityPage = () => {
         }}
         className=" overflow-y-auto text-black"
       >
-        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar />
         <div className=" p-4 sm:p-6 md:p-10 justify-center text-2xl md:text-3xl mb-4 max-w-full mt-6">
           <h2 className=" mt-2 text-center text-2xl font-semibold lg:text-3xl mb-4">
@@ -77,7 +79,7 @@ const ActivityPage = () => {
             {artikel.map((user, index) => (
               <div
                 key={index}
-                className={`rounded-3xl ${darkMode ? 'bg-[#32364F]' : 'bg-white'
+                className={`rounded-3xl ${darkModes ? 'bg-[#32364F]' : 'bg-white'
                   } shadow-md mb-6 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 min-w-[300px] border"`}
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -105,7 +107,7 @@ const ActivityPage = () => {
         </div>
 
       </div>
-      <Footer darkMode={darkMode} />
+      <Footer darkMode={darkModes} />
     </section>
 
   )
