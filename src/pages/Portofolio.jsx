@@ -77,7 +77,7 @@ const Portofolio = () => {
           padding: "0",
           boxSizing: "border-box",
           overflowX: "hidden",
-          backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733469856/glow-effect_htt6qz.webp')`,
+          backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733543685/glow_effect_odggcl.png')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
