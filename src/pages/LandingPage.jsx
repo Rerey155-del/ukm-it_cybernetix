@@ -161,7 +161,7 @@ const LandingPage = () => {
                 <Link to="/multimedia" className="block">
                   <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" /></Link>
               </div>
-              <Link to="/programming" className="block">
+              <Link to="/mulitmedia" className="block">
                 <h2 className="card-title">Multimedia</h2>
                 <p>UIX Design, Design, Video Editing</p>
               </Link>
