@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react-swc';
 // https://vite.dev/config/
 export default defineConfig({
   server: {
-    host: '165.22.99.', // Host bisa berupa 'localhost' atau '0.0.0.0' untuk akses jaringan.
-    port: 3000       // Ubah port sesuai kebutuhan.
+    host: '165.22.99.299', 
+    port: 3000       
   },
   plugins: [react()],
   build: {
