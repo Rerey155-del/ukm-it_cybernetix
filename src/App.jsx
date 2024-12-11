@@ -7,7 +7,7 @@ import Programming from "./pages/Programming";
 import Multimedia from "./pages/Multimedia";
 import Networking from "./pages/Networking";
 import Portofolio from "./pages/Portofolio";
-import Developer from "./pages/DeveloperPage";
+import Activitydetail from "./pages/ActivityDetail";
 
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/programming" element={<Programming />} />
         <Route path="/multimedia" element={<Multimedia />} />
         <Route path="/networking" element={<Networking />} />
-        <Route path="/developer" element={<Developer />} />
+        <Route path="/activitydetail" element={<Activitydetail />} />
       </Routes>
     </Router>
   );

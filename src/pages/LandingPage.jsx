@@ -127,16 +127,16 @@ const LandingPage = () => {
           </div>
           <div className="image-container mx-auto md:mx-0" data-aos="zoom-in" data-aos-duration="1500">
 
-            <label className="swap swap-flip text-9xl">
+            <label className="swap swap-flip text-9xl" >
               {/* this hidden checkbox controls the state */}
               <input type="checkbox" />
 
-              <div className="swap-on"><img
+              <div className="swap-on tooltip " data-tip="😍"><img
                 src={fotolagi}
                 alt=""
                 className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
               /></div>
-              <div className="swap-off"><img
+              <div className="swap-off tooltip " data-tip="😁"><img
                 src={Frame}
                 alt=""
                 className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
