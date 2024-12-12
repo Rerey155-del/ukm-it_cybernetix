@@ -71,20 +71,22 @@ const ActivityDetail = () => {
               <p>{artikel.isi}</p>
 
               <div className="flex gap-10 mt-6 justify-center">
-                <div className="card bg-white shadow-xl w-[25rem] gap-5 p-10 items-center">
-                  <p className="font-bold text-black">Apa kata peserta?</p>
+                <div className={`card ${darkModes? "bg-[#32364F]" : "bg-white"} shadow-xl w-[25rem] gap-5 p-10 items-center`}>
+                  <p className="font-bold ">Apa kata peserta?</p>
                   {artikel.reviewPeserta?.map((review, index) => (
-                    <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
+                    <div key={index} className= {`p-4 ${darkModes? "bg-[#383E5E]" : "bg-white"} card bg-black shadow-xl w-[20rem]`}>
                       <p>{review}</p> 
                     </div>
                   ))}
 
                 </div>
-                <div className=" card bg-white shadow-xl w-[25rem] gap-5 p-10 items-center">
-                  <p className="font-bold text-black">Apa kata CX?</p>
+                <div className={`card ${darkModes? "bg-[#32364F]" : "bg-white"} shadow-xl w-[25rem] gap-5 p-10 items-center`}>
+                  <p className="font-bold">Apa kata CX?</p>
 
                   {artikel.reviewCX?.map((review, index) => (
-                    <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
+                    <div key={index} className={`p-4  card shadow-xl w-[20rem] ${
+                      darkModes ? "bg-[#383E5E]" : "bg-white"
+                    }`}>
                       <p>{review}</p> 
                     </div>
                   ))}
@@ -93,10 +95,12 @@ const ActivityDetail = () => {
 
               </div>
             </div>
-            <div className="card bg-white h-full shadow-xl w-[25rem] gap-5 p-10 items-center">
-              <p className=" font-bold text-black">Highlight Activity</p>
+            <div className={`card ${darkModes?"bg-[#32364F]" : "bg-white"} h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}>
+              <p className=" font-bold ">Highlight Activity</p>
                 {artikel.reviewCX?.map((review, index) => (
-                <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
+                <div key={index} className={`p-4  card shadow-xl w-[20rem] ${
+                  darkModes ? "bg-[#383E5E]" : "bg-white"
+                }`}>
                   <p>{review}</p>
                 </div>
               ))}
