@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const ActivityDetail = () => {
-  const [artikel, setArtikel] = useState(null); // Menyimpan artikel sebagai null sementara
+  const [artikel, setArtikel] = useState(null); 
   const [darkMode, setDarkMode] = useState(false);
   const { id } = useParams(); // Ambil ID dari URL
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
@@ -32,7 +32,7 @@ const ActivityDetail = () => {
   if (!artikel) {
     return (
       <div className="skeleton w-full h-full bg-gray-300 animate-pulse">
-        {/* Skeleton loading jika data belum dimuat */}
+        
       </div>
     );
   }
@@ -60,8 +60,8 @@ const ActivityDetail = () => {
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <div className="flex flex-col gap-6">
-          <img className="w-full h-full" src={artikel.gambar} alt={artikel.nama} />
-          <div className="flex container mx-auto">
+          <img className="w-full h-full" src={artikel.gambar} alt={artikel.nama} data-aos="fade-up" />
+          <div className="flex container mx-auto" data-aos="fade-up">
             <div className=" p-6">
               <h2 className="font-bold text-2xl">{artikel.nama}</h2>
               <div className="flex gap-5 mt-5 mb-5">
@@ -73,11 +73,9 @@ const ActivityDetail = () => {
               <div className="flex gap-10 mt-6 justify-center">
                 <div className="card bg-white shadow-xl w-[25rem] gap-5 p-10 items-center">
                   <p className="font-bold text-black">Apa kata peserta?</p>
-
                   {artikel.reviewPeserta?.map((review, index) => (
                     <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
-                      <p className="font-semibold">Peserta {index + 1}</p> {/* Menampilkan indeks untuk memberi label */}
-                      <p>{review}</p> {/* Menampilkan string dari array reviewPeserta */}
+                      <p>{review}</p> 
                     </div>
                   ))}
 
@@ -87,8 +85,7 @@ const ActivityDetail = () => {
 
                   {artikel.reviewCX?.map((review, index) => (
                     <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
-                      
-                      <p>{review}</p> {/* Menampilkan string dari array reviewPe serta */}
+                      <p>{review}</p> 
                     </div>
                   ))}
 
@@ -97,16 +94,14 @@ const ActivityDetail = () => {
               </div>
             </div>
             <div className="card bg-white h-full shadow-xl w-[25rem] gap-5 p-10 items-center">
-                  <p className=" font-bold text-black">Highlight Activity</p>
-
-                  {artikel.reviewCX?.map((review, index) => (
-                    <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
-                      
-                      <p>{review}</p> {/* Menampilkan string dari array reviewPe serta */}
-                    </div>
-                  ))}
-
+              <p className=" font-bold text-black">Highlight Activity</p>
+                {artikel.reviewCX?.map((review, index) => (
+                <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
+                  <p>{review}</p>
                 </div>
+              ))}
+
+            </div>
           </div>
         </div>
 

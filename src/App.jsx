@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/programming" element={<Programming />} />
         <Route path="/multimedia" element={<Multimedia />} />
         <Route path="/networking" element={<Networking />} />
-        <Route path="/activitydetail" element={<Activitydetail />} />
+        <Route path="/activitydetail/:id" element={<Activitydetail />} />
         <Route path="/developer" element={<DeveloperPage />} />
 
       </Routes>
