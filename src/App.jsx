@@ -22,13 +22,9 @@ const App = () => {
         <Route path="/programming" element={<Programming />} />
         <Route path="/multimedia" element={<Multimedia />} />
         <Route path="/networking" element={<Networking />} />
-<<<<<<< HEAD
         <Route path="/activitydetail" element={<Activitydetail />} />
         <Route path="/developer" element={<DeveloperPage />} />
-=======
-        <Route path="/activitydetail/:id" element={<Activitydetail />} />
 
->>>>>>> 7f83feb0d9e34f338f0e9f0094788855cdce2d78
       </Routes>
     </Router>
   );
