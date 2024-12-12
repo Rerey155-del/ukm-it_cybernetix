@@ -14,12 +14,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 tailChase.register();
 import Footer from "../Components/Footer";
-import Frame from "../assets/Frame.svg"
-import porto1 from "../assets/porto1.jpg"
-import porto2 from "../assets/porto2.jpg"
-import porto3 from "../assets/porto3.png"
+import Frame from "../assets/Frame.svg";
+import porto1 from "../assets/porto1.jpg";
+import porto2 from "../assets/porto2.jpg";
+import porto3 from "../assets/porto3.png";
 import { Link } from "react-router-dom"; // Import Link dari React Router
-import fotolagi from "../assets/fotolagi.png"
+import fotolagi from "../assets/fotolagi.png";
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
@@ -55,7 +55,6 @@ const LandingPage = () => {
     localStorage.setItem("darkMode", JSON.stringify(!darkMode));
   };
 
-
   const showLoadingStruktural = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -88,7 +87,6 @@ const LandingPage = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           fontFamily: "Montserrat",
-
         }}
         className=" overflow-y-auto text-black"
       >
@@ -125,26 +123,32 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="image-container mx-auto md:mx-0" data-aos="zoom-in" data-aos-duration="1500">
-
-            <label className="swap swap-flip text-9xl" >
+          <div
+            className="image-container mx-auto md:mx-0"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
+            <label className="swap swap-flip text-9xl">
               {/* this hidden checkbox controls the state */}
               <input type="checkbox" />
 
-              <div className="swap-on tooltip " data-tip="😍"><img
-                src={fotolagi}
-                alt=""
-                className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
-              /></div>
-              <div className="swap-off tooltip " data-tip="😁"><img
-                src={Frame}
-                alt=""
-                className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
-              /></div>
+              <div className="swap-on tooltip " data-tip="😍">
+                <img
+                  src={fotolagi}
+                  alt=""
+                  className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
+                />
+              </div>
+              <div className="swap-off tooltip " data-tip="😁">
+                <img
+                  src={Frame}
+                  alt=""
+                  className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
+                />
+              </div>
             </label>
           </div>
         </div>
-
 
         <div>
           <div className="text-xl justify-center text-center font-bold lg:text-2xl mb-16">
@@ -154,12 +158,18 @@ const LandingPage = () => {
 
           <div className="container grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
             <div
-              className={`sm:h-[200px] ${darkModes ? 'bg-[#32364F]' : 'bg-white'
-                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
+              className={`sm:h-[200px] ${
+                darkModes ? "bg-[#32364F]" : "bg-white"
+              } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
               <div className="cursor-pointer">
                 <Link to="/multimedia" className="block">
-                  <img src={Multimedia} alt="" className="w-20 lg:w-28 lg:h-28" /></Link>
+                  <img
+                    src={Multimedia}
+                    alt=""
+                    className="w-20 lg:w-28 lg:h-28"
+                  />
+                </Link>
               </div>
               <Link to="/mulitmedia" className="block">
                 <h2 className="card-title">Multimedia</h2>
@@ -168,12 +178,18 @@ const LandingPage = () => {
             </div>
 
             <div
-              className={`sm:h-[200px] ${darkModes ? 'bg-[#32364F]' : 'bg-white'
-                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
+              className={`sm:h-[200px] ${
+                darkModes ? "bg-[#32364F]" : "bg-white"
+              } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
               <div className="cursor-pointer">
                 <Link to="/programming" className="block">
-                  <img src={Programming} alt="" className="w-16 lg:w-28 lg:h-28" /></Link>
+                  <img
+                    src={Programming}
+                    alt=""
+                    className="w-16 lg:w-28 lg:h-28"
+                  />
+                </Link>
               </div>
               <Link to="/programming" className="block">
                 <h2 className="card-title">Programming</h2>
@@ -182,19 +198,20 @@ const LandingPage = () => {
             </div>
 
             <div
-              className={`sm:h-[200px] ${darkModes ? 'bg-[#32364F]' : 'bg-white'
-                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
+              className={`sm:h-[200px] ${
+                darkModes ? "bg-[#32364F]" : "bg-white"
+              } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
               <div className="cursor-pointer">
                 <Link to="/networking" className="block">
-                  <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" /></Link>
+                  <img src={Network} alt="" className="w-20 lg:w-28 lg:h-28" />
+                </Link>
               </div>
               <Link to="/networking" className="block">
                 <h2 className="card-title">Networking</h2>
                 <p>Networking Fundamental</p>
               </Link>
             </div>
-
           </div>
         </div>
         <div className=" mb-20 mt-[8rem]">
@@ -203,36 +220,33 @@ const LandingPage = () => {
               <h2>Portofolio Kami</h2>
             </div>
             <div className="container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 mx-auto justify-items-center font-[Inter]">
-              <div
-                className="bg-white card w-80 shadow-xl rounded-3xl "
+              <div className="bg-white card w-80 shadow-xl rounded-3xl ">
+                <img src={porto1} alt="" className="rounded-3xl" />
+              </div>
 
+              <div className="bg-white card w-80 shadow-xl rounded-3xl  ">
+                <img src={porto2} alt="" className="rounded-3xl" />
+              </div>
 
-              ><img src={porto1} alt="" className="rounded-3xl" /></div>
-
-              <div
-                className="bg-white card w-80 shadow-xl rounded-3xl  "
-
-
-              ><img src={porto2} alt="" className="rounded-3xl" /></div>
-
-              <div
-                className="bg-white card w-80 shadow-xl rounded-3xl  "
-
-
-              ><img src={porto3} alt="" className="rounded-3xl" /></div>
-
-
-
+              <div className="bg-white card w-80 shadow-xl rounded-3xl  ">
+                <img src={porto3} alt="" className="rounded-3xl" />
+              </div>
             </div>
           </div>
           <div className="flex justify-center font-semibold text-lg mb-24 mt-7 font-[Inter]">
-            <button className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg " onClick={showLoadingPortofolio}>
+            <button
+              className="p-3 bg-[#F16634] text-white rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg "
+              onClick={showLoadingPortofolio}
+            >
               Selengkapnya
             </button>
           </div>
 
-          <div className={`p-4 h-16 ${darkModes ? 'bg-[#F16634]' : 'bg-[#383838]'
-            }   lg:h-36 w-full  lg:p-8  `}>
+          <div
+            className={`p-4 h-16 ${
+              darkModes ? "bg-[#F16634]" : "bg-[#383838]"
+            }   lg:h-36 w-full  lg:p-8  `}
+          >
             <div className="gap-6 flex items-center justify-center text-white text-xl lg:gap-40  ">
               <div className="text-xs text-center lg:space-y-3 lg:text-xl ">
                 <p>340+</p>
@@ -260,47 +274,81 @@ const LandingPage = () => {
 
             <div className="mx-auto justify-items-center container grid grid-cols-1 flex gap-4 px-8 mt-10 lg:flex gap-4 mt-10 lg:px-12 ">
               {/* Gambar Utama */}
-              <div className="flex-1">
+              <div className="flex-1 relative">
                 <img
                   className="h-full w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:shadow-lg"
-                  src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
+                  src="/src/assets/cyberfest.png"
                   alt="Featured Image"
                 />
+                <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                  Cyberfest 2023
+                </div>
               </div>
 
               {/* Grid 4 Gambar */}
               <div className="grid grid-cols-2 gap-4 flex-1">
-                <div>
+                <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+                    src="/src/assets/bootcamp.png"
                     alt="Image 2"
                   />
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                    CX Bootcamp 2023
+                  </div>
                 </div>
-                <div>
+                <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+                    src="/src/assets/diesnatalis.png"
                     alt="Image 3"
                   />
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                    Diesnatilis UKM-IT Cybernetix
+                  </div>
                 </div>
-                <div>
+                <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+                    src="/src/assets/outbond.png"
                     alt="Image 4"
                   />
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                    CX Outbound
+                  </div>
                 </div>
-                <div>
+                <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+                    src="/src/assets/LDK.png"
                     alt="Image 5"
                   />
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                    Latihan Dasar Kepemimpinan
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    src="/src/assets/Outdoor.png"
+                    alt="Image 5"
+                  />
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                    Outdoor
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    src="/src/assets/Webinar.png"
+                    alt="Image 5"
+                  />
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                    Webinar
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
           <div className="px-2 lg:px-10 max-w-full mt-16">
             <div>
@@ -321,25 +369,33 @@ const LandingPage = () => {
 
               {/* Tampilkan Data dari Database */}
               {users.map((user, index) => (
-              <div
-                key={index}
-                className={`card-body ${darkModes ? 'bg-[#32364F]' : 'bg-white'
+                <div
+                  key={index}
+                  className={`card-body ${
+                    darkModes ? "bg-[#32364F]" : "bg-white"
                   } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
-                <div className={`absolute ${darkModes ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
-                  } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}></div>
-                <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img
+                    src={user.foto}
+                    alt={user.nama}
+                    className="md:h-[12rem] rounded-xl w-full"
+                  />
+                  <div
+                    className={`absolute ${
+                      darkModes
+                        ? "bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent"
+                        : "bg-gradient-to-t from-white via-white/90 to-transparent"
+                    } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}
+                  ></div>
+                  <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
+                    <p className="font-bold">{user.nama}</p>
+                    <p>{user.jabatan}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
             </div>
-
-
 
             <div className="flex justify-center font-semibold text-lg mb-10 mt-7 font-[Inter]">
               <button
