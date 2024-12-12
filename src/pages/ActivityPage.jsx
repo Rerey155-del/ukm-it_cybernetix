@@ -6,13 +6,15 @@ import Footer from "../Components/Footer";
 import Sidebar from "../Components/Sidebar";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ActivityPage = () => {
   const [artikel, setArtikel] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll ke atas
@@ -26,6 +28,14 @@ const ActivityPage = () => {
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode); // Toggle dark mode
     localStorage.setItem("darkMode", JSON.stringify(!darkMode));
+  };
+
+  const showartikelDetail = (id) => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate(`/activitydetail/${id}`);
+    }, 2000);
   };
 
   useEffect(() => {
@@ -98,7 +108,7 @@ const ActivityPage = () => {
                 <div className=" px-4 lg:pt-4 w-full">
                   <p className="text-2xl font-bold mb-4">{user.nama}</p>
                   <p className="text-sm mb-4">{user.isi.length > 100 ? `${user.isi.substring(0, 100)}...` : user.isi}</p>
-                  <button className="font-[Inter] text-sm rounded bg-[#F16634] px-4 py-2 text-white hover:bg-[#d14f28] transition">
+                  <button onClick={() => showartikelDetail(user.numericId)} className="font-[Inter] text-sm rounded bg-[#F16634] px-4 py-2 text-white hover:bg-[#d14f28] transition">
                     Lihat detail
                   </button>
                 </div>
@@ -106,7 +116,15 @@ const ActivityPage = () => {
             ))}
           </div>
         </div>
-
+        {/* =============  Modal Loading  ================= */}
+        {isLoading && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center font-[Inter]">
+            <div className=" p-6 rounded-lg flex flex-col items-center">
+              <l-grid size="70" speed="1.75" color="#F16634"></l-grid>
+              <p className="mt-4 font-bold text-lg text-white">Loading...</p>
+            </div>
+          </div>
+        )}
       </div>
       <Footer darkMode={darkModes} />
     </section>

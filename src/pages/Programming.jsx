@@ -62,7 +62,7 @@ const Programming = () => {
                 image: programming,
               },
             ].map((item, index) => (
-              <div
+              <div    
                 key={index}
                 className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-6"
               >

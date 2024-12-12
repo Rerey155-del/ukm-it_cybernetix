@@ -293,7 +293,7 @@ const LandingPage = () => {
                     src="/src/assets/bootcamp.png"
                     alt="Image 2"
                   />
-                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
                     CX Bootcamp 2023
                   </div>
                 </div>
@@ -303,8 +303,8 @@ const LandingPage = () => {
                     src="/src/assets/diesnatalis.png"
                     alt="Image 3"
                   />
-                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
-                    Diesnatilis UKM-IT Cybernetix
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
+                    Dies Natalis UKM-IT Cybernetix
                   </div>
                 </div>
                 <div className="relative">
@@ -313,7 +313,7 @@ const LandingPage = () => {
                     src="/src/assets/outbond.png"
                     alt="Image 4"
                   />
-                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
                     CX Outbound
                   </div>
                 </div>
@@ -323,7 +323,7 @@ const LandingPage = () => {
                     src="/src/assets/LDK.png"
                     alt="Image 5"
                   />
-                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
                     Latihan Dasar Kepemimpinan
                   </div>
                 </div>
@@ -333,7 +333,7 @@ const LandingPage = () => {
                     src="/src/assets/Outdoor.png"
                     alt="Image 5"
                   />
-                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
                     Outdoor
                   </div>
                 </div>
@@ -343,7 +343,7 @@ const LandingPage = () => {
                     src="/src/assets/Webinar.png"
                     alt="Image 5"
                   />
-                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
                     Webinar
                   </div>
                 </div>

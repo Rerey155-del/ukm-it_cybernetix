@@ -17,22 +17,16 @@ const ActivityDetail = () => {
   };
 
   useEffect(() => {
+    // Menggunakan id untuk fetch data dari backend
     axios
-      .get("https://express-mongo-lac.vercel.app/articles") // Ambil data artikel dari API
+      .get(`https://express-mongo-lac.vercel.app/articles/${id}`) // Endpoint backend untuk mengambil artikel berdasarkan id
       .then((response) => {
-        const data = response.data;
-        console.log("Data yang diterima:", data); // Pastikan data ada dan sesuai
-        const filteredArtikel = data.find((item) => item._id === id); // Filter berdasarkan ID
-        if (filteredArtikel) {
-          setArtikel(filteredArtikel); // Set artikel jika ditemukan
-        } else {
-          console.error("Artikel tidak ditemukan dengan ID:", id);
-        }
+        setArtikel(response.data); // Set data yang diterima ke state artikel
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, [id]); // Akan dijalankan ulang jika ID berubah
+  }, [id]); // Efek dijalankan setiap kali id berubah
 
   // Pastikan artikel ada sebelum mencoba merender
   if (!artikel) {
@@ -65,31 +59,57 @@ const ActivityDetail = () => {
       >
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-        <div className="flex flex-col p-6 gap-6">
+        <div className="flex flex-col gap-6">
           <img className="w-full h-full" src={artikel.gambar} alt={artikel.nama} />
-          <div>
-            <h2 className="font-bold text-2xl">{artikel.nama}</h2>
-            <div className="flex gap-5 mt-5 mb-5">
-              <p>UKM-IT Cybernetix</p>
-              <p>11 Desember 2023</p>
-            </div>
-            <p>{artikel.isi}</p>
-          </div>
-          <div className="flex gap-10 mt-6 justify-center">
-            <div className="card bg-white shadow-xl w-[20rem] gap-5 p-10 items-center">
-              <p className="font-bold">Apa kata peserta?</p>
-              <div className="card bg-black shadow-xl w-[15rem] h-full">
-                {/* Ulasan peserta */}
+          <div className="flex container mx-auto">
+            <div className=" p-6">
+              <h2 className="font-bold text-2xl">{artikel.nama}</h2>
+              <div className="flex gap-5 mt-5 mb-5">
+                <p>UKM-IT Cybernetix</p>
+                <p>11 Desember 2023</p>
+              </div>
+              <p>{artikel.isi}</p>
+
+              <div className="flex gap-10 mt-6 justify-center">
+                <div className="card bg-white shadow-xl w-[25rem] gap-5 p-10 items-center">
+                  <p className="font-bold text-black">Apa kata peserta?</p>
+
+                  {artikel.reviewPeserta?.map((review, index) => (
+                    <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
+                      <p className="font-semibold">Peserta {index + 1}</p> {/* Menampilkan indeks untuk memberi label */}
+                      <p>{review}</p> {/* Menampilkan string dari array reviewPeserta */}
+                    </div>
+                  ))}
+
+                </div>
+                <div className=" card bg-white shadow-xl w-[25rem] gap-5 p-10 items-center">
+                  <p className="font-bold text-black">Apa kata CX?</p>
+
+                  {artikel.reviewCX?.map((review, index) => (
+                    <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
+                      
+                      <p>{review}</p> {/* Menampilkan string dari array reviewPe serta */}
+                    </div>
+                  ))}
+
+                </div>
+
               </div>
             </div>
-            <div className="card bg-white shadow-xl w-[20rem] gap-5 h-[20rem] p-10 items-center">
-              <p className="font-bold">Apa kata CX?</p>
-              <div className="card bg-black shadow-xl w-[15rem] h-full">
-                {/* Ulasan CX */}
-              </div>
-            </div>
+            <div className="card bg-white h-full shadow-xl w-[25rem] gap-5 p-10 items-center">
+                  <p className=" font-bold text-black">Highlight Activity</p>
+
+                  {artikel.reviewCX?.map((review, index) => (
+                    <div key={index} className="p-4 text-white card bg-black shadow-xl w-[20rem]">
+                      
+                      <p>{review}</p> {/* Menampilkan string dari array reviewPe serta */}
+                    </div>
+                  ))}
+
+                </div>
           </div>
         </div>
+
         <Footer darkMode={darkModes} />
       </div>
     </section>
