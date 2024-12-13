@@ -60,7 +60,7 @@ const ActivityDetail = () => {
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <div className="flex flex-col gap-6">
-          <img className="w-full h-full" src={artikel.gambar} alt={artikel.nama} data-aos="zoom-in" />
+          <img className="w-full h-full" src={artikel.gambar} alt={artikel.nama} data-aos="zoom-in" data-aos-duration="1500" />
           <div className="flex mt-4 container mx-auto" data-aos="fade-up">
             <div className=" p-5">
               <h2 className="font-bold text-2xl">{artikel.nama}</h2>
@@ -74,7 +74,9 @@ const ActivityDetail = () => {
                 <div className={`card ${darkModes? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}>
                   <p className="font-bold ">Apa kata peserta?</p>
                   {artikel.reviewPeserta?.map((review, index) => (
-                    <div key={index} className= {`p-4 ${darkModes? "bg-[#383E5E]" : "bg-white"} card bg-black shadow-xl w-[20rem]`}>
+                    <div key={index} className={`p-4  card shadow-xl w-[20rem] ${
+                      darkModes ? "bg-[#383E5E]" : "bg-white"
+                    }`}>
                       <p>{review}</p> 
                     </div>
                   ))}

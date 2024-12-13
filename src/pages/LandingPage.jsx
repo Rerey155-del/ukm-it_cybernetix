@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react"; // Fixed imports by removing duplicate `useEffect`
-
+import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
-// import foto1 from "../assets/fotobersama.svg";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Network from "../assets/Networking.svg";
@@ -276,11 +273,11 @@ const LandingPage = () => {
               {/* Gambar Utama */}
               <div className="flex-1 relative">
                 <img
-                  className="h-full w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:shadow-lg"
+                  className="h-full w-full rounded-lg "
                   src="/src/assets/cyberfest.png"
                   alt="Featured Image"
                 />
-                <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-b-lg">
+                <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
                   Cyberfest 2023
                 </div>
               </div>
@@ -289,7 +286,7 @@ const LandingPage = () => {
               <div className="grid grid-cols-2 gap-4 flex-1">
                 <div className="relative">
                   <img
-                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg object-cover"
                     src="/src/assets/bootcamp.png"
                     alt="Image 2"
                   />
@@ -299,7 +296,7 @@ const LandingPage = () => {
                 </div>
                 <div className="relative">
                   <img
-                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg c object-cover"
                     src="/src/assets/diesnatalis.png"
                     alt="Image 3"
                   />
@@ -309,7 +306,7 @@ const LandingPage = () => {
                 </div>
                 <div className="relative">
                   <img
-                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg object-cover"
                     src="/src/assets/outbond.png"
                     alt="Image 4"
                   />
@@ -319,7 +316,7 @@ const LandingPage = () => {
                 </div>
                 <div className="relative">
                   <img
-                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg object-cover"
                     src="/src/assets/LDK.png"
                     alt="Image 5"
                   />
@@ -329,7 +326,7 @@ const LandingPage = () => {
                 </div>
                 <div className="relative">
                   <img
-                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg object-cover "
                     src="/src/assets/Outdoor.png"
                     alt="Image 5"
                   />
@@ -339,7 +336,7 @@ const LandingPage = () => {
                 </div>
                 <div className="relative">
                   <img
-                    className="h-auto w-full rounded-lg cursor-pointer object-cover transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                    className="h-auto w-full rounded-lg object-cover"
                     src="/src/assets/Webinar.png"
                     alt="Image 5"
                   />
