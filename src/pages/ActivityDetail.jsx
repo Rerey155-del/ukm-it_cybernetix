@@ -61,8 +61,8 @@ const ActivityDetail = () => {
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <div className="flex flex-col gap-6">
           <img className="w-full h-full" src={artikel.gambar} alt={artikel.nama} data-aos="zoom-in" />
-          <div className="flex container mx-auto" data-aos="fade-up">
-            <div className=" p-6">
+          <div className="flex mt-4 container mx-auto" data-aos="fade-up">
+            <div className=" p-5">
               <h2 className="font-bold text-2xl">{artikel.nama}</h2>
               <div className="flex gap-5 mt-5 mb-5">
                 <p>UKM-IT Cybernetix</p>
@@ -71,7 +71,7 @@ const ActivityDetail = () => {
               <p>{artikel.isi}</p>
 
               <div className="flex gap-10 mt-6 justify-center">
-                <div className={`card ${darkModes? "bg-[#32364F]" : "bg-white"} shadow-xl w-[25rem] gap-5 p-10 items-center`}>
+                <div className={`card ${darkModes? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}>
                   <p className="font-bold ">Apa kata peserta?</p>
                   {artikel.reviewPeserta?.map((review, index) => (
                     <div key={index} className= {`p-4 ${darkModes? "bg-[#383E5E]" : "bg-white"} card bg-black shadow-xl w-[20rem]`}>
@@ -80,7 +80,7 @@ const ActivityDetail = () => {
                   ))}
 
                 </div>
-                <div className={`card ${darkModes? "bg-[#32364F]" : "bg-white"} shadow-xl w-[25rem] gap-5 p-10 items-center`}>
+                <div className={`card ${darkModes? "bg-[#32364F]" : "bg-white"} shadow-xl w-[25rem] gap-5 h-full p-10 items-center`}>
                   <p className="font-bold">Apa kata CX?</p>
 
                   {artikel.reviewCX?.map((review, index) => (
