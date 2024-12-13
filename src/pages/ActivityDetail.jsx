@@ -60,7 +60,7 @@ const ActivityDetail = () => {
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <div className="flex flex-col gap-6">
-          <img className="w-full h-full" src={artikel.gambar} alt={artikel.nama} data-aos="zoom-in" data-aos-duration="1500" />
+          <img className="w-full h-full" src={artikel.gambar} alt={artikel.nama} data-aos="fade-down" data-aos-duration="1500" />
           <div className="flex mt-4 container mx-auto" data-aos="fade-up">
             <div className=" p-5">
               <h2 className="font-bold text-2xl">{artikel.nama}</h2>
