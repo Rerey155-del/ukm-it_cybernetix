@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const ActivityDetail = () => {
-  const [artikel, setArtikel] = useState(null); 
+  const [artikel, setArtikel] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
   const { id } = useParams(); // Ambil ID dari URL
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
@@ -32,7 +32,7 @@ const ActivityDetail = () => {
   if (!artikel) {
     return (
       <div className="skeleton w-full h-full bg-gray-300 animate-pulse">
-        
+
       </div>
     );
   }
@@ -71,25 +71,47 @@ const ActivityDetail = () => {
               <p>{artikel.isi}</p>
 
               <div className="flex gap-10 mt-6 justify-center">
-                <div className={`card ${darkModes? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}>
+                <div className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}>
                   <p className="font-bold ">Apa kata peserta?</p>
                   {artikel.reviewPeserta?.map((review, index) => (
-                    <div key={index} className={`p-4  card shadow-xl w-[20rem] ${
-                      darkModes ? "bg-[#383E5E]" : "bg-white"
-                    }`}>
-                      <p>{review}</p> 
+                    <div
+                      key={index}
+                      className={`p-4 card shadow-xl w-[20rem] ${darkModes ? "bg-[#383E5E]" : "bg-white"
+                        }`}
+                    >
+                      <div className="flex items-center gap-5">
+                        {artikel.fotoReviewPeserta && artikel.fotoReviewPeserta[index] && (
+                          <img
+                            src={artikel.fotoReviewPeserta[index]}
+                            
+                            className="w-12 h-12 object-cover rounded-full items-center" // Ukuran XS dengan gaya lingkaran
+                          />
+                        )}
+                        <p>{review}</p>
+                      </div>
                     </div>
                   ))}
 
                 </div>
-                <div className={`card ${darkModes? "bg-[#32364F]" : "bg-white"} shadow-xl w-[25rem] gap-5 h-full p-10 items-center`}>
+                <div className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} shadow-xl w-[25rem] gap-5 h-full p-10 items-center`}>
                   <p className="font-bold">Apa kata CX?</p>
 
                   {artikel.reviewCX?.map((review, index) => (
-                    <div key={index} className={`p-4  card shadow-xl w-[20rem] ${
-                      darkModes ? "bg-[#383E5E]" : "bg-white"
-                    }`}>
-                      <p>{review}</p> 
+                    <div
+                      key={index}
+                      className={`p-4 card shadow-xl w-[20rem] ${darkModes ? "bg-[#383E5E]" : "bg-white"
+                        }`}
+                    >
+                      <div className="flex items-center gap-5">
+                        {artikel.fotoReviewCX && artikel.fotoReviewCX[index] && (
+                          <img
+                            src={artikel.fotoReviewCX[index]}
+                            
+                            className="w-12 h-12 object-cover rounded-full items-center" // Ukuran XS dengan gaya lingkaran
+                          />
+                        )}
+                        <p>{review}</p>
+                      </div>
                     </div>
                   ))}
 
@@ -97,15 +119,19 @@ const ActivityDetail = () => {
 
               </div>
             </div>
-            <div className={`card ${darkModes?"bg-[#32364F]" : "bg-white"} h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}>
+            <div className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}>
               <p className=" font-bold ">Highlight Activity</p>
-                {artikel.reviewCX?.map((review, index) => (
-                <div key={index} className={`p-4  card shadow-xl w-[20rem] ${
-                  darkModes ? "bg-[#383E5E]" : "bg-white"
-                }`}>
-                  <p>{review}</p>
+
+              {artikel.reviewCX?.map((review, index) => (
+                <div
+                  key={index}
+                  className={`p-4 card shadow-xl w-[20rem] ${darkModes ? "bg-[#383E5E]" : "bg-white"
+                    }`}
+                >
+                  
                 </div>
               ))}
+
 
             </div>
           </div>
