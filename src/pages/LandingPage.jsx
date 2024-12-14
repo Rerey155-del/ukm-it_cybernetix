@@ -17,6 +17,13 @@ import porto2 from "../assets/porto2.jpg";
 import porto3 from "../assets/porto3.png";
 import { Link } from "react-router-dom"; // Import Link dari React Router
 import fotolagi from "../assets/fotolagi.png";
+import bootcamp from "../assets/bootcamp.png";
+import diesnatalis from "../assets/diesnatalis.png";
+import outbond from "../assets/outbond.png";
+import ldk from "../assets/LDK.png";
+import Outdoor from "../assets/Outdoor.png";
+import Webinar from "../assets/Webinar.png";
+
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
@@ -287,7 +294,7 @@ const LandingPage = () => {
                 <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg object-cover"
-                    src="/src/assets/bootcamp.png"
+                    src={bootcamp}
                     alt="Image 2"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
@@ -297,7 +304,7 @@ const LandingPage = () => {
                 <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg c object-cover"
-                    src="/src/assets/diesnatalis.png"
+                    src={diesnatalis}
                     alt="Image 3"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
@@ -307,7 +314,7 @@ const LandingPage = () => {
                 <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg object-cover"
-                    src="/src/assets/outbond.png"
+                    src={outbond}
                     alt="Image 4"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
@@ -317,7 +324,7 @@ const LandingPage = () => {
                 <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg object-cover"
-                    src="/src/assets/LDK.png"
+                    src={ldk}
                     alt="Image 5"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
@@ -327,7 +334,7 @@ const LandingPage = () => {
                 <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg object-cover "
-                    src="/src/assets/Outdoor.png"
+                    src={Outdoor}
                     alt="Image 5"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
@@ -337,7 +344,7 @@ const LandingPage = () => {
                 <div className="relative">
                   <img
                     className="h-auto w-full rounded-lg object-cover"
-                    src="/src/assets/Webinar.png"
+                    src={Webinar}
                     alt="Image 5"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">

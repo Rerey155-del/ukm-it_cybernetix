@@ -95,7 +95,6 @@ const ActivityDetail = () => {
                 </div>
                 <div className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} shadow-xl w-[25rem] gap-5 h-full p-10 items-center`}>
                   <p className="font-bold">Apa kata CX?</p>
-
                   {artikel.reviewCX?.map((review, index) => (
                     <div
                       key={index}
