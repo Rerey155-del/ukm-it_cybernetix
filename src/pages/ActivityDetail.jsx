@@ -4,12 +4,14 @@ import Footer from "../Components/Footer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const ActivityDetail = () => {
   const [artikel, setArtikel] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
   const { id } = useParams(); // Ambil ID dari URL
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
+  const location = useLocation(); 
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode); // Toggle dark mode
@@ -26,6 +28,10 @@ const ActivityDetail = () => {
         console.error("Error fetching data:", error);
       });
   }, [id]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll ke atas
+  }, [location]); 
 
   return (
     <section>
