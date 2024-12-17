@@ -166,7 +166,7 @@ const ActivityDetail = () => {
                               } inset-x-0 bottom-0 h-4/6  rounded-b-lg pointer-events-none`}
                           ></div>
 
-                          <h3 className="absolute bottom-2 pl-2 text-white">{article.nama}</h3>
+                          <h3 className="absolute bottom-2 p-2 text-white">{article.nama}</h3>
                         </div>
                       ))
                   ) : (
