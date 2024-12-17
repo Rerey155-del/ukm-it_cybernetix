@@ -11,7 +11,8 @@ const ActivityDetail = () => {
   const [darkMode, setDarkMode] = useState(false);
   const { id } = useParams(); // Ambil ID dari URL
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
-  const location = useLocation(); 
+  const location = useLocation();
+  const [highlightArticles, setHighlightArticles] = useState([]);
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode); // Toggle dark mode
@@ -19,19 +20,24 @@ const ActivityDetail = () => {
   };
 
   useEffect(() => {
-    axios
-      .get(`https://express-mongo-lac.vercel.app/articles/${id}`)
-      .then((response) => {
-        setArtikel(response.data);
+    // Menggunakan Promise.all untuk menjalankan kedua permintaan API secara bersamaan
+    Promise.all([
+      axios.get(`https://express-mongo-lac.vercel.app/articles/${id}`), // Ambil artikel berdasarkan id
+      axios.get("https://express-mongo-lac.vercel.app/articles") // Ambil semua artikel
+    ])
+      .then(([artikelResponse, allArtikelResponse]) => {
+        setArtikel(artikelResponse.data); // Set data artikel berdasarkan id
+        setHighlightArticles(allArtikelResponse.data); // Set data artikel highlight
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, [id]);
+  }, [id]); // Efek dijalankan setiap kali id berubah
+
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll ke atas
-  }, [location]); 
+  }, [location]);
 
   return (
     <section>
@@ -58,7 +64,7 @@ const ActivityDetail = () => {
         <div className="flex flex-col gap-6">
           {/* Kondisi jika artikel masih null */}
           {!artikel ? (
-            <div className="skeleton mx auto bg-transparent mb-6 mt-16 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 w-full h-[35rem] animate-pulse"/>
+            <div className="skeleton mx auto bg-transparent mb-6 mt-16 p-6 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 w-full h-[35rem] animate-pulse" />
           ) : (
             <>
               <img
@@ -83,17 +89,15 @@ const ActivityDetail = () => {
                   <div className="flex gap-10 mt-6 justify-center">
                     {/* Kartu Review Peserta */}
                     <div
-                      className={`card ${
-                        darkModes ? "bg-[#32364F]" : "bg-white"
-                      } h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}
+                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"
+                        } h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}
                     >
                       <p className="font-bold ">Apa kata peserta?</p>
                       {artikel.reviewPeserta?.map((review, index) => (
                         <div
                           key={index}
-                          className={`p-4 card shadow-xl w-[20rem] ${
-                            darkModes ? "bg-[#383E5E]" : "bg-white"
-                          }`}
+                          className={`p-4 card shadow-xl w-[20rem] ${darkModes ? "bg-[#383E5E]" : "bg-white"
+                            }`}
                         >
                           <div className="flex items-center gap-5">
                             {artikel.fotoReviewPeserta &&
@@ -110,17 +114,15 @@ const ActivityDetail = () => {
                     </div>
                     {/* Kartu Review CX */}
                     <div
-                      className={`card ${
-                        darkModes ? "bg-[#32364F]" : "bg-white"
-                      } shadow-xl w-[25rem] gap-5 h-full p-10 items-center`}
+                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"
+                        } shadow-xl w-[25rem] gap-5 h-full p-10 items-center`}
                     >
                       <p className="font-bold">Apa kata CX?</p>
                       {artikel.reviewCX?.map((review, index) => (
                         <div
                           key={index}
-                          className={`p-4 card shadow-xl w-[20rem] ${
-                            darkModes ? "bg-[#383E5E]" : "bg-white"
-                          }`}
+                          className={`p-4 card shadow-xl w-[20rem] ${darkModes ? "bg-[#383E5E]" : "bg-white"
+                            }`}
                         >
                           <div className="flex items-center gap-5">
                             {artikel.fotoReviewCX &&
@@ -138,11 +140,39 @@ const ActivityDetail = () => {
                   </div>
                 </div>
                 <div
-                  className={`card ${
-                    darkModes ? "bg-[#32364F]" : "bg-white"
-                  } h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}
+                  className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"
+                    } h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}
                 >
-                  <p className=" font-bold ">Highlight Activity</p>
+                  <p className="font-bold">Highlight Activity</p>
+                  {highlightArticles.length > 0 ? (
+                    // Randomize articles and take only the first 4
+                    highlightArticles
+                      .sort(() => Math.random() - 0.5)  // Randomize the array
+                      .slice(0, 4)  // Take the first 4 articles
+                      .map((article, index) => (
+                        <div
+                          key={index}
+                          className={`card shadow-xl w-[20rem] rounded-xl`}
+                        >
+                          <img
+                            src={article.gambar}
+                            alt={article.nama}
+                            className="w-full h-40 object-cover rounded-xl"
+                          />
+                          <div
+                            className={`absolute ${darkModes
+                              ? "bg-gradient-to-t from-black via-black/90 to-transparent"
+                              : "bg-gradient-to-t from-black via-black/90 to-transparent"
+                              } inset-x-0 bottom-0 h-4/6  rounded-b-lg pointer-events-none`}
+                          ></div>
+
+                          <h3 className="absolute bottom-2 pl-2 text-white">{article.nama}</h3>
+                        </div>
+                      ))
+                  ) : (
+                    <p>Memuat Artikel Terbaru...</p>
+                  )}
+
                 </div>
               </div>
             </>
