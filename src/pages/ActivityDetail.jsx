@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ActivityDetail = () => {
   const [artikel, setArtikel] = useState(null);
@@ -13,6 +13,8 @@ const ActivityDetail = () => {
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
   const location = useLocation();
   const [highlightArticles, setHighlightArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode); // Toggle dark mode
@@ -33,6 +35,14 @@ const ActivityDetail = () => {
         console.error("Error fetching data:", error);
       });
   }, [id]); // Efek dijalankan setiap kali id berubah
+
+  const showartikelDetail = (id) => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate(`/activitydetail/${id}`); // Arahkan ke halaman detail artikel dengan ID
+    }, 2000);
+  };
 
 
   useEffect(() => {
@@ -152,8 +162,9 @@ const ActivityDetail = () => {
                       .map((article, index) => (
                         <div
                           key={index}
-                          className={`card shadow-xl w-[20rem] rounded-xl`}
-                        >
+                          className={`card shadow-xl w-[20rem] rounded-xl cursor-pointer `}
+                          onClick={() => showartikelDetail(article.numericId)}
+                        > 
                           <img
                             src={article.gambar}
                             alt={article.nama}
@@ -178,6 +189,15 @@ const ActivityDetail = () => {
             </>
           )}
         </div>
+        {/* =============  Modal Loading  ================= */}
+        {isLoading && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center font-[Inter]">
+            <div className=" p-6 rounded-lg flex flex-col items-center">
+              <l-grid size="70" speed="1.75" color="#F16634"></l-grid>
+              <p className="mt-4 font-bold text-lg text-white">Loading...</p>
+            </div>
+          </div>
+        )}
         <Footer darkMode={darkModes} />
       </div>
     </section>
