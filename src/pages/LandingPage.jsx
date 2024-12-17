@@ -23,6 +23,7 @@ import outbond from "../assets/outbond.png";
 import ldk from "../assets/LDK.png";
 import Outdoor from "../assets/Outdoor.png";
 import Webinar from "../assets/Webinar.png";
+import cyberfest from "../assets/cyberfest.png";
 
 
 const LandingPage = () => {
@@ -281,7 +282,7 @@ const LandingPage = () => {
               <div className="flex-1 relative">
                 <img
                   className="h-full w-full rounded-lg "
-                  src="/src/assets/cyberfest.png"
+                  src={cyberfest}
                   alt="Featured Image"
                 />
                 <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
