@@ -13,7 +13,7 @@ const Footer = ({darkMode}) => {
       <div className="absolute top-0 left-[-150px] w-[400px] h-[400px] bg-gradient-radial from-blue-300/40 to-transparent rounded-full"></div>
       <div className="absolute bottom-0 right-[-150px] w-[400px] h-[400px] bg-gradient-radial from-red-300/40 to-transparent rounded-full"></div>
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 font-[Montserrat]">
         {/* Bagian Utama */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Bagian Kiri */}
