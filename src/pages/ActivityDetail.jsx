@@ -78,36 +78,34 @@ const ActivityDetail = () => {
           ) : (
             <>
               <img
-                className="w-full h-full"
+                className="w-full h-auto sm:h-[20rem] md:h-[30rem] object-cover"
                 src={artikel.gambar}
                 alt={artikel.nama}
                 data-aos="fade-down"
                 data-aos-duration="1500"
               />
               <div
-                className="flex mt-4 container mx-auto"
+                className="flex flex-col lg:flex-row gap-4 container mx-auto p-4"
                 data-aos="fade-up"
               >
                 <div className="p-5">
-                  <h2 className="font-bold text-2xl">{artikel.nama}</h2>
+                  <h2 className="font-bold text-2xl lg:text-3xl">{artikel.nama}</h2>
                   <div className="flex gap-5 mt-5 mb-5">
                     <p>UKM-IT Cybernetix</p>
                     <p>11 Desember 2023</p>
                   </div>
                   <p>{artikel.isi}</p>
 
-                  <div className="flex gap-10 mt-6 justify-center">
+                  <div className="grid gap-10 mt-6 justify-center grid-cols-1 sm:grid-cols-2">
                     {/* Kartu Review Peserta */}
                     <div
-                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"
-                        } h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}
+                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-full gap-5 p-10 items-center`}
                     >
                       <p className="font-bold ">Apa kata peserta?</p>
                       {artikel.reviewPeserta?.map((review, index) => (
                         <div
                           key={index}
-                          className={`p-4 card shadow-xl w-[20rem] ${darkModes ? "bg-[#383E5E]" : "bg-white"
-                            }`}
+                          className={`p-4 card shadow-xl w-full ${darkModes ? "bg-[#383E5E]" : "bg-white"}`}
                         >
                           <div className="flex items-center gap-5">
                             {artikel.fotoReviewPeserta &&
@@ -117,22 +115,21 @@ const ActivityDetail = () => {
                                   className="w-12 h-12 object-cover rounded-full items-center"
                                 />
                               )}
-                            <p>{review}</p>
+                            <p className="text-sm">{review}</p>
                           </div>
                         </div>
                       ))}
                     </div>
+
                     {/* Kartu Review CX */}
                     <div
-                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"
-                        } shadow-xl w-[25rem] gap-5 h-full p-10 items-center`}
+                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} shadow-xl w-full gap-5 h-full p-10 items-center`}
                     >
                       <p className="font-bold">Apa kata CX?</p>
                       {artikel.reviewCX?.map((review, index) => (
                         <div
                           key={index}
-                          className={`p-4 card shadow-xl w-[20rem] ${darkModes ? "bg-[#383E5E]" : "bg-white"
-                            }`}
+                          className={`p-4 card shadow-xl w-full ${darkModes ? "bg-[#383E5E]" : "bg-white"}`}
                         >
                           <div className="flex items-center gap-5">
                             {artikel.fotoReviewCX &&
@@ -142,29 +139,29 @@ const ActivityDetail = () => {
                                   className="w-12 h-12 object-cover rounded-full items-center"
                                 />
                               )}
-                            <p>{review}</p>
+                            <p className="text-sm">{review}</p>
                           </div>
                         </div>
                       ))}
                     </div>
                   </div>
+
                 </div>
                 <div
-                  className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"
-                    } h-full shadow-xl w-[25rem] gap-5 p-10 items-center`}
+                  className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-full sm:w-[25rem] gap-5 p-10 items-center mx-auto`}
                 >
                   <p className="font-bold">Highlight Activity</p>
                   {highlightArticles.length > 0 ? (
                     // Randomize articles and take only the first 4
                     highlightArticles
-                      .sort(() => Math.random() - 0.5)  // Randomize the array
-                      .slice(0, 4)  // Take the first 4 articles
+                      .sort(() => Math.random() - 0.5) // Randomize the array
+                      .slice(0, 4) // Take the first 4 articles
                       .map((article, index) => (
                         <div
                           key={index}
-                          className={`card shadow-xl w-[20rem] rounded-xl cursor-pointer `}
+                          className={`card shadow-xl w-full sm:w-[20rem] rounded-xl cursor-pointer mx-auto`}
                           onClick={() => showartikelDetail(article.numericId)}
-                        > 
+                        >
                           <img
                             src={article.gambar}
                             alt={article.nama}
@@ -174,17 +171,16 @@ const ActivityDetail = () => {
                             className={`absolute ${darkModes
                               ? "bg-gradient-to-t from-black via-black/90 to-transparent"
                               : "bg-gradient-to-t from-black via-black/90 to-transparent"
-                              } inset-x-0 bottom-0 h-4/6  rounded-b-lg pointer-events-none`}
+                              } inset-x-0 bottom-0 h-4/6 rounded-b-lg pointer-events-none`}
                           ></div>
-
                           <h3 className="absolute bottom-2 p-2 text-white">{article.nama}</h3>
                         </div>
                       ))
                   ) : (
                     <p>Memuat Artikel Terbaru...</p>
                   )}
-
                 </div>
+
               </div>
             </>
           )}
