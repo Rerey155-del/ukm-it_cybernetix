@@ -148,7 +148,7 @@ const ActivityDetail = () => {
 
                 </div>
                 <div
-                  className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-full sm:w-[25rem] gap-5 p-10 items-center mx-auto`}
+                  className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-full sm:w-[25rem] gap-5 p-5 mb-4 md:p-10 items-center mx-auto`}
                 >
                   <p className="font-bold">Highlight Activity</p>
                   {highlightArticles.length > 0 ? (
