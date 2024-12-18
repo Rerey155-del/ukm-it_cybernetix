@@ -99,7 +99,7 @@ const ActivityDetail = () => {
                   <div className="grid gap-10 mt-6 justify-center grid-cols-1 sm:grid-cols-2">
                     {/* Kartu Review Peserta */}
                     <div
-                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-full gap-5 p-10 items-center`}
+                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-full gap-5 p-6 md:p-10 items-center`}
                     >
                       <p className="font-bold ">Apa kata peserta?</p>
                       {artikel.reviewPeserta?.map((review, index) => (
@@ -123,7 +123,7 @@ const ActivityDetail = () => {
 
                     {/* Kartu Review CX */}
                     <div
-                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} shadow-xl w-full gap-5 h-full p-10 items-center`}
+                      className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} shadow-xl w-full gap-5 h-full p-6 md:p-10 items-center`}
                     >
                       <p className="font-bold">Apa kata CX?</p>
                       {artikel.reviewCX?.map((review, index) => (
