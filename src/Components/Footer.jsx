@@ -41,12 +41,11 @@ const Footer = ({darkMode}) => {
                 Divisi
               </h3>
               <ul className="space-y-2 text-center sm:text-left">
-                <li>Software Development</li>
-                <li>UI & UX Design</li>
+                <li>Programming</li>
                 <li>Networking</li>
                 <li>Multimedia</li>
-                <li>Hardware</li>
-                <li>Operating System</li>
+                
+                
               </ul>
             </div>
 
