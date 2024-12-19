@@ -1,14 +1,13 @@
 import Cx from "../assets/cx-logo.svg";
 
 // eslint-disable-next-line react/prop-types
-const Footer = ({darkMode}) => {
+const Footer = ({ darkMode }) => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className={` relative py-12 overflow-hidden ${
-      darkMode
+    <footer className={` relative py-12 overflow-hidden ${darkMode
         ? "bg-[#32364F]" // Background gelap
         : "bg-gradient-to-r from-blue-100 via-white to-red-100 text-gray-800" // Background terang
-    }`}>
+      }`}>
       {/* Lingkaran Gradien */}
       <div className="absolute top-0 left-[-150px] w-[400px] h-[400px] bg-gradient-radial from-blue-300/40 to-transparent rounded-full"></div>
       <div className="absolute bottom-0 right-[-150px] w-[400px] h-[400px] bg-gradient-radial from-red-300/40 to-transparent rounded-full"></div>
@@ -44,8 +43,8 @@ const Footer = ({darkMode}) => {
                 <li>Programming</li>
                 <li>Networking</li>
                 <li>Multimedia</li>
-                
-                
+
+
               </ul>
             </div>
 
@@ -81,7 +80,7 @@ const Footer = ({darkMode}) => {
                 <li>DPO</li>
                 <li>Struktural</li>
                 <li>Anggota Aktif</li>
-                <li>Alumni Luar Biasa</li>
+
               </ul>
             </div>
 
