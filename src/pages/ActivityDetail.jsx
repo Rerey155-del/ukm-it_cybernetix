@@ -78,7 +78,7 @@ const ActivityDetail = () => {
           ) : (
             <>
               <img
-                className="w-full h-auto sm:h-[20rem] md:h-[30rem] object-cover"
+                className="w-full h-auto sm:h-[20rem] md:h-full object-cover"
                 src={artikel.gambar}
                 alt={artikel.nama}
                 data-aos="fade-down"
@@ -97,7 +97,7 @@ const ActivityDetail = () => {
                   <p>{artikel.isi}</p>
 
                   <div className="grid gap-10 mt-6 justify-center grid-cols-1 sm:grid-cols-2">
-                    {/* Kartu Review Peserta */}
+
                     <div
                       className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-full gap-5 p-6 md:p-10 items-center`}
                     >
@@ -121,7 +121,7 @@ const ActivityDetail = () => {
                       ))}
                     </div>
 
-                    {/* Kartu Review CX */}
+
                     <div
                       className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} shadow-xl w-full gap-5 h-full p-6 md:p-10 items-center`}
                     >
