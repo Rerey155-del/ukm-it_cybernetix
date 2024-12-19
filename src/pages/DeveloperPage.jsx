@@ -4,6 +4,13 @@ import Footer from "../Components/Footer";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Rerey from "../assets/Rereyy.png";
+import figma from "../assets/figma.png";
+import reactjs from "../assets/reactjs.png";
+import tailwind from "../assets/tailwind.png";
+import express from "../assets/express.png";
+import mongodb from "../assets/mongodb.png";
+import nodejs from "../assets/nodejs.png";
+
 
 const CXDevelopers = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -72,16 +79,16 @@ const CXDevelopers = () => {
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
 
 
-        <div className="text-center mt-24 mb-6">
+        <div className="container mx-auto text-center md:mt-24 mb-6">
           <h2 className=" font-bold text-5xl"><span className="text-[#F16634]">CX</span> DEV !</h2>
           <p className="text-sm">great person who made this website</p>
-          <h2 className="text-2xl text-start pl-28 font-bold">Our Developers</h2>
+          <h2 className="text-2xl text-start pl-20 font-bold hidden lg:block">Our Developers</h2>
         </div>
         
         {/* About Projects */}
         <div className="container mx-auto px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-14 text-center md:text-left">
           {/* Teks di atas pada ponsel */}
-          <div className="corder-1 md:order-2 flex flex-col justify-center">
+          <div className="order-1 md:order-2 flex flex-col justify-center">
             <h2 className="text-3xl font-bold">About Projects</h2>
             <p className="text-md mt-4 md:text-lg">
               Website ini kami ciptakan dengan sepenuh hati, sebagai wujud dedikasi kami yang mendalam kepada UKM-IT Cybernetix. Kami
@@ -92,8 +99,15 @@ const CXDevelopers = () => {
               Website ini dirancang menggunakan berbagai teknologi canggih untuk memastikan pengalaman yang responsif dan mulus bagi semua
               pengguna.
             </p>
-            <div>
-              <img src="" alt="" />
+            <br />
+            <div className="flex size-10 gap-4 swap-on tooltip">
+              <img className=" transform hover:scale-105 transition-transform" data-tip="Figma" src={figma} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="React JS" src={reactjs} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="Tailwind" src={tailwind} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="Express.js" src={express} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="MongoDB"src={mongodb} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="Node.js" src={nodejs} />
+
             </div>
           </div>
 
@@ -109,7 +123,7 @@ const CXDevelopers = () => {
               className="absolute bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent inset-x-0 bottom-0 h-1/2 rounded-b-3xl pointer-events-none"
             ></div>
             <div className="text-center md:absolute z-10 inset-x-0  md:bottom-6 text-white">
-              <h3 className="font-bold">Reyhan Maulana</h3>
+              <h3 className="font-bold text-lg">Reyhan Maulana</h3>
               <p className="mt-2 mb-4">Project Lead / Full Stack Dev</p>
             </div>
           </div>
