@@ -10,6 +10,10 @@ import tailwind from "../assets/tailwind.png";
 import express from "../assets/express.png";
 import mongodb from "../assets/mongodb.png";
 import nodejs from "../assets/nodejs.png";
+import mufid from "../assets/mufiddev.png";
+import keyfa from "../assets/keyfadev.png";
+import jevin from "../assets/jevindev.png";
+import agil from "../assets/agildev.png";
 
 
 const CXDevelopers = () => {
@@ -28,29 +32,29 @@ const CXDevelopers = () => {
 
   const developers = [
     {
-      name: "Rerey",
+      name: "CX-Rerey",
       role: "Project Lead / Full Stack Dev",
       image: [Rerey],
     },
     {
       name: "CX - Mufid",
       role: "UI/UX Designer",
-      image: "/src/assets/mupiddev.png",
+      image: [mufid],
     },
     {
       name: "CX - Keyfa",
       role: "UI/UX Designer",
-      image: "/src/assets/keyfadev.png",
+      image: [keyfa],
     },
     {
       name: "CX - Jevin",
       role: "UI/UX Designer",
-      image: "/src/assets/jevindev.png",
+      image: [jevin],
     },
     {
       name: "CX - Agil",
       role: "Frontend Developer",
-      image: "/src/assets/agildev.png",
+      image: [agil],
     },
   ];
 
@@ -124,7 +128,7 @@ const CXDevelopers = () => {
               className="absolute bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent inset-x-0 bottom-0 h-1/2 rounded-b-3xl pointer-events-none"
             ></div>
             <div className="text-center md:absolute z-10 inset-x-0  md:bottom-6 text-white">
-              <h3 className="font-bold text-lg">Reyhan Maulana</h3>
+              <h3 className="font-bold text-lg">CX-Rerey</h3>
               <p className="mt-2 mb-4">Project Lead / Full Stack Dev</p>
             </div>
           </div>
