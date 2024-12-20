@@ -4,16 +4,16 @@ import Footer from "../Components/Footer";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Rerey from "../assets/Rereyy.png";
-import figma from "../assets/figma.png";
-import reactjs from "../assets/reactjs.png";
-import tailwind from "../assets/tailwind.png";
-import express from "../assets/express.png";
-import mongodb from "../assets/mongodb.png";
-import nodejs from "../assets/nodejs.png";
-import mufid from "../assets/mufiddev.png";
-import keyfa from "../assets/keyfadev.png";
-import jevin from "../assets/jevindev.png";
-import agil from "../assets/agildev.png";
+import Figma from "../assets/figma.png";
+import Reactjs from "../assets/reactjs.png";
+import Tailwind from "../assets/tailwind.png";
+import Express from "../assets/express.png";
+import Mongodb from "../assets/mongodb.png";
+import Nodejs from "../assets/nodejs.png";
+import Mufid from "../assets/mupiddev.png";
+import Keyfa from "../assets/keyfadev.png";
+import Jevin from "../assets/jevindev.png";
+import Agil from "../assets/agildev.png";
 
 
 const CXDevelopers = () => {
@@ -39,22 +39,22 @@ const CXDevelopers = () => {
     {
       name: "CX - Mufid",
       role: "UI/UX Designer",
-      image: [mufid],
+      image: [Mufid],
     },
     {
       name: "CX - Keyfa",
       role: "UI/UX Designer",
-      image: [keyfa],
+      image: [Keyfa],
     },
     {
       name: "CX - Jevin",
       role: "UI/UX Designer",
-      image: [jevin],
+      image: [Jevin],
     },
     {
       name: "CX - Agil",
       role: "Frontend Developer",
-      image: [agil],
+      image: [Agil],
     },
   ];
 
@@ -106,12 +106,12 @@ const CXDevelopers = () => {
             </p>
             <br />
             <div className="flex size-10 gap-4 swap-on tooltip">
-              <img className=" transform hover:scale-105 transition-transform" data-tip="Figma" src={figma} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="React JS" src={reactjs} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="Tailwind" src={tailwind} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="Express.js" src={express} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="MongoDB"src={mongodb} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="Node.js" src={nodejs} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="Figma" src={Figma} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="React JS" src={Reactjs} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="Tailwind" src={Tailwind} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="Express.js" src={Express} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="MongoDB"src={Mongodb} />
+              <img className=" transform hover:scale-105 transition-transform" data-tip="Node.js" src={Nodejs} />
 
             </div>
           </div>
