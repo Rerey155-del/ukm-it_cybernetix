@@ -105,13 +105,13 @@ const CXDevelopers = () => {
               pengguna.
             </p>
             <br />
-            <div className="flex size-10 gap-4 swap-on tooltip">
-              <img className=" transform hover:scale-105 transition-transform" data-tip="Figma" src={Figma} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="React JS" src={Reactjs} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="Tailwind" src={Tailwind} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="Express.js" src={Express} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="MongoDB"src={Mongodb} />
-              <img className=" transform hover:scale-105 transition-transform" data-tip="Node.js" src={Nodejs} />
+            <div className="flex size-10 gap-4 ">
+              <img className=" transform hover:scale-105 transition-transform"  src={Figma} />
+              <img className=" transform hover:scale-105 transition-transform"  src={Reactjs} />
+              <img className=" transform hover:scale-105 transition-transform"  src={Tailwind} />
+              <img className=" transform hover:scale-105 transition-transform" src={Express} />
+              <img className=" transform hover:scale-105 transition-transform" src={Mongodb} />
+              <img className=" transform hover:scale-105 transition-transform"  src={Nodejs} />
 
             </div>
           </div>
@@ -128,7 +128,7 @@ const CXDevelopers = () => {
               className="absolute bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent inset-x-0 bottom-0 h-1/2 rounded-b-3xl pointer-events-none"
             ></div>
             <div className="text-center md:absolute z-10 inset-x-0  md:bottom-6 text-white">
-              <h3 className="font-bold text-lg">CX-Rerey</h3>
+              <h3 className="font-bold text-lg">CX - Rerey</h3>
               <p className="mt-2 mb-4">Project Lead / Full Stack Dev</p>
             </div>
           </div>
