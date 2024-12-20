@@ -79,14 +79,15 @@ const CXDevelopers = () => {
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
 
 
-        <div className="container mx-auto text-center md:mt-24 mb-6">
+        <div className="container mx-auto text-center md:mt-24 mb-6" data-aos="fade-up" data-aos-duration="1500" >
           <h2 className=" font-bold text-5xl"><span className="text-[#F16634]">CX</span> DEV !</h2>
           <p className="text-sm">great person who made this website</p>
           <h2 className="text-2xl text-start pl-20 font-bold hidden lg:block">Our Developers</h2>
         </div>
         
         {/* About Projects */}
-        <div className="container mx-auto px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-14 text-center md:text-left">
+        <div className="container mx-auto px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-14 text-center md:text-left" data-aos="fade-up"
+            data-aos-duration="1500">
           {/* Teks di atas pada ponsel */}
           <div className="order-1 md:order-2 flex flex-col justify-center">
             <h2 className="text-3xl font-bold">About Projects</h2>
@@ -131,7 +132,7 @@ const CXDevelopers = () => {
 
 
         {/* Developers Section */}
-        <div className="container mb-6 mx-auto p-6 md:p-20 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="container mb-6 mx-auto p-6 md:p-20 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-duration="1500">
           {developers.slice(1).map((dev, index) => (
             <div
               key={index}

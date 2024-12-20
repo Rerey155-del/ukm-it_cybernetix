@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import info from "../assets/info.png";
 
 
 
@@ -29,6 +30,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   const Profile = () => {
     navigate("/Profile");
   };
+
+  const developer = () => {
+    navigate("/developer");
+  }
 
   const Recruitment = () => {
     Swal.fire({
@@ -127,8 +132,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </li>
 
           </ul>
-          <div className="flex justify-end ml-auto pt-1">
-            
+          <div className="flex justify-end ml-auto pt-1 gap-6">
+
             <label className="flex cursor-pointer gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +149,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 <path
                   d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
               </svg>
-              <input type="checkbox" checked={darkMode} onChange={toggleDarkMode}  value="synthwave" className="toggle theme-controller" />
+              <input type="checkbox" checked={darkMode} onChange={toggleDarkMode} value="synthwave" className="toggle theme-controller" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -158,6 +163,15 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
               </svg>
             </label>
+            <button
+              onClick={(e) => {
+                e.preventDefault(); // Mencegah aksi default tombol
+                developer(); // Memanggil fungsi developer
+              }}
+            >
+              <img className="w-6 h-6" src={info} alt="Info Icon" />
+            </button>
+
           </div>
 
         </div>

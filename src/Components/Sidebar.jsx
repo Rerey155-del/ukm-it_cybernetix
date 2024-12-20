@@ -5,6 +5,7 @@ import Proyek from "../assets/proyek.svg";
 import Cx from "../assets/cx-logo.svg";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import info from "../assets/info.png";
 
 
 
@@ -36,6 +37,10 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
     const Profile = () => {
         navigate("/Profile");
     };
+
+    const developer = () => {
+        navigate("/developer");
+      }
 
     const Recruitment = () => {
         Swal.fire({
@@ -115,9 +120,17 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                             </a>
                         </li>
                     </ul>
+                    
                 </div>
-                <div className="flex justify-center pt-80 ml-auto">
-                   
+                <div className="flex justify-center gap-8 pt-80 ml-auto">
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault(); // Mencegah aksi default tombol
+                            developer(); // Memanggil fungsi developer
+                        }}
+                    >
+                        <img className="w-6 h-6" src={info} alt="Info Icon" />
+                    </button>
                     <label className="flex cursor-pointer gap-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
