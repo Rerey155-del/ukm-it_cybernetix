@@ -32,7 +32,7 @@ const CXDevelopers = () => {
 
   const developers = [
     {
-      name: "CX-Rerey",
+      name: "CX - Rerey",
       role: "Project Lead / Full Stack Dev",
       image: [Rerey],
     },
