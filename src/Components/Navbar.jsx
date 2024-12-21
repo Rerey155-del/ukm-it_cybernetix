@@ -124,7 +124,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 }}>Profile</a>
             </li>
             <li>
-              <a href=""
+              <a href="https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX"
                 onClick={(e) => {
                   e.preventDefault();
                   Recruitment();

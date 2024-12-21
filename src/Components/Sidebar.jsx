@@ -114,7 +114,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Recruitment}>
+                            <a href="https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Recruitment}>
                                 <img src={Proyek} alt="" />
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Recruitment</span>
                             </a>
