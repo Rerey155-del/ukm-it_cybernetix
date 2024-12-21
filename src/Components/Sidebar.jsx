@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Menu from "../assets/menu.svg";
-import Tentang from "../assets/divisi.svg";
-import Proyek from "../assets/proyek.svg";
+import clock from "../assets/clock_loader.svg";
+import registration from "../assets/app_registration.svg";
+import account from "../assets/account_circle.svg";
+import people from "../assets/Groups.svg";
+import home from "../assets/home.svg";
 import Cx from "../assets/cx-logo.svg";
 import { useNavigate } from "react-router-dom";
 // import Swal from "sweetalert2";
@@ -90,26 +93,26 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                                 href="#"
                                 className="flex items-center p-2 rounded-lg text-gray-900 hover:text-white hover:bg-[#F16634] dark:text-white group" onClick={Dashboard}
                             >
-                                <img src={Tentang} alt="" />
+                                <img src={home} alt="" />
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Dashboard</span>
                             </a>
                         </li>
 
                         <li>
                             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Struktural}>
-                                <img src={Proyek} alt="" />
+                            <img src={people} alt="" />
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Struktural</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Activity}>
-                                <img src={Proyek} alt="" />
+                            <img src={clock} alt="" />
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Activity</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Profile}>
-                                <img src={Proyek} alt="" />
+                            <img src={account} alt="" />
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Profile</span>
                             </a>
                         </li>
@@ -120,7 +123,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                                 target="_blank"
                                 rel="noopener noreferrer" // Tambahkan ini untuk keamanan saat membuka tab baru
                             >
-                                <img src={Proyek} alt="Recruitment Logo" />
+                                 <img src={registration} alt="" />
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>
                                     Recruitment
                                 </span>
