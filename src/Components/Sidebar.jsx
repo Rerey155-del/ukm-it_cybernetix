@@ -127,6 +127,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>
                                     Recruitment
                                 </span>
+                                
                             </a>
                         </li>
 
