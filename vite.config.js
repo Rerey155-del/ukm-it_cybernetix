@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react-swc';
 
 // https://vite.dev/config/
 export default defineConfig({
-  // server: {
-  //   host: '165.22.99.299', 
-  //   port: 3500       
-  // },
+  server: {
+    host: '188.166.227.167', 
+    port: 3500       
+  },
   plugins: [react()],
   build: {
     sourcemap: false, // Matikan source map di produksi
