@@ -4,7 +4,7 @@ import Tentang from "../assets/divisi.svg";
 import Proyek from "../assets/proyek.svg";
 import Cx from "../assets/cx-logo.svg";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import info from "../assets/info.png";
 
 
@@ -40,15 +40,15 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
 
     const developer = () => {
         navigate("/developer");
-      }
-
-    const Recruitment = () => {
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Saat ini, fitur ini masih dalam pengembangan",
-        });
     }
+
+    // const Recruitment = () => {
+    //     Swal.fire({
+    //         icon: "error",
+    //         title: "Oops...",
+    //         text: "Saat ini, fitur ini masih dalam pengembangan",
+    //     });
+    // }
 
 
     return (
@@ -114,13 +114,21 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                             </a>
                         </li>
                         <li>
-                            <a href="https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Recruitment}>
-                                <img src={Proyek} alt="" />
-                                <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>Recruitment</span>
+                            <a
+                                href="https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX"
+                                className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group`}
+                                target="_blank"
+                                rel="noopener noreferrer" // Tambahkan ini untuk keamanan saat membuka tab baru
+                            >
+                                <img src={Proyek} alt="Recruitment Logo" />
+                                <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>
+                                    Recruitment
+                                </span>
                             </a>
                         </li>
+
                     </ul>
-                    
+
                 </div>
                 <div className="flex justify-center gap-8 pt-80 ml-auto">
                     <button

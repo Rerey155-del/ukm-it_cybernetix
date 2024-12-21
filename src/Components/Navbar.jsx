@@ -3,7 +3,7 @@ import Cx from "../assets/cx-logo.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import info from "../assets/info.png";
 
 
@@ -35,13 +35,13 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     navigate("/developer");
   }
 
-  const Recruitment = () => {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Saat ini, recruitment belum dibuka yaa",
-    });
-  }
+  // const Recruitment = () => {
+  //   Swal.fire({
+  //     icon: "error",
+  //     title: "Oops...",
+  //     text: "Saat ini, recruitment belum dibuka yaa",
+  //   });
+  // }
 
   useEffect(() => {
     // Inisialisasi AOS untuk animasi
@@ -124,12 +124,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 }}>Profile</a>
             </li>
             <li>
-              <a href="https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX"
-                onClick={(e) => {
-                  e.preventDefault();
-                  Recruitment();
-                }}>Recruitment</a>
+              <a href="https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX" target="_blank" rel="noopener noreferrer">
+                Recruitment
+              </a>
             </li>
+
 
           </ul>
           <div className="flex justify-end ml-auto pt-1 gap-6">

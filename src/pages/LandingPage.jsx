@@ -122,9 +122,15 @@ const LandingPage = () => {
                 <button className="rounded-3xl bg-[#F16634] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg">
                   Kenali Kami
                 </button>
-                <button className="rounded-3xl bg-[#373737] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg">
+                <button
+                  onClick={() => {
+                    window.open("https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX", "_blank");
+                  }}
+                  className="rounded-3xl bg-[#373737] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg"
+                >
                   Gabung Sekarang
                 </button>
+
               </div>
             </div>
           </div>
@@ -163,9 +169,8 @@ const LandingPage = () => {
 
           <div className="container grid grid-cols-1 gap-4 px-6 mx-auto justify-items-center font-[Inter] md:grid-cols-2 lg:grid-cols-3">
             <div
-              className={`sm:h-[200px] ${
-                darkModes ? "bg-[#32364F]" : "bg-white"
-              } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
+              className={`sm:h-[200px] ${darkModes ? "bg-[#32364F]" : "bg-white"
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
               <div className="cursor-pointer">
                 <Link to="/multimedia" className="block">
@@ -183,9 +188,8 @@ const LandingPage = () => {
             </div>
 
             <div
-              className={`sm:h-[200px] ${
-                darkModes ? "bg-[#32364F]" : "bg-white"
-              } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
+              className={`sm:h-[200px] ${darkModes ? "bg-[#32364F]" : "bg-white"
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
               <div className="cursor-pointer">
                 <Link to="/programming" className="block">
@@ -203,9 +207,8 @@ const LandingPage = () => {
             </div>
 
             <div
-              className={`sm:h-[200px] ${
-                darkModes ? "bg-[#32364F]" : "bg-white"
-              } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
+              className={`sm:h-[200px] ${darkModes ? "bg-[#32364F]" : "bg-white"
+                } card-body lg:h-full w-80 shadow-2xl rounded-3xl cursor-pointer  hover:shadow-lg`}
             >
               <div className="cursor-pointer">
                 <Link to="/networking" className="block">
@@ -248,9 +251,8 @@ const LandingPage = () => {
           </div>
 
           <div
-            className={`p-4 h-16 ${
-              darkModes ? "bg-[#F16634]" : "bg-[#383838]"
-            }   lg:h-36 w-full  lg:p-8  `}
+            className={`p-4 h-16 ${darkModes ? "bg-[#F16634]" : "bg-[#383838]"
+              }   lg:h-36 w-full  lg:p-8  `}
           >
             <div className="gap-6 flex items-center justify-center text-white text-xl lg:gap-40  ">
               <div className="text-xs text-center lg:space-y-3 lg:text-xl ">
@@ -376,9 +378,8 @@ const LandingPage = () => {
               {users.map((user, index) => (
                 <div
                   key={index}
-                  className={`card-body ${
-                    darkModes ? "bg-[#32364F]" : "bg-white"
-                  } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
+                  className={`card-body ${darkModes ? "bg-[#32364F]" : "bg-white"
+                    } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
@@ -388,11 +389,10 @@ const LandingPage = () => {
                     className="md:h-[12rem] rounded-xl w-full"
                   />
                   <div
-                    className={`absolute ${
-                      darkModes
+                    className={`absolute ${darkModes
                         ? "bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent"
                         : "bg-gradient-to-t from-white via-white/90 to-transparent"
-                    } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}
+                      } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}
                   ></div>
                   <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
                     <p className="font-bold">{user.nama}</p>
