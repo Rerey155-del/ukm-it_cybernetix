@@ -16,9 +16,4 @@ export default defineConfig({
       compress: true, // Optimasi kompresi
     }, 
   },
-  resolve: {
-    alias: {
-      '@assets': '/src/assets', // Alias untuk mengakses gambar
-    },
-  },
 });
