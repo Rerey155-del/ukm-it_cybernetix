@@ -98,13 +98,13 @@ const LandingPage = () => {
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
 
-        <div className="container p-6 sm:p-10 md:p-16 lg: px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-2 md:space-x-40 mb-10 sm:mb-24 mt-6 sm:mt-10">
+        <div className="container p-6 sm:p-8 md:p-12 lg:px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-2 md:space-x-20 mb-10 sm:mb-16 mt-4 sm:mt-6">
           <div
             data-aos="fade-up"
             data-aos-duration="1500"
             className="text-center md:text-left"
           >
-            <div className="font-bold  text-4xl sm:text-4xl md:text-8xl mb-2 sm:mb-4 text-left ">
+            <div className="font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-2 sm:mb-4 text-left">
               <h1>UKM-IT</h1>
               <h1>
                 <span className="text-[#F16634]">C</span>
@@ -114,9 +114,9 @@ const LandingPage = () => {
             </div>
 
             <div>
-              <p className="break-words w-full md:w-[35em] mx-auto md:mx-0 mb-5 font-[Inter] text-sm sm:text-base text-left md:text-lg lg:text-xl ">
-                Wadah pemberdayaan mahasiswa yang berfokus membangun
-                keterampilan dalam mengenal dunia teknologi
+              <p className="break-words w-full md:w-[30em] lg:w-[35em] mx-auto md:mx-0 mb-5 font-[Inter] text-sm sm:text-base text-left md:text-lg lg:text-xl">
+                Wadah pemberdayaan mahasiswa yang berfokus membangun keterampilan dalam
+                mengenal dunia teknologi
               </p>
               <div className="flex space-x-4 mb-8 justify-center md:justify-start text-white font-[Inter]">
                 <button className="rounded-3xl bg-[#F16634] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg">
@@ -124,13 +124,15 @@ const LandingPage = () => {
                 </button>
                 <button
                   onClick={() => {
-                    window.open("https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX", "_blank");
+                    window.open(
+                      "https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX",
+                      "_blank"
+                    );
                   }}
                   className="rounded-3xl bg-[#373737] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Gabung Sekarang
                 </button>
-
               </div>
             </div>
           </div>
@@ -143,23 +145,24 @@ const LandingPage = () => {
               {/* this hidden checkbox controls the state */}
               <input type="checkbox" />
 
-              <div className="swap-on tooltip " data-tip="😍">
+              <div className="swap-on tooltip" data-tip="😍">
                 <img
                   src={fotolagi}
                   alt=""
-                  className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
+                  className="w-[300px] h-[300px] md:w-[500px] md:h-full lg:w-[500px] lg:h-full max-w-full"
                 />
               </div>
-              <div className="swap-off tooltip " data-tip="😁">
+              <div className="swap-off tooltip" data-tip="😁">
                 <img
                   src={Frame}
                   alt=""
-                  className="w-auto h-auto max-w-full md:max-w-sm lg:max-w-sm xl:max-w-sm "
+                  className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] max-w-full"
                 />
               </div>
             </label>
           </div>
         </div>
+
 
         <div>
           <div className="text-xl justify-center text-center font-bold lg:text-2xl mb-16">
@@ -283,7 +286,7 @@ const LandingPage = () => {
               {/* Gambar Utama */}
               <div className="flex-1 relative">
                 <img
-                  className="h-full w-full rounded-lg "
+                  className="h-full w-full rounded-lg object-cover"
                   src={cyberfest}
                   alt="Featured Image"
                 />
@@ -311,7 +314,7 @@ const LandingPage = () => {
                     alt="Image 3"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
-                    Dies Natalis UKM-IT Cybernetix
+                    Dies Natalis 17th
                   </div>
                 </div>
                 <div className="relative">
@@ -341,7 +344,7 @@ const LandingPage = () => {
                     alt="Image 5"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm rounded-lg">
-                    Outdoor
+                    CX Outdoor
                   </div>
                 </div>
                 <div className="relative">
@@ -390,8 +393,8 @@ const LandingPage = () => {
                   />
                   <div
                     className={`absolute ${darkModes
-                        ? "bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent"
-                        : "bg-gradient-to-t from-white via-white/90 to-transparent"
+                      ? "bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent"
+                      : "bg-gradient-to-t from-white via-white/90 to-transparent"
                       } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}
                   ></div>
                   <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">

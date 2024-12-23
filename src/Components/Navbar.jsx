@@ -8,9 +8,11 @@ import info from "../assets/info.png";
 
 
 
+
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ darkMode, toggleDarkMode }) => {
-
+ 
+  
 
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
