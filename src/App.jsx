@@ -9,6 +9,7 @@ import Networking from "./pages/Networking";
 import Portofolio from "./pages/Portofolio";
 import Activitydetail from "./pages/ActivityDetail";
 import DeveloperPage from "./pages/DeveloperPage";
+import Recruitment from "./pages/Recruitment";
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
         <Route path="/networking" element={<Networking />} />
         <Route path="/activitydetail/:id" element={<Activitydetail />} />
         <Route path="/developer" element={<DeveloperPage />} />
-
+        <Route path="/recruitment" element={<Recruitment />} />
       </Routes>
     </Router>
   );

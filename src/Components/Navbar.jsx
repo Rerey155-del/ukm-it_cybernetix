@@ -36,6 +36,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   const developer = () => {
     navigate("/developer");
   }
+  const recruitment = () => {
+    navigate("/developer");
+  }
 
   // const Recruitment = () => {
   //   Swal.fire({
@@ -126,9 +129,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 }}>Profile</a>
             </li>
             <li>
-              <a href="https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX" target="_blank" rel="noopener noreferrer">
-                Recruitment
-              </a>
+            <a href=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  recruitment();
+                }}>Recruitment</a>
             </li>
 
 
