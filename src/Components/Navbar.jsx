@@ -84,7 +84,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           position: "fixed",
           width: "100%",
           top: 0,
-          zIndex: 1,
+          zIndex: 100,
         }}
       >
         <div
