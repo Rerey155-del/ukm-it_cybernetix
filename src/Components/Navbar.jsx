@@ -37,7 +37,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     navigate("/developer");
   }
   const recruitment = () => {
-    navigate("/developer");
+    navigate("/recruitment");
   }
 
   // const Recruitment = () => {
