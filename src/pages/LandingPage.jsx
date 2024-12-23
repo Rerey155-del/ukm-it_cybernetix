@@ -149,7 +149,7 @@ const LandingPage = () => {
                 <img
                   src={fotolagi}
                   alt=""
-                  className="w-[250px] h-[300px] md:w-[450px] md:h-full lg:w-[450px] lg:h-full max-w-full"
+                  className="w-[300px] h-[350px] md:w-[450px] md:h-full lg:w-[450px] lg:h-full max-w-full"
                 />
               </div>
               <div className="swap-off tooltip" data-tip="😁">
