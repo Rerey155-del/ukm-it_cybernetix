@@ -44,6 +44,9 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
     const developer = () => {
         navigate("/developer");
     }
+    const recruitment = () => {
+        navigate("/recruitment");
+    }
 
     // const Recruitment = () => {
     //     Swal.fire({
@@ -117,12 +120,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX"
-                                className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group`}
-                                target="_blank"
-                                rel="noopener noreferrer" // Tambahkan ini untuk keamanan saat membuka tab baru
-                            >
+                        <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={recruitment}>
                                  <img src={registration} alt="" />
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>
                                     Recruitment
