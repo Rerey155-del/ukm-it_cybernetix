@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
 import Garis from "../assets/garis.png";
+import Footer from "../Components/Footer";
 
 
 const Recruitment = () => {
@@ -12,11 +13,11 @@ const Recruitment = () => {
     const toggleDarkMode = () => {
         setDarkMode((prevMode) => !prevMode); // Toggle dark mode
         localStorage.setItem("darkMode", JSON.stringify(!darkMode));
-      };
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0); // Scroll ke atas
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location]);
 
     return (
@@ -59,7 +60,7 @@ const Recruitment = () => {
 
                         <div>
                             <p className="break-words w-full md:w-[30em] lg:w-[35em] mx-auto md:mx-0 mb-5 font-[Inter] text-sm sm:text-base text-left md:text-lg lg:text-xl">
-                            Yuk! gabung sama Unit Kegiatan Mahasiswa berbasis IT terbaik dan terbesar di Universitas Putra Indonesia “YPTK” Padang.
+                                Yuk! gabung sama Unit Kegiatan Mahasiswa berbasis IT terbaik dan terbesar di Universitas Putra Indonesia “YPTK” Padang.
                             </p>
                             <div className="flex space-x-4 mb-8 justify-center md:justify-start text-white font-[Inter]">
                                 <button
@@ -82,7 +83,7 @@ const Recruitment = () => {
                         data-aos-duration="1500"
                     >
                         <label className="text-9xl">
-                          
+
 
                             <div>
                                 <img
@@ -99,6 +100,7 @@ const Recruitment = () => {
                     </div>
                 </div>
             </div>
+            <Footer darkMode={darkModes} />
         </section>
     )
 }
