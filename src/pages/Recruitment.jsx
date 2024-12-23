@@ -6,9 +6,11 @@ import Garis from "../assets/garis.png";
 import Footer from "../Components/Footer";
 
 
+
 const Recruitment = () => {
     const [darkMode, setDarkMode] = useState(false);
     const darkModes = JSON.parse(localStorage.getItem("darkMode"));
+    
 
     const toggleDarkMode = () => {
         setDarkMode((prevMode) => !prevMode); // Toggle dark mode
@@ -99,6 +101,7 @@ const Recruitment = () => {
                         <img src={Garis} className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none" alt="" />
                     </div>
                 </div>
+               
             </div>
             <Footer darkMode={darkModes} />
         </section>

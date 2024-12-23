@@ -5,17 +5,19 @@ import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 // import Swal from "sweetalert2";
 import info from "../assets/info.png";
-
+import { helix } from "ldrs";
+helix.register();
 
 
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ darkMode, toggleDarkMode }) => {
- 
-  
+
+
 
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   const Menu = () => {
     navigate("/");
@@ -36,9 +38,14 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   const developer = () => {
     navigate("/developer");
   }
-  const recruitment = () => {
-    navigate("/recruitment");
-  }
+ 
+  const showLoadingRecruitment = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate("/recruitment"); // Ganti "/nextPage" dengan path halaman tujuan Anda
+    }, 2000);
+  };
 
   // const Recruitment = () => {
   //   Swal.fire({
@@ -129,10 +136,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 }}>Profile</a>
             </li>
             <li>
-            <a href=""
+              <a href=""
                 onClick={(e) => {
                   e.preventDefault();
-                  recruitment();
+                  showLoadingRecruitment();
                 }}>Recruitment</a>
             </li>
 
@@ -183,6 +190,15 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         </div>
 
       </nav>
+      {/* =============  Modal Loading  ================= */}
+      {isLoading && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex justify-center items-center font-[Inter]">
+          <div className=" p-6 rounded-lg flex flex-col items-center">
+            <l-helix size="70" speed="2.5" color="#F16634"></l-helix>
+            <p className="mt-4 font-bold text-lg text-white">Memasuki dunia lain...</p>
+          </div>
+        </div>
+      )}
     </>
   );
 };
