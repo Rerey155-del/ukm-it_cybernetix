@@ -44,7 +44,7 @@ const Recruitment = () => {
             >
                 <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
                 <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-                <div className="container p-6 sm:p-8 md:p-12 lg:px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-2 md:space-x-20 mb-10 sm:mb-16 mt-4 sm:mt-6">
+                <div className="container p-6 sm:p-8 md:p-12 lg:px-4 mx-auto items-center grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:space-x-20 mb-10 sm:mb-16 mt-4 sm:mt-6">
                     <div
                         data-aos="fade-up"
                         data-aos-duration="1500"
