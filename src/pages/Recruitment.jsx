@@ -1,4 +1,4 @@
-import fotolagi from "../assets/fotolagi.png";
+import fotolagi from "../assets/kakak.png";
 import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
