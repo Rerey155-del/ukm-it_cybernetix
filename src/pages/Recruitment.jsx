@@ -98,7 +98,7 @@ const Recruitment = () => {
                         </label>
                     </div>
                     <div>
-                        <img src={Garis} className="absolute top-0 left-0 w-[100%] h-auto z-0 pointer-events-none max-w-full" alt="" />
+                        <img src={Garis} className="absolute top-0 left-0 w-[100%] h-auto z-0 md:w-full pointer-events-none max-w-full" alt="" />
                     </div>
                 </div>
                
