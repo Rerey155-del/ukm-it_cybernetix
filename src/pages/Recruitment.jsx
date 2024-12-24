@@ -91,7 +91,7 @@ const Recruitment = () => {
                                 <img
                                     src={fotolagi}
                                     alt=""
-                                    className=" w-[400px] h-[450px] md:w-[400px] md:h-full lg:w-[450px] lg:h-full max-w-full"
+                                    className=" w-[400px] h-full md:w-[450px] md:h-full lg:w-[450px] lg:h-full max-w-full"
                                 />
                             </div>
 
