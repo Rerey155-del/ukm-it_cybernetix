@@ -18,4 +18,5 @@ export default defineConfig({
       compress: true, // Optimasi kompresi
     }, 
   },
+  
 });
