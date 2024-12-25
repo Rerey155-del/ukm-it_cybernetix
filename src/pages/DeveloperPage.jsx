@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Rerey from "../assets/Rereydev.png";
+import Rerey from "../assets/rereydev.png";
 import Figma from "../assets/figma.png";
 import Reactjs from "../assets/reactjs.png";
 import Tailwind from "../assets/tailwind.png";
@@ -123,7 +123,6 @@ const CXDevelopers = () => {
             />
           </div>
         </div>
-
         {/* Developers Section */}
         <div className="container mb-6 mx-auto p-6 md:p-20 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-duration="1500">
           {developers.slice(1).map((dev, index) => (
