@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Rerey from "../assets/Rereyy.png";
+import Rerey from "../assets/Rereydev.png";
 import Figma from "../assets/figma.png";
 import Reactjs from "../assets/reactjs.png";
 import Tailwind from "../assets/tailwind.png";
@@ -117,20 +117,12 @@ const CXDevelopers = () => {
           </div>
 
           {/* Gambar di bawah pada ponsel */}
-          <div className="container mx-auto order-1 md:order-1 card bg-[#32364F] sm:w-full md:w-full lg:w-full shadow-lg rounded-3xl transform hover:scale-105 transition-transform">
+          <div className="container mx-auto order-1 md:order-1 sm:w-full md:w-full lg:w-full shadow-lg rounded-3xl transform hover:scale-105 transition-transform">
             <img
               src={developers[0].image}
-              alt={developers[0].name}
+              
               className="w-full h-full object-cover rounded-3xl mb-4 md:w-full md:h-full"
             />
-
-            <div
-              className="absolute bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent inset-x-0 bottom-0 h-1/2 rounded-b-3xl pointer-events-none"
-            ></div>
-            <div className="text-center md:absolute z-10 inset-x-0  md:bottom-6 text-white">
-              <h3 className="font-bold text-lg">CX - Rerey</h3>
-              <p className="mt-2 mb-4">Project Lead / Full Stack Dev</p>
-            </div>
           </div>
         </div>
 
