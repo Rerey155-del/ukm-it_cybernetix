@@ -120,10 +120,13 @@ const CXDevelopers = () => {
           <div className="container mx-auto order-1 md:order-1 sm:w-full md:w-full lg:w-full shadow-lg rounded-3xl transform hover:scale-105 transition-transform">
             <img
               src={developers[0].image}
+              
               className="w-full h-full object-cover rounded-3xl mb-4 md:w-full md:h-full"
             />
           </div>
         </div>
+
+
         {/* Developers Section */}
         <div className="container mb-6 mx-auto p-6 md:p-20 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-duration="1500">
           {developers.slice(1).map((dev, index) => (
