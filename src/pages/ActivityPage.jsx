@@ -29,6 +29,7 @@ const ActivityPage = () => {
     setDarkMode((prevMode) => !prevMode); // Toggle dark mode
     localStorage.setItem("darkMode", JSON.stringify(!darkMode));
   };
+  
 
   const showartikelDetail = (id) => {
     setIsLoading(true);
