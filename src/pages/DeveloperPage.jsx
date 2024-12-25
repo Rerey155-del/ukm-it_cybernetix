@@ -81,8 +81,7 @@ const CXDevelopers = () => {
         {/* Navbar */}
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-
-
+        
         <div className="container mx-auto text-center md:mt-24 mb-6" data-aos="fade-up" data-aos-duration="1500" >
           <h2 className=" font-bold text-5xl"><span className="text-[#F16634]">CX</span> DEV !</h2>
           <p className="text-sm">great person who made this website</p>
@@ -112,7 +111,6 @@ const CXDevelopers = () => {
               <img className=" transform hover:scale-105 transition-transform" src={Express} />
               <img className=" transform hover:scale-105 transition-transform" src={Mongodb} />
               <img className=" transform hover:scale-105 transition-transform"  src={Nodejs} />
-
             </div>
           </div>
 
@@ -125,7 +123,6 @@ const CXDevelopers = () => {
             />
           </div>
         </div>
-
 
         {/* Developers Section */}
         <div className="container mb-6 mx-auto p-6 md:p-20 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-duration="1500">
@@ -142,8 +139,6 @@ const CXDevelopers = () => {
             </div>
           ))}
         </div>
-
-
         {/* Footer */}
         <Footer darkMode={darkModes} />
       </div>
