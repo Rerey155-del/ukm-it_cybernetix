@@ -124,8 +124,6 @@ const CXDevelopers = () => {
             />
           </div>
         </div>
-
-
         {/* Developers Section */}
         <div className="container mb-6 mx-auto p-6 md:p-20 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-duration="1500">
           {developers.slice(1).map((dev, index) => (
