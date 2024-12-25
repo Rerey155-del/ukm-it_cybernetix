@@ -120,7 +120,6 @@ const CXDevelopers = () => {
           <div className="container mx-auto order-1 md:order-1 sm:w-full md:w-full lg:w-full shadow-lg rounded-3xl transform hover:scale-105 transition-transform">
             <img
               src={developers[0].image}
-              
               className="w-full h-full object-cover rounded-3xl mb-4 md:w-full md:h-full"
             />
           </div>
