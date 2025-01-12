@@ -7,7 +7,7 @@ import people from "../assets/Groups.svg";
 import home from "../assets/home.svg";
 import Cx from "../assets/cx-logo.svg";
 import { useNavigate } from "react-router-dom";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 import info from "../assets/info.png";
 import { helix } from "ldrs";
 helix.register();
@@ -18,7 +18,7 @@ helix.register();
 const Sidebar = ({ darkMode, toggleDarkMode }) => {
     // Tambahkan state untuk mengelola visibilitas Sidebar
     const [isOpen, setIsOpen] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
 
 
     const navigate = useNavigate();
@@ -48,21 +48,21 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
         navigate("/developer");
     }
 
-    const showLoadingRecruitment = () => {
-        setIsLoading(true);
-        setTimeout(() => {
-          setIsLoading(false);
-          navigate("/recruitment"); // Ganti "/nextPage" dengan path halaman tujuan Anda
-        }, 2000);
-      };
+    // const showLoadingRecruitment = () => {
+    //     setIsLoading(true);
+    //     setTimeout(() => {
+    //       setIsLoading(false);
+    //       navigate("/recruitment"); // Ganti "/nextPage" dengan path halaman tujuan Anda
+    //     }, 2000);
+    //   };
 
-    // const Recruitment = () => {
-    //     Swal.fire({
-    //         icon: "error",
-    //         title: "Oops...",
-    //         text: "Saat ini, fitur ini masih dalam pengembangan",
-    //     });
-    // }
+    const Recruitment = () => {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Maaf, udah tutup pendaftarannya 😊",
+        });
+    }
 
 
     return (
@@ -128,7 +128,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                             </a>
                         </li>
                         <li>
-                        <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={showLoadingRecruitment}>
+                        <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Recruitment}>
                                  <img src={registration} alt="" />
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>
                                     Recruitment
@@ -181,14 +181,14 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                 </div>
             </div>
             {/* =============  Modal Loading  ================= */}
-      {isLoading && (
+      {/* {isLoading && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex justify-center items-center font-[Inter]">
           <div className=" p-6 rounded-lg flex flex-col items-center">
             <l-helix size="70" speed="2.5" color="#F16634"></l-helix>
             <p className="mt-4 font-bold text-lg text-white">Memasuki dunia lain...</p>
           </div>
         </div>
-      )}
+      )} */}
         </div>
     );
 };

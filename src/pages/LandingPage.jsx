@@ -123,12 +123,7 @@ const LandingPage = () => {
                   Kenali Kami
                 </button>
                 <button
-                  onClick={() => {
-                    window.open(
-                      "https://bit.ly/RecruitmentCX-17UKM-ITCYBERNETIX",
-                      "_blank"
-                    );
-                  }}
+                  
                   className="rounded-3xl bg-[#373737] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Gabung Sekarang

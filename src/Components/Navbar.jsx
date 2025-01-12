@@ -3,7 +3,7 @@ import Cx from "../assets/cx-logo.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 import info from "../assets/info.png";
 import { helix } from "ldrs";
 helix.register();
@@ -17,7 +17,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
   const Menu = () => {
     navigate("/");
@@ -39,21 +39,21 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     navigate("/developer");
   }
  
-  const showLoadingRecruitment = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      navigate("/recruitment"); // Ganti "/nextPage" dengan path halaman tujuan Anda
-    }, 2000);
-  };
+  // const showLoadingRecruitment = () => {
+  //   setIsLoading(true);
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //     navigate("/recruitment"); // Ganti "/nextPage" dengan path halaman tujuan Anda
+  //   }, 2000);
+  // };
 
-  // const Recruitment = () => {
-  //   Swal.fire({
-  //     icon: "error",
-  //     title: "Oops...",
-  //     text: "Saat ini, recruitment belum dibuka yaa",
-  //   });
-  // }
+  const Recruitment = () => {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Maaf, udah tutup pendaftarannya 😊",
+    });
+  }
 
   useEffect(() => {
     // Inisialisasi AOS untuk animasi
@@ -139,7 +139,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               <a href=""
                 onClick={(e) => {
                   e.preventDefault();
-                  showLoadingRecruitment();
+                  Recruitment();
                 }}>Recruitment</a>
             </li>
 
@@ -191,14 +191,14 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
       </nav>
       {/* =============  Modal Loading  ================= */}
-      {isLoading && (
+      {/* {isLoading && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex justify-center items-center font-[Inter]">
           <div className=" p-6 rounded-lg flex flex-col items-center">
             <l-helix size="70" speed="2.5" color="#F16634"></l-helix>
             <p className="mt-4 font-bold text-lg text-white">Memasuki dunia lain...</p>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };
