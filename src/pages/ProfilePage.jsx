@@ -61,17 +61,17 @@ const ProfilePage = () => {
 
                 <div className="container justify-items-center mx-auto p-8 text-md md:p-16 mt-12  ">
                     <p>
-                        UKM-IT Cybernetix UPI YPTK Padang dibentuk oleh mahasiswa yang memiliki visi dan semangat yang sama untuk mengembangkan teknologi informasi di lingkungan kampus. Berawal dari keinginan Muhammad Riza Nurtam, Medio Nofriyanto, Hadad Samir, dan Rafles Susandi untuk mengaktifkan kembali kelompok belajar Linux yang telah ada sejak 2001, pada 18 Desember 2006 mereka mengadakan pertemuan pertama. Dalam pertemuan tersebut, hadir beberapa mahasiswa lain yang berbagi pandangan yang sama untuk membentuk UKM IT yang dapat diakui secara resmi oleh kampus.</p>
+                        UKM-IT Cybernetix UPI YPTK Padang dibentuk oleh mahasiswa yang memiliki visi dan semangat yang sama untuk mengembangkan teknologi informasi di lingkungan kampus. Berawal dari keinginan Muhammad Riza Nurtam, Medio Nofriyanto, Hadad Samir, dan Rafles Susandi untuk mengaktifkan kembali kelompok belajar Linux yang telah ada sejak 2001. Disisi lain ada Alif Amri Suri, Alfin Akhret, Andi Hadriansyah, Yolanof Hidayat, Reyhan Ali yang juga punya keinginan untuk membentuk wadah yang bisa  dimanfaatkan mahasiswa untuk belajar dan berkarya Bersama di bidang IT.pada 18 Desember 2006 mereka mengadakan pertemuan pertama. Dalam pertemuan tersebut, hadir beberapa mahasiswa lain yang berbagi pandangan yang sama untuk membentuk UKM IT yang dapat diakui secara resmi oleh kampus.</p>
                     <br />
                     <p>
                         Langkah awal menuju pendirian UKM ini adalah dengan mengadakan pertemuan kedua pada 25 Desember 2006, yang dihadiri sekitar 25 mahasiswa. Dalam pertemuan ini, disepakati untuk mendekati pihak yang berwenang di kampus, yaitu Badan Eksekutif Mahasiswa (BEM), guna mendapatkan dukungan. Setelah proses pendekatan dan pengajuan proposal pembentukan, UKM ini resmi didukung oleh BEM. Namun, tantangan muncul ketika jumlah anggota tetap yang diperlukan berkurang, sehingga tim formatur kembali mencari anggota tambahan.
                     </p>
                     <br />
                     <p>
-                        Melalui usaha keras, pada Sidang Umum yang diadakan pada 7-8 Juni 2007, UKM IT-CybernetiX akhirnya resmi didirikan dengan total anggota lebih dari 52 orang, di bawah naungan BEM dan diresmikan langsung oleh Presiden Mahasiswa.</p>
+                        Melalui usaha keras, pada Sidang Umum yang diadakan pada  06-07 Juni 2007, UKM-IT Cybernetix akhirnya resmi didirikan dengan total anggota lebih dari 52 orang, di bawah naungan BEM dan diresmikan langsung oleh Presiden Mahasiswa.</p>
                     <br />
                     <p>
-                        Sejak berdirinya, UKM IT-Cybernetix aktif berkontribusi dalam bidang pembelajaran, pengembangan, dan penelitian teknologi informasi. Beragam kegiatan telah dilakukan, mulai dari belajar bersama, berbagi ilmu, hingga mengadakan acara besar yang melibatkan seluruh mahasiswa UPI YPTK Padang serta mahasiswa dari universitas lain di Kota Padang. Kegiatan tersebut meliputi seminar, kompetisi IT, dan program kolaborasi antar universitas, dengan tujuan utama untuk mengembangkan minat dan keahlian mahasiswa di bidang teknologi informasi serta memperkuat jaringan antar mahasiswa di kota Padang.</p>
+                        Sejak berdirinya, UKM-IT Cybernetix aktif berkontribusi dalam bidang pembelajaran, pengembangan, dan penelitian teknologi informasi. Beragam kegiatan telah dilakukan, mulai dari belajar bersama, berbagi ilmu, hingga mengadakan acara besar yang melibatkan seluruh mahasiswa UPI YPTK Padang serta mahasiswa dari universitas lain di Kota Padang. Kegiatan tersebut meliputi seminar, kompetisi IT, dan program kolaborasi antar universitas, dengan tujuan utama untuk mengembangkan minat dan keahlian mahasiswa di bidang teknologi informasi serta memperkuat jaringan antar mahasiswa di kota Padang.</p>
                 </div>
             </div>
             <Footer darkMode={darkModes} />
