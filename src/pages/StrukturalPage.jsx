@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-
 import Navbar from "../Components/Navbar";
-import together from "../assets/Together.jpg";
 import axios from "axios";
 import Sidebar from "../Components/Sidebar";
 import Footer from "../Components/Footer";
-
+import header1 from "../assets/header/1.png";
+import header2 from "../assets/header/2.png";
+import header3 from "../assets/header/3.png";
+import header4 from "../assets/header/4.png";
+import header5 from "../assets/header/5.png";
+import header6 from "../assets/header/6.png";
 import { useLocation } from "react-router-dom";
 
 const StrukturalPage = () => {
@@ -14,16 +17,19 @@ const StrukturalPage = () => {
   const [psdmUser, setPsdmUser] = useState([]);
   const [infokomUser, setInfokomUser] = useState([]);
   const [humasUser, setHumasUser] = useState([]);
+  const [programmingUser, setProgrammingUser] = useState([]);
+  const [multimediaUser, setMultimediaUser] = useState([]);
+  const [networkingUser, setNetworkingUser] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
+  const [current, setCurrent] = useState(0);
 
+  const headers = [header1, header2, header3, header4, header5, header6];
 
   useEffect(() => {
-    // Logika autoscroll setiap kali rute berubah
-    window.scrollTo(0, 0); // Scroll ke atas
-  }, [location]); // Akan dijalankan saat lokasi (URL) berubah
-
+    window.scrollTo(0, 0);
+  }, [location]);
 
   useEffect(() => {
     Promise.all([
@@ -32,6 +38,9 @@ const StrukturalPage = () => {
       axios.get("https://express-mongo-lac.vercel.app/psdm"),
       axios.get("https://express-mongo-lac.vercel.app/infokom"),
       axios.get("https://express-mongo-lac.vercel.app/humas"),
+      axios.get("https://express-mongo-lac.vercel.app/programming"),
+      axios.get("https://express-mongo-lac.vercel.app/multimedia"),
+      axios.get("https://express-mongo-lac.vercel.app/networking"),
     ])
       .then(
         ([
@@ -40,12 +49,18 @@ const StrukturalPage = () => {
           psdmResponse,
           infokomResponse,
           humasResponse,
+          programmingResponse,
+          multimediaResponse,
+          networkingResponse,
         ]) => {
           setUsers(steeringResponse.data);
           setLitbangUser(litbangResponse.data);
           setPsdmUser(psdmResponse.data);
           setInfokomUser(infokomResponse.data);
-          setHumasUser(humasResponse.data); // Menyimpan data untuk pengguna litbang
+          setHumasUser(humasResponse.data);
+          setProgrammingUser(programmingResponse.data);
+          setMultimediaUser(multimediaResponse.data);
+          setNetworkingUser(networkingResponse.data);
         }
       )
       .catch((error) => {
@@ -53,234 +68,164 @@ const StrukturalPage = () => {
       });
   }, []);
 
+  // ✅ Auto fade transition
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % headers.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [headers.length]);
+
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode); // Toggle dark mode
+    setDarkMode((prev) => !prev);
     localStorage.setItem("darkMode", JSON.stringify(!darkMode));
   };
-
 
   return (
     <section style={{ overflow: "hidden" }}>
       <div
         style={{
-          backgroundColor: darkModes ? "#1E2237" : "#FBF8EF", // Ubah warna berdasarkan darkMode
-          color: darkModes ? "#FFFFFF" : "#000000", // Warna teks
+          backgroundColor: darkModes ? "#1E2237" : "#FBF8EF",
+          color: darkModes ? "#FFFFFF" : "#000000",
           minHeight: "100vh",
           width: "100%",
-          margin: "0",
-          padding: "0",
           boxSizing: "border-box",
-          overflowX: "hidden",
           backgroundImage: `url('https://res.cloudinary.com/dbc7scew4/image/upload/v1733543685/glow_effect_odggcl.png')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
           fontFamily: "Montserrat",
         }}
-        className=" text-black"
       >
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-        <div className=" p-4 sm:p-6 md:p-10 justify-center font-bold text-2xl md:text-3xl mb-4 max-w-full mt-6">
-          <h2 data-aos="fade-up"  className="text-center mb-6 sm:mb-8 md:mb-5">
-            Struktural 2024/2025
+
+        {/* ========== Carousel Section ========== */}
+        <div className="p-4 sm:p-6 md:p-10 justify-center font-bold text-2xl md:text-3xl mb-4 max-w-full mt-6">
+          <h2 data-aos="fade-up" className="text-center mb-6 sm:mb-8 md:mb-5">
+            Struktural 2025/2026
           </h2>
 
-          <img
-            data-aos="zoom-in" 
-            className="container rounded-2xl w-full h-zauto max-h-[40rem] sm:max-h-[28rem] md:max-h-[32rem] lg:max-h-[36rem] object-cover mx-auto shadow-xl"
-            src={together}
-            alt=""
+          {/* ✅ Fading Carousel */}
+          <div className="container mx-auto flex justify-center" data-aos="fade-up" data-aos-duration="1000">
+            <div className="relative w-full h-[36rem] sm:h-[40rem] md:h-[44rem] lg:h-[46rem] rounded-2xl overflow-hidden">
+              {headers.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Header ${index + 1}`}
+                  className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
+                    index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ============================= CONTENT STRUCTURE ============================= */}
+        <div className="px-2 lg:px-10 max-w-full mt-16">
+          <Section
+            title="Struktural Inti"
+            users={users}
+            darkModes={darkModes}
+          />
+          <Section
+            title="Bidang Penelitian & Pengembangan"
+            users={litbangUser}
+            darkModes={darkModes}
+          />
+          <Section
+            title="Bidang Informasi dan Komunikasi"
+            users={infokomUser}
+            darkModes={darkModes}
+          />
+          <Section
+            title="Bidang Hubungan Masyarakat"
+            users={humasUser}
+            darkModes={darkModes}
+          />
+          <Section
+            title="Bidang Pengembangan Sumber Daya Manusia"
+            users={psdmUser}
+            darkModes={darkModes}
+          />
+
+          <div className="container mx-auto text-center text-2xl font-semibold lg:text-3xl mb-4">
+            <h2>Divisi</h2>
+          </div>
+
+          <Section
+            title="Programming"
+            users={programmingUser}
+            darkModes={darkModes}
+          />
+          <Section
+            title="Multimedia"
+            users={multimediaUser}
+            darkModes={darkModes}
+          />
+          <Section
+            title="Networking"
+            users={networkingUser}
+            darkModes={darkModes}
           />
         </div>
-
-        <div className=" px-2 lg:px-10 max-w-full mt-16">
-        <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
-          <h2
-          >
-            Struktural Inti
-          </h2>
-</div>
-          <div
-            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
-            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
-          >
-            {/* Tampilkan Skeleton Loader jika users kosong */}
-            {users.length === 0 &&
-              [...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="skeleton w-[8rem] sm:w-[10rem] md:w-48 lg:w-60 aspect-square bg-gray-300 rounded-3xl animate-pulse"
-
-                ></div>
-              ))}
-            {users.map((user, index) => (
-              <div
-                key={index}
-                className={`card-body ${darkModes ? 'bg-[#32364F]' : 'bg-white'
-                  } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
-                <div className={`absolute ${darkModes ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
-                  } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}></div>
-                <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
-          <h2 
-          >
-            Bidang Penelitian & Pengembangan
-          </h2>
-          </div>
-          <div
-            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter] "
-            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
-          >
-            {/* Tampilkan Skeleton Loader jika users kosong */}
-            {litbangUser.length === 0 &&
-              [...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="skeleton w-[8rem] sm:w-[10rem] md:w-48 lg:w-60 aspect-square bg-gray-300 rounded-3xl animate-pulse"
-                ></div>
-              ))}
-            {litbangUser.map((user, index) => (
-              <div
-                key={index}
-                className={`card-body ${darkModes ? 'bg-[#32364F]' : 'bg-white'
-                  } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
-                <div className={`absolute ${darkModes ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
-                  } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}></div>
-                <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
-          <h2>
-            Bidang Informasi dan Komunikasi
-          </h2>
-          </div>
-          <div
-            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
-            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
-          >
-            {/* Tampilkan Skeleton Loader jika users kosong */}
-            {infokomUser.length === 0 &&
-              [...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="skeleton w-[8rem] sm:w-[10rem] md:w-48 lg:w-60 aspect-square bg-gray-300 rounded-3xl animate-pulse"
-                ></div>
-              ))}
-            {infokomUser.map((user, index) => (
-              <div
-                key={index}
-                className={`card-body ${darkModes ? 'bg-[#32364F]' : 'bg-white'
-                  } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
-                <div className={`absolute ${darkModes ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
-                  } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}></div>
-                <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
-          <h2
-          >
-            Bidang Hubungan Masyarakat
-          </h2>
-          </div>
-          <div
-            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
-            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
-          >
-            {/* Tampilkan Skeleton Loader jika users kosong */}
-            {humasUser.length === 0 &&
-              [...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="skeleton w-[8rem] sm:w-[10rem] md:w-48 lg:w-60 aspect-square bg-gray-300 rounded-3xl animate-pulse"
-                ></div>
-              ))}
-            {humasUser.map((user, index) => (
-              <div
-                key={index}
-                className={`card-body ${darkModes ? 'bg-[#32364F]' : 'bg-white'
-                  } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
-                <div className={`absolute ${darkModes ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
-                  } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}></div>
-                <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="container mx-auto pl-4 text-2xl  font-semibold lg:text-3xl mb-4">
-          <h2
-          >
-            Bidang Pengembangan Sumber Daya Manusia
-          </h2>
-          </div>
-          <div
-            className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter] mb-6"
-            style={{ overflow: "hidden" }} // Menghilangkan scroll di grid
-          >
-            {/* Tampilkan Skeleton Loader jika users kosong */}
-            {psdmUser.length === 0 &&
-              [...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="skeleton w-[8rem] sm:w-[10rem] md:w-48 lg:w-60 aspect-square bg-gray-300 rounded-3xl animate-pulse"
-                ></div>
-              ))}
-            {psdmUser.map((user, index) => (
-              <div
-                key={index}
-                className={`card-body ${darkModes ? 'bg-[#32364F]' : 'bg-white'
-                  } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl`}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <img src={user.foto} alt={user.nama} className="md:h-[12rem] rounded-xl w-full" />
-                <div className={`absolute ${darkModes ? 'bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent' : 'bg-gradient-to-t from-white via-white/90 to-transparent'
-                  } inset-x-0 bottom-0 h-1/2  rounded-b-3xl pointer-events-none`}></div>
-                <div className="text-center md:absolute z-10 inset-x-0 bottom-4 ">
-                  <p className="font-bold">{user.nama}</p>
-                  <p>{user.jabatan}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
+
       <Footer darkMode={darkModes} />
     </section>
   );
 };
+
+// 🔹 Komponen reusable untuk bagian struktur
+const Section = ({ title, users, darkModes }) => (
+  <>
+    <div className="container mx-auto pl-4 text-2xl font-semibold lg:text-3xl mb-4">
+      <h2>{title}</h2>
+    </div>
+
+    <div
+      className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
+      style={{ overflow: "hidden" }}
+    >
+      {users.length === 0 &&
+        [...Array(4)].map((_, i) => (
+          <div
+            key={i}
+            className="skeleton w-[8rem] sm:w-[10rem] md:w-48 lg:w-60 aspect-square bg-gray-300 rounded-3xl animate-pulse"
+          ></div>
+        ))}
+
+      {users.map((user, i) => (
+        <div
+          key={i}
+          className={`card-body ${
+            darkModes ? "bg-[#32364F]" : "bg-white"
+          } sm:w-[10rem] p-6 text-sm md:w-60 lg:w-60 shadow-lg rounded-3xl relative`}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <img
+            src={user.foto}
+            alt={user.nama}
+            className="md:h-[12rem] rounded-xl w-full"
+          />
+          <div
+            className={`absolute ${
+              darkModes
+                ? "bg-gradient-to-t from-[#32364F] via-[#32364F]/90 to-transparent"
+                : "bg-gradient-to-t from-white via-white/90 to-transparent"
+            } inset-x-0 bottom-0 h-1/2 rounded-b-3xl pointer-events-none`}
+          ></div>
+          <div className="text-center md:absolute z-10 inset-x-0 bottom-4">
+            <p className="font-bold">{user.nama}</p>
+            <p>{user.jabatan}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </>
+);
 
 export default StrukturalPage;
