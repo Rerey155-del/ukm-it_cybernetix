@@ -27,10 +27,12 @@ const StrukturalPage = () => {
 
   const headers = [header1, header2, header3, header4, header5, header6];
 
+  // Scroll ke atas setiap pindah halaman
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  // Fetch data semua bidang
   useEffect(() => {
     Promise.all([
       axios.get("https://express-mongo-lac.vercel.app/steeringcommittee"),
@@ -117,7 +119,7 @@ const StrukturalPage = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <div className="relative w-full h-[20rem] sm:h-[28rem] md:h-[40rem] lg:h-[46rem] rounded-2xl overflow-hidden bg-black flex items-center justify-center">
+            <div className="relative w-full h-[18rem] sm:h-[26rem] md:h-[38rem] lg:h-[44rem] rounded-2xl overflow-hidden bg-black flex items-center justify-center">
               {headers.map((img, index) => (
                 <img
                   key={index}
@@ -126,7 +128,7 @@ const StrukturalPage = () => {
                   className={`absolute inset-0 w-full h-full transition-opacity duration-[2000ms] ease-in-out ${
                     index === current ? "opacity-100 z-20" : "opacity-0 z-10"
                   } 
-      object-contain sm:object-cover bg-black`}
+                  object-contain sm:object-cover bg-black`}
                 />
               ))}
             </div>
@@ -135,11 +137,7 @@ const StrukturalPage = () => {
 
         {/* ============================= CONTENT STRUCTURE ============================= */}
         <div className="px-2 lg:px-10 max-w-full mt-16">
-          <Section
-            title="Struktural Inti"
-            users={users}
-            darkModes={darkModes}
-          />
+          <Section title="Struktural Inti" users={users} darkModes={darkModes} />
           <Section
             title="Bidang Penelitian & Pengembangan"
             users={litbangUser}
@@ -161,25 +159,13 @@ const StrukturalPage = () => {
             darkModes={darkModes}
           />
 
-          <div className="container mx-auto text-center text-2xl font-semibold lg:text-3xl mb-4">
+          <div className="container mx-auto text-center text-2xl font-semibold lg:text-3xl mb-4 mt-6">
             <h2>Divisi</h2>
           </div>
 
-          <Section
-            title="Programming"
-            users={programmingUser}
-            darkModes={darkModes}
-          />
-          <Section
-            title="Multimedia"
-            users={multimediaUser}
-            darkModes={darkModes}
-          />
-          <Section
-            title="Networking"
-            users={networkingUser}
-            darkModes={darkModes}
-          />
+          <Section title="Programming" users={programmingUser} darkModes={darkModes} />
+          <Section title="Multimedia" users={multimediaUser} darkModes={darkModes} />
+          <Section title="Networking" users={networkingUser} darkModes={darkModes} />
         </div>
       </div>
 
@@ -191,12 +177,12 @@ const StrukturalPage = () => {
 // 🔹 Komponen reusable untuk bagian struktur
 const Section = ({ title, users, darkModes }) => (
   <>
-    <div className="container mx-auto pl-4 text-2xl font-semibold lg:text-3xl mb-4">
-      <h2>{title}</h2>
+    <div className="container mx-auto text-center sm:text-left px-2 sm:pl-4 text-2xl font-semibold lg:text-3xl mb-4">
+      <h2 data-aos="fade-up">{title}</h2>
     </div>
 
     <div
-      className="container grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:p-8 mx-auto justify-items-center font-[Inter]"
+      className="container grid grid-cols-2 p-3 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:p-8 mx-auto justify-items-center font-[Inter]"
       style={{ overflow: "hidden" }}
     >
       {users.length === 0 &&
