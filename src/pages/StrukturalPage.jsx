@@ -102,12 +102,14 @@ const StrukturalPage = () => {
 
         {/* ========== Carousel Section ========== */}
         <div className="p-4 sm:p-6 md:p-10 justify-center font-bold text-2xl md:text-3xl mb-4 max-w-full">
-          <h2
-            data-aos="fade-up"
-            className="text-center mb-6 sm:mb-8 md:mb-5 mt-6"
-          >
-            Struktural 2025/2026
-          </h2>
+          <div className="container mx-auto mt-6">
+            <h2
+              data-aos="fade-up"
+              className="text-center mb-6 sm:mb-8 md:mb-5"
+            >
+              Struktural 2025/2026
+            </h2>
+          </div>
 
           {/* ✅ Fading Carousel */}
           <div
