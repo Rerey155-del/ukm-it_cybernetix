@@ -102,21 +102,29 @@ const StrukturalPage = () => {
 
         {/* ========== Carousel Section ========== */}
         <div className="p-4 sm:p-6 md:p-10 justify-center font-bold text-2xl md:text-3xl mb-4 max-w-full">
-          <h2 data-aos="fade-up" className="text-center mb-6 sm:mb-8 md:mb-5 mt-6">
+          <h2
+            data-aos="fade-up"
+            className="text-center mb-6 sm:mb-8 md:mb-5 mt-6"
+          >
             Struktural 2025/2026
           </h2>
 
           {/* ✅ Fading Carousel */}
-          <div className="container mx-auto flex justify-center" data-aos="fade-up" data-aos-duration="1000">
-            <div className="relative w-full h-[36rem] sm:h-[40rem] md:h-[44rem] lg:h-[46rem] rounded-2xl overflow-hidden">
+          <div
+            className="container mx-auto flex justify-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div className="relative w-full h-[20rem] sm:h-[28rem] md:h-[40rem] lg:h-[46rem] rounded-2xl overflow-hidden bg-black flex items-center justify-center">
               {headers.map((img, index) => (
                 <img
                   key={index}
                   src={img}
                   alt={`Header ${index + 1}`}
-                  className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
-                    index === current ? "opacity-100 z-10" : "opacity-0 z-0"
-                  }`}
+                  className={`absolute inset-0 w-full h-full transition-opacity duration-[2000ms] ease-in-out ${
+                    index === current ? "opacity-100 z-20" : "opacity-0 z-10"
+                  } 
+      object-contain sm:object-cover bg-black`}
                 />
               ))}
             </div>
