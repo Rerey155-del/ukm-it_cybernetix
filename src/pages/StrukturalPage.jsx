@@ -9,6 +9,7 @@ import header3 from "../assets/header/3.png";
 import header4 from "../assets/header/4.png";
 import header5 from "../assets/header/5.png";
 import header6 from "../assets/header/6.png";
+import header7 from "../assets/header/7.png";
 import { useLocation } from "react-router-dom";
 
 const StrukturalPage = () => {
@@ -25,7 +26,7 @@ const StrukturalPage = () => {
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
   const [current, setCurrent] = useState(0);
 
-  const headers = [header1, header2, header3, header4, header5, header6];
+  const headers = [header1, header2, header3, header4, header5, header6, header7];
 
   // Scroll ke atas setiap pindah halaman
   useEffect(() => {
