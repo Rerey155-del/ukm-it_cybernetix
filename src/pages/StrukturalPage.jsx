@@ -3,13 +3,13 @@ import Navbar from "../Components/Navbar";
 import axios from "axios";
 import Sidebar from "../Components/Sidebar";
 import Footer from "../Components/Footer";
-import header1 from "../assets/header/1.png";
-import header2 from "../assets/header/2.png";
-import header3 from "../assets/header/3.png";
-import header4 from "../assets/header/4.png";
-import header5 from "../assets/header/5.png";
-import header6 from "../assets/header/6.png";
-import header7 from "../assets/header/7.png";
+import header1 from "../assets/header/1.webp";
+import header2 from "../assets/header/2.webp";
+import header3 from "../assets/header/3.webp";
+import header4 from "../assets/header/4.webp";
+import header5 from "../assets/header/5.webp";
+import header6 from "../assets/header/6.webp";
+import header7 from "../assets/header/7.webp";
 import { useLocation } from "react-router-dom";
 
 const StrukturalPage = () => {
@@ -26,7 +26,15 @@ const StrukturalPage = () => {
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
   const [current, setCurrent] = useState(0);
 
-  const headers = [header1, header2, header3, header4, header5, header6, header7];
+  const headers = [
+    header1,
+    header2,
+    header3,
+    header4,
+    header5,
+    header6,
+    header7,
+  ];
 
   // Scroll ke atas setiap pindah halaman
   useEffect(() => {
