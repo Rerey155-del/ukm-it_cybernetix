@@ -10,6 +10,7 @@ import header4 from "../assets/header/4.webp";
 import header5 from "../assets/header/5.webp";
 import header6 from "../assets/header/6.webp";
 import header7 from "../assets/header/7.webp";
+import header8 from "../assets/header/8.webp";
 import { useLocation } from "react-router-dom";
 
 const StrukturalPage = () => {
@@ -34,6 +35,7 @@ const StrukturalPage = () => {
     header5,
     header6,
     header7,
+    header8,
   ];
 
   // Scroll ke atas setiap pindah halaman
