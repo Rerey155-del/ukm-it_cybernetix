@@ -59,8 +59,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
     const Recruitment = () => {
         Swal.fire({
             icon: "error",
-            title: "Oops...",
-            text: "Maaf, udah tutup pendaftarannya 😊",
+            title: "Coming Soon 😊",
         });
     }
 

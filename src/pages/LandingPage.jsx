@@ -11,7 +11,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 tailChase.register();
 import Footer from "../Components/Footer";
-import Frame from "../assets/Frame.svg";
+import Frame from "../assets/header/avatar.svg";
 import porto1 from "../assets/porto1.jpg";
 import porto2 from "../assets/porto2.jpg";
 import porto3 from "../assets/porto3.png";
