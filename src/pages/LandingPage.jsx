@@ -132,7 +132,7 @@ const LandingPage = () => {
             data-aos="zoom-in"
             data-aos-duration="1500"
           >
-            <label className="swap swap-flip text-9xl">
+            <label className="swap swap-flip text-9xl mt-6">
               {/* this hidden checkbox controls the state */}
               <input type="checkbox" />
 
