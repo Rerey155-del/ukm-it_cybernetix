@@ -3,7 +3,6 @@ import Cx from "../assets/cx-logo.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
 import info from "../assets/info.png";
 import { helix } from "ldrs";
 helix.register();
@@ -47,12 +46,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   //   }, 2000);
   // };
 
-  const Recruitment = () => {
-    Swal.fire({
-      icon: "error",
-      title: "Coming Soon 😊",
-    });
-  }
 
   useEffect(() => {
     // Inisialisasi AOS untuk animasi
@@ -135,11 +128,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 }}>Profile</a>
             </li>
             <li>
-              <a href=""
-                onClick={(e) => {
-                  e.preventDefault();
-                  Recruitment();
-                }}>Recruitment</a>
+              <a href="https://forms.gle/3JPxgNGxx2xNWRev8"
+                
+                >Recruitment</a>
             </li>
 
 
