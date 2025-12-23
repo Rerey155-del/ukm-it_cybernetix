@@ -121,7 +121,7 @@ const LandingPage = () => {
                 href="https://forms.gle/3JPxgNGxx2xNWRev8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-3xl bg-[#373737] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="inline-block rounded-3xl bg-[#F16634] text-white p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg"
               >
                 Gabung Sekarang
               </a>
