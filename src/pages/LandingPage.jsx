@@ -24,7 +24,6 @@ import ldk from "../assets/LDK.png";
 import Outdoor from "../assets/Outdoor.png";
 import Webinar from "../assets/Webinar.png";
 import cyberfest from "../assets/cyberfest.png";
-import Swal from "sweetalert2";
 
 const LandingPage = () => {
   const [users, setUsers] = useState([]);
@@ -33,13 +32,6 @@ const LandingPage = () => {
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation(); // Mendapatkan informasi lokasi/rute saat ini
   const darkModes = JSON.parse(localStorage.getItem("darkMode"));
-
-  const Recruitment = () => {
-    Swal.fire({
-      icon: "error",
-      title: "Coming Soon 😊",
-    });
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll ke atas
@@ -125,17 +117,14 @@ const LandingPage = () => {
                 Wadah pemberdayaan mahasiswa yang berfokus membangun
                 keterampilan dalam mengenal dunia teknologi
               </p>
-              <div className="flex space-x-4 mb-8 justify-center md:justify-start text-white font-[Inter]">
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    Recruitment();
-                  }}
-                  className="rounded-3xl bg-[#373737] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg"
-                >
-                  Gabung Sekarang
-                </button>
-              </div>
+              <a
+                href="https://forms.gle/3JPxgNGxx2xNWRev8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-3xl bg-[#373737] p-3 px-4 font-semibold cursor-pointer transition duration-300 hover:scale-105 hover:shadow-lg"
+              >
+                Gabung Sekarang
+              </a>
             </div>
           </div>
           <div

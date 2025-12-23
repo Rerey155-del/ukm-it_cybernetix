@@ -7,7 +7,6 @@ import people from "../assets/Groups.svg";
 import home from "../assets/home.svg";
 import Cx from "../assets/cx-logo.svg";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
 import info from "../assets/info.png";
 import { helix } from "ldrs";
 helix.register();
@@ -56,13 +55,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
     //     }, 2000);
     //   };
 
-    const Recruitment = () => {
-        Swal.fire({
-            icon: "error",
-            title: "Coming Soon 😊",
-        });
-    }
-
+   
 
     return (
         <div>
@@ -127,7 +120,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                             </a>
                         </li>
                         <li>
-                        <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" onClick={Recruitment}>
+                        <a href="https://forms.gle/3JPxgNGxx2xNWRev8" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#F16634] group" >
                                  <img src={registration} alt="" />
                                 <span className={`ms-3 ${darkMode ? "text-white" : "text-black hover:text-white"}`}>
                                     Recruitment
