@@ -92,13 +92,13 @@ const ActivityDetail = () => {
                   <h2 className="font-bold text-2xl lg:text-3xl">{artikel.nama}</h2>
                   <div className="flex gap-5 mt-5 mb-5">
                     <p>UKM-IT Cybernetix</p>
-                    <p>11 Desember 2023</p>
+                    
                   </div>
                   <p>{artikel.isi}</p>
 
                   <div className="grid gap-10 mt-6 justify-center grid-cols-1 sm:grid-cols-2">
 
-                    <div
+                    {/* <div
                       className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} h-full shadow-xl w-full gap-5 p-6 md:p-10 items-center`}
                     >
                       <p className="font-bold ">Apa kata peserta?</p>
@@ -119,10 +119,10 @@ const ActivityDetail = () => {
                           </div>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
 
 
-                    <div
+                    {/* <div
                       className={`card ${darkModes ? "bg-[#32364F]" : "bg-white"} shadow-xl w-full gap-5 h-full p-6 md:p-10 items-center`}
                     >
                       <p className="font-bold">Apa kata CX?</p>
@@ -143,7 +143,7 @@ const ActivityDetail = () => {
                           </div>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
 
                 </div>
