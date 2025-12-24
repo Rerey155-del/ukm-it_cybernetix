@@ -15,7 +15,7 @@ import Raka from "../assets/developer/3.png";
 import Adit from "../assets/developer/4.png";
 import Rofiq from "../assets/developer/6.png";
 import Rafif from "../assets/developer/7.png";
-import Vazra from "../assets/developer/8.png";
+import Vazra from "../assets/developer/8.jpg";
 
 const CXDevelopers = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -153,7 +153,7 @@ const CXDevelopers = () => {
                object-contain 
                hover:scale-110 transition-transform"
                 />
-                
+
                 <img
                   src={Mongodb}
                   alt="MongoDB"
@@ -161,7 +161,6 @@ const CXDevelopers = () => {
                object-contain 
                hover:scale-110 transition-transform"
                 />
-                
               </div>
             </div>
           </div>
