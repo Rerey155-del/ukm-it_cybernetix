@@ -3,18 +3,19 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Rerey from "../assets/rereydev.png";
+import Rerey from "../assets/developer/1.png";
 import Figma from "../assets/figma.png";
-import Reactjs from "../assets/reactjs.png";
 import Tailwind from "../assets/tailwind.png";
-import Express from "../assets/express.png";
+import Laravel from "../assets/laravel.svg";
 import Mongodb from "../assets/mongodb.png";
-import Nodejs from "../assets/nodejs.png";
-import Mufid from "../assets/mupiddev.png";
-import Keyfa from "../assets/keyfadev.png";
-import Jevin from "../assets/jevindev.png";
-import Agil from "../assets/agildev.png";
 
+import Diva from "../assets/developer/2.png";
+import Keyfa from "../assets/developer/5.png";
+import Raka from "../assets/developer/3.png";
+import Adit from "../assets/developer/4.png";
+import Rofiq from "../assets/developer/6.png";
+import Rafif from "../assets/developer/7.png";
+import Vazra from "../assets/developer/8.png";
 
 const CXDevelopers = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -37,9 +38,19 @@ const CXDevelopers = () => {
       image: [Rerey],
     },
     {
-      name: "CX - Mufid",
-      role: "UI/UX Designer",
-      image: [Mufid],
+      name: "CX - Diva",
+      role: "Secretary Programmer",
+      image: [Diva],
+    },
+    {
+      name: "CX - Raka",
+      role: "Programmer",
+      image: [Raka],
+    },
+    {
+      name: "CX - Adit",
+      role: "Programmer",
+      image: [Adit],
     },
     {
       name: "CX - Keyfa",
@@ -47,14 +58,19 @@ const CXDevelopers = () => {
       image: [Keyfa],
     },
     {
-      name: "CX - Jevin",
+      name: "CX - Rofiq",
       role: "UI/UX Designer",
-      image: [Jevin],
+      image: [Rofiq],
     },
     {
-      name: "CX - Agil",
-      role: "Frontend Developer",
-      image: [Agil],
+      name: "CX - Rafif",
+      role: "UI/UX Designer",
+      image: [Rafif],
+    },
+    {
+      name: "CX - Vazra",
+      role: "UI/UX Designer",
+      image: [Vazra],
     },
   ];
 
@@ -81,63 +97,116 @@ const CXDevelopers = () => {
         {/* Navbar */}
         <Navbar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
         <Sidebar darkMode={darkModes} toggleDarkMode={toggleDarkMode} />
-        
-        <div className="container mx-auto text-center md:mt-24 mb-6" data-aos="fade-up" data-aos-duration="1500" >
-          <h2 className=" font-bold text-5xl"><span className="text-[#F16634]">CX</span> DEV !</h2>
-          <p className="text-sm">great person who made this website</p>
-          <h2 className="text-2xl text-start pl-20 font-bold hidden lg:block">Our Developers</h2>
-        </div>
-        
-        {/* About Projects */}
-        <div className="container mx-auto px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-14 text-center md:text-left" data-aos="fade-up"
-            data-aos-duration="1500">
-          {/* Teks di atas pada ponsel */}
-          <div className="order-1 md:order-2 flex flex-col justify-center">
-            <h2 className="text-3xl font-bold">About Projects</h2>
-            <p className="text-md mt-4 md:text-lg">
-              Website ini kami ciptakan dengan sepenuh hati, sebagai wujud dedikasi kami yang mendalam kepada UKM-IT Cybernetix. Kami
-              mengorbankan waktu, tenaga, dan pemikiran untuk mewujudkan visi ini, dan kini hasilnya dapat Anda nikmati dan gunakan. Setiap detik
-              yang kami habiskan dalam perjalanan ini adalah langkah menuju mewujudkan impian tersebut.
-            </p>
-            <p className="text-md mt-4 md:text-lg">
-              Website ini dirancang menggunakan berbagai teknologi canggih untuk memastikan pengalaman yang responsif dan mulus bagi semua
-              pengguna.
-            </p>
-            <br />
-            <div className="flex size-10 gap-4 ">
-              <img className=" transform hover:scale-105 transition-transform"  src={Figma} />
-              <img className=" transform hover:scale-105 transition-transform"  src={Reactjs} />
-              <img className=" transform hover:scale-105 transition-transform"  src={Tailwind} />
-              <img className=" transform hover:scale-105 transition-transform" src={Express} />
-              <img className=" transform hover:scale-105 transition-transform" src={Mongodb} />
-              <img className=" transform hover:scale-105 transition-transform"  src={Nodejs} />
-            </div>
+        <div>
+          {/* Header */}
+          <div
+            className="container mx-auto text-center md:mt-24 mb-6"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <h2 className="font-bold text-5xl">
+              <span className="text-[#F16634]">CX</span> DEV !
+            </h2>
+            <p className="text-sm">great person who made this website</p>
           </div>
 
-          {/* Gambar di bawah pada ponsel */}
-          <div className="container mx-auto order-1 md:order-1 sm:w-full md:w-full lg:w-full shadow-lg rounded-3xl transform hover:scale-105 transition-transform">
-            <img
-              src={developers[0].image}
-              
-              className="w-full h-full object-cover rounded-3xl mb-4 md:w-full md:h-full"
-            />
+          {/* About Projects */}
+          <div
+            className="container mx-auto px-10 md:px-20 
+               grid grid-cols-1 md:grid-cols-2 
+               gap-14 text-center md:text-left"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <div className="flex flex-col justify-center">
+              <h2 className="text-3xl font-bold">About Projects</h2>
+
+              <p className="text-md mt-4 md:text-lg">
+                Website ini kami ciptakan dengan sepenuh hati, sebagai wujud
+                dedikasi kami yang mendalam kepada UKM-IT Cybernetix.
+              </p>
+
+              <p className="text-md mt-4 md:text-lg">
+                Website ini dirancang menggunakan berbagai teknologi canggih
+                untuk memastikan pengalaman yang responsif dan mulus.
+              </p>
+
+              <div className="flex gap-5 mt-6 justify-center md:justify-start">
+                <img
+                  src={Figma}
+                  alt="Figma"
+                  className="w-10 h-10 md:w-12 md:h-12 
+               object-contain 
+               hover:scale-110 transition-transform"
+                />
+                <img
+                  src={Laravel}
+                  alt="Laravel"
+                  className="w-10 h-10 md:w-12 md:h-12 
+               object-contain 
+               hover:scale-110 transition-transform"
+                />
+                <img
+                  src={Tailwind}
+                  alt="Tailwind"
+                  className="w-10 h-10 md:w-12 md:h-12 
+               object-contain 
+               hover:scale-110 transition-transform"
+                />
+                
+                <img
+                  src={Mongodb}
+                  alt="MongoDB"
+                  className="w-10 h-10 md:w-12 md:h-12 
+               object-contain 
+               hover:scale-110 transition-transform"
+                />
+                
+              </div>
+            </div>
+          </div>
+          <div
+            className="container mx-auto mt-16 px-6 md:px-20"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <h2 className="text-2xl font-bold text-center md:text-left">
+              Our Developers
+            </h2>
+          </div>
+
+          <div
+            className="container mx-auto mt-6 px-6 md:px-20
+             grid grid-cols-2 md:grid-cols-4
+             gap-5 mb-8"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            {developers.map((dev, index) => (
+              <div
+                key={index}
+                className="mx-auto w-full max-w-[220px]
+                 rounded-2xl overflow-hidden
+                 bg-white/5 backdrop-blur
+                 shadow-sm hover:shadow-md
+                 transition-all duration-300
+                 hover:-translate-y-1"
+              >
+                {/* Image */}
+                <div className="aspect-[3/4]">
+                  <img
+                    src={dev.image}
+                    alt={dev.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+
         {/* Developers Section */}
-        <div className="container mb-6 mx-auto p-6 md:p-20 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-duration="1500">
-          {developers.slice(1).map((dev, index) => (
-            <div
-              key={index}
-              className="text-center rounded-3xl shadow-md transform hover:scale-105 transition-transform"
-            >
-              <img
-                src={dev.image}
-                alt={dev.name}
-                className="w-full h-full object-cover rounded-3xl mb-4"
-              />
-            </div>
-          ))}
-        </div>
+
         {/* Footer */}
         <Footer darkMode={darkModes} />
       </div>
