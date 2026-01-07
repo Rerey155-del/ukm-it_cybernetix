@@ -8,13 +8,12 @@ import Figma from "../assets/figma.png";
 import Tailwind from "../assets/tailwind.png";
 import Laravel from "../assets/laravel.svg";
 import Mongodb from "../assets/mongodb.png";
-
 import Diva from "../assets/developer/2.png";
 import Keyfa from "../assets/developer/5.png";
 import Raka from "../assets/developer/3.png";
 import Adit from "../assets/developer/4.png";
 import Rofiq from "../assets/developer/6.png";
-import Rafif from "../assets/developer/7.png  ";
+import Rafif from "../assets/developer/7.png";
 import Vazra from "../assets/developer/8.jpg";
 
 const CXDevelopers = () => {
